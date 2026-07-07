@@ -1,0 +1,13 @@
+{
+  "name": "skill-forge-workbooks",
+  "version": "1.0.0",
+  "description": "Velox Wrap Co Skill Forge training workbooks",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-workbooks.js",
+    "build:pdf": "node scripts/build-workbooks.js --pdf"
+  },
+  "dependencies": {
+    "marked": "^15.0.0"
+  }
+}
