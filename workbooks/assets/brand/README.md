@@ -31,7 +31,7 @@ workbooks/assets/brand/
 
 **Prefer SVG for logos** (sharp at any print size). Add a matching `.png` at 2× resolution only if you don’t have SVG.
 
-**Font:** Name it `skill-forge-display` with the correct extension. If the font has a real name (e.g. `BebasNeue.woff2`), still copy it here as `skill-forge-display.woff2` so the build script has one predictable path.
+**Font:** Name it `skill-forge-display` with the correct extension (`.woff2`, `.woff`, or `.otf`). Use this filename even if the source font file has a different name — the build script expects one predictable path.
 
 ## gradient.json (optional)
 

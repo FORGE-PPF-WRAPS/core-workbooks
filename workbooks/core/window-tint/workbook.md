@@ -162,9 +162,9 @@ Before any install, confirm:
 
 | Tool | Purpose |
 |------|---------|
-| **Film cutting knife / Olfa** | Trim film edges, pattern cutting |
+| **Film cutting knife** | Trim film edges, pattern cutting |
 | **Hard card / squeegee set** | Wet-out and remove slip solution |
-| **Soft squeegee (felt or Teflon)** | Final passes on film surface |
+| **Soft squeegee (felt or low-friction)** | Final passes on film surface |
 | **Heat gun** | Shrink film on curved glass |
 | **Spray bottles** | Slip solution and rinse |
 | **Scrub pad / steel wool (#0000)** | Glass prep (product-specific) |
@@ -177,7 +177,7 @@ Before any install, confirm:
 Most shops use a mild soap-and-water mix:
 
 - 1 quart distilled water
-- 2–4 drops baby shampoo or film manufacturer's recommended slip agent
+- 2–4 drops mild soap or your film supplier's recommended slip agent
 
 **Too much soap** = film slides excessively and won't grab. **Too little** = film sticks before positioned.
 
@@ -660,7 +660,7 @@ Where legal, a brow strip on the windshield top is a common add-on:
 ## Resources & Quick Reference
 
 ### Slip Solution Quick Mix
-1 quart distilled water + 2–4 drops baby shampoo
+1 quart distilled water + 2–4 drops mild soap
 
 ### Squeegee Direction
 Center outward → edges. Defroster lines: parallel strokes.

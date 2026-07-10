@@ -168,7 +168,7 @@ Walk the vehicle in good lighting (preferably outdoors or with LED inspection li
 
 | Tool | Purpose |
 |------|---------|
-| **Hard squeegee (with felt or Teflon sleeve)** | Primary wet-out tool |
+| **Hard squeegee (with felt or low-friction sleeve)** | Primary wet-out tool |
 | **Soft squeegee** | Final passes, delicate areas |
 | **Slip/tack solution bottles** | Positioning and final adhesion |
 | **Heat gun** | Stretching, conforming, post-heating |
@@ -559,14 +559,9 @@ By the end of Day 3, you will be able to:
 5. Weed liner from cut pieces
 6. Install each piece in logical order: center panels first, then edges, then details
 
-### Pattern Software Options (Industry Common)
+### Pattern Software at Your Shop
 
-- **XPEL DAP** (Design Access Program)
-- **3M Pattern Solutions**
-- **STEK DAP**
-- **Grafityp / other OEM-specific tools**
-
-Your shop will standardize on one platform — learn it deeply rather than dabbling in all.
+Your shop will use one plotter pattern platform. Learn that system deeply — vehicle lookup, kit selection, nesting, and cut workflow. Ask your instructor which platform you will train on and where to find vehicle patterns for new models.
 
 ---
 

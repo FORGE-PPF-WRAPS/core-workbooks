@@ -56,7 +56,7 @@ workbooks/assets/
     │
     ├── window-tint/                          ← TINT ONLY
     │   ├── tools/
-    │   │   ├── olfa-knife.png
+    │   │   ├── utility-knife.png
     │   │   ├── hard-card.png
     │   │   ├── tint-blade-holder.png
     │   │   ├── scrub-pad-0000.png
