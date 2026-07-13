@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Forge — Window Tint Installation</title>
+  <style>/* Skill Forge Workbooks — Print Stylesheet */
+
+@page {
+  size: letter;
+  margin: 0.75in 0.85in;
+}
+
+@page :first {
+  margin-top: 0.5in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  color: #1a1a1a;
+  max-width: 7.5in;
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  color: #0d1b2a;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 22pt;
+  border-bottom: 3px solid #1b4965;
+  padding-bottom: 0.2em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 15pt;
+  margin-top: 1.4em;
+  border-bottom: 1px solid #bee9e8;
+  padding-bottom: 0.15em;
+}
+
+h3 {
+  font-size: 12pt;
+  margin-top: 1em;
+  color: #1b4965;
+}
+
+h4 {
+  font-size: 10.5pt;
+  margin-top: 0.8em;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+ul, ol {
+  margin: 0.4em 0;
+  padding-left: 1.4em;
+}
+
+li {
+  margin: 0.2em 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8em 0;
+  font-size: 9.5pt;
+  page-break-inside: avoid;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.35em 0.5em;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #e8f4f8;
+  font-weight: 600;
+}
+
+.cover {
+  text-align: center;
+  padding: 2in 0 1in;
+  page-break-after: always;
+}
+
+.cover .brand {
+  font-size: 11pt;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1b4965;
+  margin-bottom: 0.5in;
+}
+
+.cover h1 {
+  font-size: 28pt;
+  border: none;
+  margin: 0.3in 0;
+}
+
+.cover .subtitle {
+  font-size: 14pt;
+  color: #555;
+  margin: 0.2in 0;
+}
+
+.cover .meta {
+  margin-top: 1in;
+  font-size: 11pt;
+  color: #666;
+}
+
+.cover .student-fields {
+  margin-top: 1.5in;
+  text-align: left;
+  max-width: 4in;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cover .student-fields p {
+  border-bottom: 1px solid #999;
+  padding-bottom: 0.2em;
+  margin: 0.8em 0;
+}
+
+.page-break {
+  page-break-before: always;
+}
+
+.no-break {
+  page-break-inside: avoid;
+}
+
+.callout {
+  background: #f0f7fa;
+  border-left: 4px solid #1b4965;
+  padding: 0.6em 0.8em;
+  margin: 0.8em 0;
+  page-break-inside: avoid;
+}
+
+.callout.warning {
+  background: #fff8e6;
+  border-left-color: #e6a817;
+}
+
+.callout.tip {
+  background: #eef9ee;
+  border-left-color: #2d6a4f;
+}
+
+.lab {
+  border: 2px solid #1b4965;
+  border-radius: 4px;
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  page-break-inside: avoid;
+}
+
+.lab h3 {
+  margin-top: 0;
+  color: #1b4965;
+}
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li::before {
+  content: "☐ ";
+  font-size: 12pt;
+}
+
+.knowledge-check {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  page-break-inside: avoid;
+}
+
+.knowledge-check ol {
+  margin: 0;
+}
+
+.notes-page {
+  border: 1px dashed #ccc;
+  min-height: 8in;
+  padding: 0.5in;
+  page-break-before: always;
+}
+
+.notes-page h2 {
+  border: none;
+  color: #999;
+  font-size: 12pt;
+}
+
+.notes-lines {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 23px,
+    #e0e0e0 23px,
+    #e0e0e0 24px
+  );
+  min-height: 7in;
+  margin-top: 0.5in;
+}
+
+.schedule-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+  width: 22%;
+}
+
+.footer-note {
+  font-size: 8.5pt;
+  color: #888;
+  margin-top: 2em;
+  border-top: 1px solid #ddd;
+  padding-top: 0.5em;
+}
+
+@media print {
+  body {
+    font-size: 10pt;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
+
+@media screen {
+  body {
+    padding: 1in;
+    background: #f5f5f5;
+  }
+
+  .cover, .page-break {
+    background: white;
+    padding: 1in;
+    margin-bottom: 1em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+}
+</style>
+</head>
+<body>
+  <div class="cover">
+    <div class="brand">Skill Forge · Velox Wrap Co</div>
+    <h1>Window Tint Installation</h1>
+    <p class="subtitle">Core Course — 3-Day Beginner Program</p>
+    <p class="meta">Student Workbook · Version 1.0</p>
+    <div class="student-fields">
+      <p>Student Name: _________________________________</p>
+      <p>Class Date: ___________________________________</p>
+      <p>Instructor: ___________________________________</p>
+      <p>Location: ____________________________________</p>
+    </div>
+  </div>
+  <h1>Window Tint Installation — Student Workbook</h1>
+<p><strong>Skill Forge Core Course · 3-Day Beginner Program</strong></p>
+<hr>
+<h2>Welcome</h2>
+<p>Welcome to the Skill Forge Window Tint Core Course. Over three intensive days you will build the foundational knowledge and hands-on skills needed to install automotive window film professionally — from your first flat-glass cut to a complete vehicle tint job.</p>
+<p>This workbook is your companion through classroom sessions, shop demonstrations, and supervised installs. Complete the knowledge checks, take notes during labs, and use the checklists to track your progress toward course completion.</p>
+<div class="callout">
+
+<p><strong>What &quot;Core&quot; means:</strong> This course is designed for beginners with little or no tint experience. By Day 3 you will have installed film on multiple glass types and completed a supervised full-vehicle tint. Advanced techniques (ceramic specialty installs, commercial fleet work, windshield full-tint where permitted) are covered in our Advanced courses.</p>
+</div>
+
+<hr>
+<h2>Pre-Course Checklist</h2>
+<div class="no-break">
+
+<h3>Before You Arrive</h3>
+<ul class="checklist">
+<li>Review your state's window tint laws (VLT limits for front side, rear side, rear window, windshield)</li>
+<li>Wear closed-toe shoes and shop-appropriate clothing all three days</li>
+<li>Bring safety glasses if you have a preferred pair (loaners available)</li>
+<li>Bring a notebook and pen for additional notes beyond this workbook</li>
+<li>Remove rings and bracelets that can scratch glass during installs</li>
+<li>Trim fingernails — long nails make film handling difficult</li>
+</ul>
+
+<h3>Provided Each Day</h3>
+<ul>
+<li>Practice glass panels and vehicle access for supervised installs</li>
+<li>Window film (practice and project rolls)</li>
+<li>Tools: squeegees, heat gun, spray bottles, blades, tint slip solution</li>
+<li>Lunch and refreshments</li>
+</ul>
+</div>
+
+<hr>
+<h2>Course Schedule Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Theme</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Day 1</strong></td>
+<td>Foundations</td>
+<td>Film science, laws, tools, safety, flat glass</td>
+</tr>
+<tr>
+<td><strong>Day 2</strong></td>
+<td>Technique</td>
+<td>Shrinking, curved glass, door glass, troubleshooting</td>
+</tr>
+<tr>
+<td><strong>Day 3</strong></td>
+<td>Professional Practice</td>
+<td>Rear window, full vehicle, QC, business basics, assessment</td>
+</tr>
+</tbody></table>
+<div class="page-break"></div>
+
+<h1>Day 1 — Foundations</h1>
+<h2>Day 1 Learning Objectives</h2>
+<p>By the end of Day 1, you will be able to:</p>
+<ol>
+<li>Identify common window film types and their performance characteristics</li>
+<li>Explain VLT (Visible Light Transmission) and how tint laws apply</li>
+<li>Set up a tint workstation with proper lighting and contamination control</li>
+<li>Perform a complete glass prep sequence on automotive glass</li>
+<li>Cut, position, and squeegee film on flat practice glass with minimal defects</li>
+</ol>
+<hr>
+<h2>Day 1 Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Session</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8:00 – 8:30</td>
+<td>Welcome, introductions, course overview</td>
+</tr>
+<tr>
+<td>8:30 – 9:30</td>
+<td><strong>Classroom:</strong> Window film types &amp; performance</td>
+</tr>
+<tr>
+<td>9:30 – 10:00</td>
+<td><strong>Classroom:</strong> Tint laws &amp; customer consultation basics</td>
+</tr>
+<tr>
+<td>10:00 – 10:15</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:15 – 11:15</td>
+<td><strong>Classroom:</strong> Tools, chemicals, workspace setup</td>
+</tr>
+<tr>
+<td>11:15 – 12:00</td>
+<td><strong>Classroom:</strong> Safety — heat, blades, chemicals, electrical (defrosters)</td>
+</tr>
+<tr>
+<td>12:00 – 1:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>1:00 – 1:30</td>
+<td><strong>Demo:</strong> Glass prep and contamination inspection</td>
+</tr>
+<tr>
+<td>1:30 – 3:00</td>
+<td><strong>Lab 1:</strong> Flat glass cut, wet-out, and squeegee technique</td>
+</tr>
+<tr>
+<td>3:00 – 3:15</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>3:15 – 4:30</td>
+<td><strong>Lab 2:</strong> Pattern cutting from roll — inside vs outside cut</td>
+</tr>
+<tr>
+<td>4:30 – 5:00</td>
+<td>Day 1 knowledge check &amp; Q&amp;A</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Session 1: Window Film Types &amp; Performance</h2>
+<h3>How Window Film Works</h3>
+<p>Automotive window film is a multi-layer laminate applied to the interior surface of glass. Key layers include:</p>
+<ul>
+<li><strong>Scratch-resistant hard coat</strong> — protects the film surface from abrasion</li>
+<li><strong>Tinted or coated layer</strong> — provides UV rejection, heat rejection, and visible light reduction</li>
+<li><strong>Adhesive layer</strong> — bonds film to glass (pressure-sensitive or water-activated depending on product)</li>
+<li><strong>Release liner</strong> — protects adhesive until installation</li>
+</ul>
+<h3>Common Film Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Construction</th>
+<th>Heat Rejection</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Dyed</strong></td>
+<td>Dyed layer in polyester</td>
+<td>Moderate</td>
+<td>Economical; can fade over time in harsh sun</td>
+</tr>
+<tr>
+<td><strong>Metalized</strong></td>
+<td>Metal particles in film</td>
+<td>Good</td>
+<td>Can interfere with radio/GPS/cell signals</td>
+</tr>
+<tr>
+<td><strong>Hybrid</strong></td>
+<td>Dyed + metalized</td>
+<td>Good</td>
+<td>Balance of performance and cost</td>
+</tr>
+<tr>
+<td><strong>Carbon</strong></td>
+<td>Carbon particles</td>
+<td>Very good</td>
+<td>No signal interference; good color stability</td>
+</tr>
+<tr>
+<td><strong>Ceramic</strong></td>
+<td>Ceramic nano-particles</td>
+<td>Excellent</td>
+<td>Premium tier; best heat rejection, no signal issues</td>
+</tr>
+</tbody></table>
+<div class="callout tip">
+
+<p><strong>Installer tip:</strong> Learn to explain film tiers in customer language: &quot;This film blocks 99% of UV rays&quot; is more meaningful to most customers than quoting IR rejection percentages.</p>
+</div>
+
+<h3>Key Performance Metrics</h3>
+<ul>
+<li><strong>VLT (Visible Light Transmission)</strong> — percentage of visible light passing through the film + glass assembly. Lower VLT = darker appearance.</li>
+<li><strong>UV rejection</strong> — quality automotive films block 99%+ of UV rays regardless of VLT.</li>
+<li><strong>TSER (Total Solar Energy Rejected)</strong> — overall heat rejection; important for upselling ceramic.</li>
+<li><strong>IRR (Infrared Rejection)</strong> — measures rejection of infrared heat; ceramic films excel here.</li>
+</ul>
+<hr>
+<h2>Session 2: Tint Laws &amp; Customer Consultation</h2>
+<h3>Understanding VLT Limits</h3>
+<p>Every state (and many municipalities) regulates how dark window tint can be on each window position. Limits are expressed as minimum VLT — the percentage of light that must pass through.</p>
+<p><strong>Typical window positions regulated:</strong></p>
+<ul>
+<li>Front driver &amp; passenger (side)</li>
+<li>Front windshield (often only brow/visor strip allowed)</li>
+<li>Rear side windows</li>
+<li>Rear window (back glass)</li>
+</ul>
+<div class="callout warning">
+
+<p><strong>Critical:</strong> Film VLT ratings are measured on the film alone. Installed VLT on glass is affected by the glass itself. Always consult current state law and your film manufacturer&#39;s installed VLT data before advising customers.</p>
+</div>
+
+<h3>Customer Consultation Basics</h3>
+<p>Before any install, confirm:</p>
+<ol>
+<li><strong>Legal limits</strong> for their state and which windows they want tinted</li>
+<li><strong>Film tier</strong> — dyed, carbon, ceramic — and explain the performance difference</li>
+<li><strong>Warranty</strong> — film warranty vs. your shop&#39;s workmanship warranty</li>
+<li><strong>Cure time</strong> — windows stay up 24–72 hours depending on film and weather</li>
+<li><strong>Existing tint</strong> — old film must be removed before new install (additional charge)</li>
+</ol>
+<p><strong>Document everything.</strong> A signed work order with film type, VLT, windows to be tinted, and price prevents disputes.</p>
+<hr>
+<h2>Session 3: Tools, Chemicals &amp; Workspace</h2>
+<h3>Essential Tint Tools</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Film cutting knife</strong></td>
+<td>Trim film edges, pattern cutting</td>
+</tr>
+<tr>
+<td><strong>Hard card / squeegee set</strong></td>
+<td>Wet-out and remove slip solution</td>
+</tr>
+<tr>
+<td><strong>Soft squeegee (felt or low-friction)</strong></td>
+<td>Final passes on film surface</td>
+</tr>
+<tr>
+<td><strong>Heat gun</strong></td>
+<td>Shrink film on curved glass</td>
+</tr>
+<tr>
+<td><strong>Spray bottles</strong></td>
+<td>Slip solution and rinse</td>
+</tr>
+<tr>
+<td><strong>Scrub pad / steel wool (#0000)</strong></td>
+<td>Glass prep (product-specific)</td>
+</tr>
+<tr>
+<td><strong>Tint-safe blade holder</strong></td>
+<td>Clean edges on glass (use with care)</td>
+</tr>
+<tr>
+<td><strong>Heat gun holster / stand</strong></td>
+<td>Keep heat gun accessible but safe</td>
+</tr>
+<tr>
+<td><strong>Film plotter</strong> (shop)</td>
+<td>Computer-cut patterns — introduced Day 3</td>
+</tr>
+</tbody></table>
+<h3>Slip Solution Recipe (General)</h3>
+<p>Most shops use a mild soap-and-water mix:</p>
+<ul>
+<li>1 quart distilled water</li>
+<li>2–4 drops mild soap or your film supplier&#39;s recommended slip agent</li>
+</ul>
+<p><strong>Too much soap</strong> = film slides excessively and won&#39;t grab. <strong>Too little</strong> = film sticks before positioned.</p>
+<h3>Workspace Requirements</h3>
+<ul>
+<li><strong>Clean floor</strong> — lint and dust are the enemy</li>
+<li><strong>Good lighting</strong> — LED shop lights at the glass surface reveal contamination instantly</li>
+<li><strong>Climate control</strong> — ideal install temp 50–90°F; avoid dusty or windy conditions with doors open</li>
+<li><strong>Organized film storage</strong> — rolls upright, climate-controlled, away from dust</li>
+</ul>
+<hr>
+<h2>Session 4: Safety</h2>
+<div class="callout warning">
+
+<p><strong>Non-negotiable safety rules for every install:</strong></p>
+<ol>
+<li>Heat guns reach 1,000°F+ — never point at skin, wiring, or interior trim</li>
+<li>Razor blades cut glass AND skin — always cut away from your body</li>
+<li>Ammonia-based cleaners can damage film adhesive and interior surfaces</li>
+<li>Defroster lines are fragile — excessive blade pressure or heat can break them</li>
+<li>Wear eye protection when using heat guns near shrinking film</li>
+</ol>
+</div>
+
+<h3>Chemical Safety</h3>
+<ul>
+<li>Know your SDS (Safety Data Sheet) for all cleaning products</li>
+<li>Ventilate the workspace when using strong degreasers</li>
+<li>Never mix chemicals unless the manufacturer specifies it</li>
+</ul>
+<hr>
+<h2>Lab 1: Glass Prep &amp; Flat Glass Install</h2>
+<div class="lab">
+
+<h3>Lab 1 — Flat Glass Prep &amp; Install</h3>
+<p><strong>Objective:</strong> Prepare a flat practice glass panel and install a piece of window film with clean edges and minimal contamination.</p>
+<p><strong>Time:</strong> 90 minutes</p>
+<h4>Part A — Glass Prep (20 min)</h4>
+<ol>
+<li>Inspect glass under shop lighting for existing contamination, adhesive residue, or defects</li>
+<li>Spray with slip solution and scrub with tint-safe pad</li>
+<li>Squeegee dry completely — water trapped under film causes bubbles</li>
+<li>Final pass with lint-free cloth; inspect for remaining particles</li>
+<li><strong>Checkpoint:</strong> Glass should be squeaky-clean. Run your fingernail along the surface — if you feel grit, re-prep.</li>
+</ol>
+<h4>Part B — Cut &amp; Position (25 min)</h4>
+<ol>
+<li>Unroll film on the <strong>outside</strong> of the glass (liner facing you)</li>
+<li>Cut film roughly 1&quot; larger than glass on all sides</li>
+<li>Peel liner partially; spray adhesive side with slip solution</li>
+<li>Spray glass interior with slip solution</li>
+<li>Position film on interior glass; align edges with slight overhang</li>
+<li><strong>Checkpoint:</strong> Film should slide freely for positioning</li>
+</ol>
+<h4>Part C — Wet-Out &amp; Squeegee (35 min)</h4>
+<ol>
+<li>Starting from the center, squeegee outward in firm, overlapping strokes</li>
+<li>Push solution and air to the edges — do not trap air in the center</li>
+<li>Tack down edges; trim excess with fresh blade using glass as guide</li>
+<li>Final light pass with soft squeegee</li>
+<li><strong>Checkpoint:</strong> No visible bubbles larger than a pinhead; edges fully adhered</li>
+</ol>
+<h4>Part D — Self-Assessment</h4>
+<p>Rate your install (1–5): Edge cleanliness ___ | Bubble count ___ | Contamination ___</p>
+</div>
+
+<hr>
+<h2>Lab 2: Pattern Cutting from Roll</h2>
+<div class="lab">
+
+<h3>Lab 2 — Roll Pattern Cutting</h3>
+<p><strong>Objective:</strong> Cut a pattern for a door glass using the outside-cut method.</p>
+<p><strong>Time:</strong> 60 minutes</p>
+<h4>Outside Cut Method</h4>
+<ol>
+<li>Place film on exterior glass with liner out</li>
+<li>Trim excess to manageable size</li>
+<li>Cut to glass shape using the glass edge as your guide</li>
+<li>Peel liner, wet adhesive, transfer to interior</li>
+<li>Wet-out and finish</li>
+</ol>
+<h4>Inside Cut Method (preview)</h4>
+<ol>
+<li>Place film inside glass, liner out</li>
+<li>Cut to fit from interior — more precise but tighter workspace</li>
+<li>Used commonly on rear windows and final trims</li>
+</ol>
+<p><strong>Practice both methods</strong> on your door glass assignment during Day 2.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>Day 1 Knowledge Check</h2>
+<div class="knowledge-check">
+
+<ol>
+<li>What does VLT stand for, and how does a lower VLT number affect appearance?</li>
+<li>Name three differences between dyed film and ceramic film.</li>
+<li>Why is distilled water preferred for slip solution?</li>
+<li>What are three signs that glass is not clean enough for film application?</li>
+<li>Why do we cut patterns on the outside of the glass but install on the inside?</li>
+<li>What safety precautions apply when using a heat gun?</li>
+</ol>
+</div>
+
+<h2>Day 1 Notes</h2>
+<div class="notes-page">
+<h2>Day 1 — My Notes</h2>
+<div class="notes-lines"></div>
+</div>
+
+<div class="page-break"></div>
+
+<h1>Day 2 — Technique Development</h1>
+<h2>Day 2 Learning Objectives</h2>
+<p>By the end of Day 2, you will be able to:</p>
+<ol>
+<li>Explain the heat-shrink process and when it is required</li>
+<li>Shrink film on a curved practice panel using a heat gun</li>
+<li>Remove and reinstall a door glass (or work through door access method)</li>
+<li>Install film on a curved quarter window with clean edges</li>
+<li>Identify and correct common defects: fingers, bubbles, contamination, creases</li>
+</ol>
+<hr>
+<h2>Day 2 Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Session</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8:00 – 8:30</td>
+<td>Day 1 review &amp; Q&amp;A</td>
+</tr>
+<tr>
+<td>8:30 – 9:45</td>
+<td><strong>Classroom:</strong> Heat shrinking theory &amp; technique</td>
+</tr>
+<tr>
+<td>9:45 – 10:30</td>
+<td><strong>Demo:</strong> Shrinking on curved glass</td>
+</tr>
+<tr>
+<td>10:30 – 10:45</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:45 – 11:45</td>
+<td><strong>Classroom:</strong> Door glass — removal, access, defroster lines</td>
+</tr>
+<tr>
+<td>11:45 – 12:00</td>
+<td><strong>Classroom:</strong> Troubleshooting common defects</td>
+</tr>
+<tr>
+<td>12:00 – 1:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>1:00 – 2:30</td>
+<td><strong>Lab 3:</strong> Curved panel shrink &amp; install</td>
+</tr>
+<tr>
+<td>2:30 – 2:45</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>2:45 – 4:30</td>
+<td><strong>Lab 4:</strong> Door glass tint install (supervised)</td>
+</tr>
+<tr>
+<td>4:30 – 5:00</td>
+<td>Day 2 knowledge check &amp; Q&amp;A</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Session 5: Heat Shrinking Theory</h2>
+<h3>Why Shrink?</h3>
+<p>Flat film does not naturally conform to compound curves (bowed rear windows, curved door glass). <strong>Shrinking</strong> uses heat to relax the polyester film so it contracts and conforms to the curve without fingers (lifted areas that won&#39;t adhere).</p>
+<h3>The Shrink Process</h3>
+<ol>
+<li>Place film on the <strong>outside</strong> of the curved glass (liner out)</li>
+<li>Identify low points and fingers that need shrinkage</li>
+<li>Apply heat in sweeping motions — never hold stationary</li>
+<li>Film will wrinkle, then tighten — stop before overheating</li>
+<li>Smooth with gloved hand or squeegee; repeat until film lays flat</li>
+<li>Cut pattern, then transfer to interior for install</li>
+</ol>
+<div class="callout warning">
+
+<p><strong>Overheating causes:</strong> film discoloration, adhesive failure, and visible distortion. If you see rainbow haziness, you&#39;ve gone too far. Start over with fresh film.</p>
+</div>
+
+<h3>Heat Gun Technique</h3>
+<ul>
+<li>Keep nozzle 4–6 inches from film surface</li>
+<li>Use continuous sweeping motion</li>
+<li>Shrink from the center of fingers toward edges</li>
+<li>Let film cool before cutting — shrinking continues slightly as it cools</li>
+</ul>
+<hr>
+<h2>Session 6: Door Glass &amp; Defroster Lines</h2>
+<h3>Door Glass Access Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>When to Use</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Drop glass</strong></td>
+<td>Most modern vehicles</td>
+<td>Lower glass 2–3&quot; for bottom edge access</td>
+</tr>
+<tr>
+<td><strong>Panel removal</strong></td>
+<td>Tight seals, some trucks/SUVs</td>
+<td>Remove door panel; protect clips and wiring</td>
+</tr>
+<tr>
+<td><strong>Full glass removal</strong></td>
+<td>Deep tint, problem installs</td>
+<td>Requires urethane/seal knowledge — advanced</td>
+</tr>
+</tbody></table>
+<h3>Working Around Defroster Lines</h3>
+<p>Rear windows and some side glass have defroster lines (conductive ceramic frit lines):</p>
+<ul>
+<li><strong>Never scrape across lines</strong> with a blade</li>
+<li>Squeegee <strong>parallel</strong> to lines, not across them</li>
+<li>Use a soft squeegee with light pressure over lines</li>
+<li>Heat shrinking over lines requires extra care — lines are raised</li>
+</ul>
+<hr>
+<h2>Session 7: Troubleshooting Common Defects</h2>
+<table>
+<thead>
+<tr>
+<th>Defect</th>
+<th>Likely Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Finger</strong></td>
+<td>Insufficient shrink on curve</td>
+<td>Remove film; re-shrink or start fresh</td>
+</tr>
+<tr>
+<td><strong>Bubble</strong></td>
+<td>Trapped air/solution</td>
+<td>Small: pin and squeegee; large: remove and redo</td>
+</tr>
+<tr>
+<td><strong>Contamination</strong></td>
+<td>Dirty glass or dusty environment</td>
+<td>Remove film, re-prep glass, reinstall</td>
+</tr>
+<tr>
+<td><strong>Crease</strong></td>
+<td>Film folded during handling</td>
+<td>Cannot fix — replace film</td>
+</tr>
+<tr>
+<td><strong>Dust speck</strong></td>
+<td>Airborne particle during install</td>
+<td>Pin if tiny; redo if visible</td>
+</tr>
+<tr>
+<td><strong>Edge lift</strong></td>
+<td>Incomplete squeegee at edge</td>
+<td>Re-squeegee; heat lightly if needed</td>
+</tr>
+</tbody></table>
+<div class="callout tip">
+
+<p><strong>The 24-hour rule:</strong> Minor haziness from moisture in the slip solution often clears within 24–48 hours as the adhesive cures. Don&#39;t panic-rework a good install too soon.</p>
+</div>
+
+<hr>
+<h2>Lab 3: Curved Panel Shrink &amp; Install</h2>
+<div class="lab">
+
+<h3>Lab 3 — Curved Glass Install</h3>
+<p><strong>Objective:</strong> Shrink and install film on a curved practice panel or quarter window.</p>
+<p><strong>Time:</strong> 90 minutes</p>
+<ol>
+<li>Place film on exterior curved glass; identify fingers</li>
+<li>Shrink each finger until film lays flat with no tension</li>
+<li>Allow to cool; cut pattern with 1/16&quot; margin</li>
+<li>Transfer to interior; wet-out from center outward</li>
+<li>Pay attention to edges — light heat may be needed for final tack</li>
+<li><strong>Checkpoint:</strong> No fingers remaining; edges fully adhered; no creases</li>
+</ol>
+<p><strong>Instructor sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<hr>
+<h2>Lab 4: Door Glass Install</h2>
+<div class="lab">
+
+<h3>Lab 4 — Door Glass Tint Install</h3>
+<p><strong>Objective:</strong> Complete a supervised door glass tint from pattern cut to finished install.</p>
+<p><strong>Time:</strong> 105 minutes</p>
+<ol>
+<li>Prep interior glass with full drop or panel access</li>
+<li>Cut pattern (outside method)</li>
+<li>Install, wet-out, and trim</li>
+<li>Inspect under shop lights at multiple angles</li>
+<li>Document any defects and corrections made</li>
+</ol>
+<p><strong>Vehicle assigned:</strong> _______________________</p>
+<p><strong>Film used:</strong> ____________________________</p>
+<p><strong>Instructor sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>Day 2 Knowledge Check</h2>
+<div class="knowledge-check">
+
+<ol>
+<li>Why is film shrunk on the outside of the glass before interior installation?</li>
+<li>Describe the correct heat gun motion during shrinking.</li>
+<li>What happens if you overheat film during shrinking?</li>
+<li>How should you squeegee across defroster lines?</li>
+<li>What is the difference between a &quot;finger&quot; and a bubble?</li>
+<li>When might you choose to remove a door panel for access?</li>
+</ol>
+</div>
+
+<h2>Day 2 Notes</h2>
+<div class="notes-page">
+<h2>Day 2 — My Notes</h2>
+<div class="notes-lines"></div>
+</div>
+
+<div class="page-break"></div>
+
+<h1>Day 3 — Professional Practice</h1>
+<h2>Day 3 Learning Objectives</h2>
+<p>By the end of Day 3, you will be able to:</p>
+<ol>
+<li>Shrink and install film on a rear window (back glass)</li>
+<li>Complete a supervised full-vehicle tint to shop quality standards</li>
+<li>Perform a quality control inspection using a standardized checklist</li>
+<li>Explain cure time, aftercare, and warranty to a customer</li>
+<li>Outline basic pricing structure for tint services</li>
+</ol>
+<hr>
+<h2>Day 3 Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Session</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8:00 – 8:30</td>
+<td>Day 2 review &amp; Q&amp;A</td>
+</tr>
+<tr>
+<td>8:30 – 9:30</td>
+<td><strong>Classroom:</strong> Rear window strategy &amp; windshield brow</td>
+</tr>
+<tr>
+<td>9:30 – 10:00</td>
+<td><strong>Demo:</strong> Rear window shrink overview</td>
+</tr>
+<tr>
+<td>10:00 – 10:15</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:15 – 11:00</td>
+<td><strong>Classroom:</strong> QC inspection &amp; rework decisions</td>
+</tr>
+<tr>
+<td>11:00 – 12:00</td>
+<td><strong>Lab 5:</strong> Rear window install (paired or solo)</td>
+</tr>
+<tr>
+<td>12:00 – 1:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>1:00 – 1:45</td>
+<td><strong>Classroom:</strong> Pricing, upselling, and business basics</td>
+</tr>
+<tr>
+<td>1:45 – 4:00</td>
+<td><strong>Lab 6:</strong> Full vehicle tint — supervised capstone install</td>
+</tr>
+<tr>
+<td>4:00 – 4:30</td>
+<td>Final knowledge check</td>
+</tr>
+<tr>
+<td>4:30 – 5:00</td>
+<td>Course wrap-up, certificates, feedback</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Session 8: Rear Window Strategy</h2>
+<p>The rear window is the most challenging automotive glass install because of its compound curve. Strategy:</p>
+<ol>
+<li><strong>Choose the right film</strong> — some films shrink easier than others; ask your film rep</li>
+<li><strong>One-piece vs. seamed</strong> — one-piece looks best; seams are a last resort on extreme curves</li>
+<li><strong>Shrink in stages</strong> — tackle the deepest curve areas first</li>
+<li><strong>Use plenty of slip</strong> on interior install — rear windows have tight access</li>
+<li><strong>H-pattern shrink</strong> — common technique for deep bowl rear windows (instructor demo)</li>
+</ol>
+<h3>Windshield Brow (Visor Strip)</h3>
+<p>Where legal, a brow strip on the windshield top is a common add-on:</p>
+<ul>
+<li>Typical depth: 4–6 inches below the shade band</li>
+<li>Cut from flat film; no shrink usually required</li>
+<li>Align with rearview mirror sight line — confirm with customer seated in vehicle</li>
+</ul>
+<hr>
+<h2>Session 9: Quality Control Inspection</h2>
+<h3>QC Checklist — Every Install</h3>
+<ul class="checklist">
+<li>Glass prepped — no visible contamination under film</li>
+<li>Film positioned correctly — no gaps at edges</li>
+<li>Edges cleanly trimmed — no ragged cuts</li>
+<li>No fingers on curved areas</li>
+<li>No bubbles larger than pinhead (customer-visible)</li>
+<li>Defroster lines intact — none broken or scraped</li>
+<li>Interior trim and panels reinstalled without damage</li>
+<li>Customer paperwork completed with film type and VLT documented</li>
+</ul>
+
+<h3>Rework Decision Tree</h3>
+<ul>
+<li><strong>Cosmetic defect visible from 3 feet</strong> → rework before delivery</li>
+<li><strong>Edge dust speck, customer won&#39;t see</strong> → document and deliver with care instructions</li>
+<li><strong>Functional issue (edge lift, finger in sight line)</strong> → always rework</li>
+</ul>
+<hr>
+<h2>Session 10: Pricing &amp; Business Basics</h2>
+<h3>Common Pricing Models</h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Per window</strong></td>
+<td>Price each position separately</td>
+</tr>
+<tr>
+<td><strong>Package</strong></td>
+<td>2-front, 4-side, 5-window, 7-window packages</td>
+</tr>
+<tr>
+<td><strong>Film tier upsell</strong></td>
+<td>Base price for dyed; +$ for carbon; +$$ for ceramic</td>
+</tr>
+</tbody></table>
+<h3>What to Include in Your Price</h3>
+<ul>
+<li>Film cost (waste factor ~10–15%)</li>
+<li>Labor time (your hourly rate × estimated hours)</li>
+<li>Overhead (rent, utilities, insurance, tools)</li>
+<li>Profit margin (target 40–60% gross on labor)</li>
+</ul>
+<h3>Aftercare Instructions (Give Every Customer)</h3>
+<ol>
+<li>Keep windows up for <strong>48–72 hours</strong> (follow film manufacturer spec)</li>
+<li>Clean with ammonia-free cleaner and soft cloth only</li>
+<li>Avoid abrasive pads on tinted windows</li>
+<li>Small water bubbles are normal during cure — they will dissipate</li>
+<li>Contact shop if edge lift occurs within workmanship warranty period</li>
+</ol>
+<hr>
+<h2>Lab 5: Rear Window Install</h2>
+<div class="lab">
+
+<h3>Lab 5 — Rear Window Install</h3>
+<p><strong>Objective:</strong> Shrink and install film on a rear window to shop quality standards.</p>
+<p><strong>Time:</strong> 60 minutes (instructor may extend as needed)</p>
+<p><strong>Vehicle assigned:</strong> _______________________</p>
+<p><strong>Shrink technique used:</strong> __________________</p>
+<p><strong>Instructor sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<hr>
+<h2>Lab 6: Full Vehicle Capstone Install</h2>
+<div class="lab">
+
+<h3>Lab 6 — Full Vehicle Tint (Capstone)</h3>
+<p><strong>Objective:</strong> Complete a full-vehicle tint under instructor supervision, meeting all QC checklist items.</p>
+<p><strong>Time:</strong> 135 minutes</p>
+<p><strong>Vehicle assigned:</strong> _______________________</p>
+<p><strong>Windows tinted:</strong> ☐ Front sides  ☐ Rear sides  ☐ Rear window  ☐ Brow</p>
+<p><strong>Film type &amp; VLT:</strong> ________________________</p>
+<p><strong>QC checklist completed:</strong> ☐ Yes</p>
+<p><strong>Instructor final sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>Final Knowledge Check</h2>
+<div class="knowledge-check">
+
+<ol>
+<li>Why is the rear window considered the most difficult automotive tint install?</li>
+<li>List five items on the QC checklist.</li>
+<li>How long should a customer keep windows up after install?</li>
+<li>What cleaner should customers avoid on tinted windows?</li>
+<li>Name three components of a tint pricing structure.</li>
+<li>When is a rework required vs. acceptable to deliver?</li>
+</ol>
+</div>
+
+<hr>
+<h2>Course Completion Record</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Completed</th>
+<th>Instructor Initials</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Day 1 Labs 1–2</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Day 2 Labs 3–4</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Day 3 Labs 5–6</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>All knowledge checks</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Final capstone install (Pass)</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+</tbody></table>
+<p><strong>Certificate of Completion issued:</strong> ☐ Yes — Date: __________</p>
+<p><strong>Instructor signature:</strong> ___________________________</p>
+<hr>
+<h2>Resources &amp; Quick Reference</h2>
+<h3>Slip Solution Quick Mix</h3>
+<p>1 quart distilled water + 2–4 drops mild soap</p>
+<h3>Squeegee Direction</h3>
+<p>Center outward → edges. Defroster lines: parallel strokes.</p>
+<h3>Cure Time</h3>
+<p>48–72 hours windows up; full adhesive cure up to 30 days</p>
+<h3>Film Storage</h3>
+<p>Cool, dry, upright; avoid direct sunlight on rolls</p>
+<div class="notes-page">
+<h2>Day 3 — My Notes</h2>
+<div class="notes-lines"></div>
+</div>
+
+  <p class="footer-note">© Velox Wrap Co · Skill Forge Training · For enrolled students only. Reproduction prohibited without written permission.</p>
+</body>
+</html>

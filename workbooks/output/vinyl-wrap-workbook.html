@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Forge — Vinyl Wrap Installation</title>
+  <style>/* Skill Forge Workbooks — Print Stylesheet */
+
+@page {
+  size: letter;
+  margin: 0.75in 0.85in;
+}
+
+@page :first {
+  margin-top: 0.5in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  color: #1a1a1a;
+  max-width: 7.5in;
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  color: #0d1b2a;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 22pt;
+  border-bottom: 3px solid #1b4965;
+  padding-bottom: 0.2em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 15pt;
+  margin-top: 1.4em;
+  border-bottom: 1px solid #bee9e8;
+  padding-bottom: 0.15em;
+}
+
+h3 {
+  font-size: 12pt;
+  margin-top: 1em;
+  color: #1b4965;
+}
+
+h4 {
+  font-size: 10.5pt;
+  margin-top: 0.8em;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+ul, ol {
+  margin: 0.4em 0;
+  padding-left: 1.4em;
+}
+
+li {
+  margin: 0.2em 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8em 0;
+  font-size: 9.5pt;
+  page-break-inside: avoid;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.35em 0.5em;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #e8f4f8;
+  font-weight: 600;
+}
+
+.cover {
+  text-align: center;
+  padding: 2in 0 1in;
+  page-break-after: always;
+}
+
+.cover .brand {
+  font-size: 11pt;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1b4965;
+  margin-bottom: 0.5in;
+}
+
+.cover h1 {
+  font-size: 28pt;
+  border: none;
+  margin: 0.3in 0;
+}
+
+.cover .subtitle {
+  font-size: 14pt;
+  color: #555;
+  margin: 0.2in 0;
+}
+
+.cover .meta {
+  margin-top: 1in;
+  font-size: 11pt;
+  color: #666;
+}
+
+.cover .student-fields {
+  margin-top: 1.5in;
+  text-align: left;
+  max-width: 4in;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cover .student-fields p {
+  border-bottom: 1px solid #999;
+  padding-bottom: 0.2em;
+  margin: 0.8em 0;
+}
+
+.page-break {
+  page-break-before: always;
+}
+
+.no-break {
+  page-break-inside: avoid;
+}
+
+.callout {
+  background: #f0f7fa;
+  border-left: 4px solid #1b4965;
+  padding: 0.6em 0.8em;
+  margin: 0.8em 0;
+  page-break-inside: avoid;
+}
+
+.callout.warning {
+  background: #fff8e6;
+  border-left-color: #e6a817;
+}
+
+.callout.tip {
+  background: #eef9ee;
+  border-left-color: #2d6a4f;
+}
+
+.lab {
+  border: 2px solid #1b4965;
+  border-radius: 4px;
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  page-break-inside: avoid;
+}
+
+.lab h3 {
+  margin-top: 0;
+  color: #1b4965;
+}
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li::before {
+  content: "☐ ";
+  font-size: 12pt;
+}
+
+.knowledge-check {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  page-break-inside: avoid;
+}
+
+.knowledge-check ol {
+  margin: 0;
+}
+
+.notes-page {
+  border: 1px dashed #ccc;
+  min-height: 8in;
+  padding: 0.5in;
+  page-break-before: always;
+}
+
+.notes-page h2 {
+  border: none;
+  color: #999;
+  font-size: 12pt;
+}
+
+.notes-lines {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 23px,
+    #e0e0e0 23px,
+    #e0e0e0 24px
+  );
+  min-height: 7in;
+  margin-top: 0.5in;
+}
+
+.schedule-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+  width: 22%;
+}
+
+.footer-note {
+  font-size: 8.5pt;
+  color: #888;
+  margin-top: 2em;
+  border-top: 1px solid #ddd;
+  padding-top: 0.5em;
+}
+
+@media print {
+  body {
+    font-size: 10pt;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
+
+@media screen {
+  body {
+    padding: 1in;
+    background: #f5f5f5;
+  }
+
+  .cover, .page-break {
+    background: white;
+    padding: 1in;
+    margin-bottom: 1em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+}
+</style>
+</head>
+<body>
+  <div class="cover">
+    <div class="brand">Skill Forge · Velox Wrap Co</div>
+    <h1>Vinyl Wrap Installation</h1>
+    <p class="subtitle">Core Course — 3-Day Beginner Program</p>
+    <p class="meta">Student Workbook · Version 1.0</p>
+    <div class="student-fields">
+      <p>Student Name: _________________________________</p>
+      <p>Class Date: ___________________________________</p>
+      <p>Instructor: ___________________________________</p>
+      <p>Location: ____________________________________</p>
+    </div>
+  </div>
+  <h1>Automotive Vinyl Wrap — Student Workbook</h1>
+<p><strong>Skill Forge Core Course · 3-Day Beginner Program</strong></p>
+<hr>
+<h2>Welcome</h2>
+<p>Welcome to the Skill Forge Automotive Vinyl Wrap Core Course. Over three intensive days you will learn the foundational skills to install cast vinyl film on automotive surfaces — from surface preparation and your first flat-panel install to completing a supervised multi-panel color-change package under instructor supervision.</p>
+<p>Vinyl wrap is one of the highest-demand services in automotive restyling. This course gives you hands-on practice and quality standards to start offering wrap services with confidence.</p>
+<div class="callout">
+
+<p><strong>What &quot;Core&quot; means:</strong> This course is designed for beginners with little or no wrap experience. Window tint or PPF experience helps but is not required. By Day 3 you will have completed multiple panel installs and a supervised multi-panel capstone project. Advanced techniques (full vehicle color changes, chrome delete, commercial fleet branding, complex inlays) are covered in our Advanced courses.</p>
+</div>
+
+<hr>
+<h2>Pre-Course Checklist</h2>
+<div class="no-break">
+
+<h3>Before You Arrive</h3>
+<ul class="checklist">
+<li>Wear closed-toe shoes and shop-appropriate clothing all three days</li>
+<li>Bring safety glasses (loaners available)</li>
+<li>Remove rings, watches, and bracelets that can scratch paint or film</li>
+<li>Trim fingernails — you will handle adhesive film constantly</li>
+<li>If you have tint or PPF experience, bring one question you want answered about wrap differences</li>
+</ul>
+
+<h3>Provided Each Day</h3>
+<ul>
+<li>Practice panels and vehicle access for supervised installs</li>
+<li>Cast vinyl film (practice and project material)</li>
+<li>Tools: squeegees, heat gun, knifeless tape, blades, tape measure, application fluid, tack cloths, prep chemicals</li>
+<li>Lunch and refreshments</li>
+</ul>
+</div>
+
+<hr>
+<h2>Course Schedule Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Theme</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Day 1</strong></td>
+<td>Foundations</td>
+<td>Film science, cast vs calendered, tools, prep, flat panels</td>
+</tr>
+<tr>
+<td><strong>Day 2</strong></td>
+<td>Technique</td>
+<td>Stretching, post-heating, curves, hood/door panels, bumpers, mirrors</td>
+</tr>
+<tr>
+<td><strong>Day 3</strong></td>
+<td>Professional Practice</td>
+<td>Inlays, door jambs, knifeless tape, QC, business basics, assessment</td>
+</tr>
+</tbody></table>
+<div class="page-break"></div>
+
+<h1>Day 1 — Foundations</h1>
+<h2>Day 1 Learning Objectives</h2>
+<p>By the end of Day 1, you will be able to:</p>
+<ol>
+<li>Distinguish cast vs. calendered vinyl and explain when each is appropriate</li>
+<li>Assess paint condition and determine if correction is needed before wrap install</li>
+<li>Set up a wrap workstation with contamination control</li>
+<li>Perform a complete paint decontamination and prep sequence</li>
+<li>Install cast vinyl on a flat practice panel with clean edges and no lift</li>
+</ol>
+<hr>
+<h2>Day 1 Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Session</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8:00 – 8:30</td>
+<td>Welcome, introductions, course overview</td>
+</tr>
+<tr>
+<td>8:30 – 9:30</td>
+<td><strong>Classroom:</strong> Vinyl film types — cast vs calendered &amp; construction</td>
+</tr>
+<tr>
+<td>9:30 – 10:15</td>
+<td><strong>Classroom:</strong> Paint assessment &amp; correction basics</td>
+</tr>
+<tr>
+<td>10:15 – 10:30</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:30 – 11:30</td>
+<td><strong>Classroom:</strong> Tools, application fluid, workspace setup</td>
+</tr>
+<tr>
+<td>11:30 – 12:00</td>
+<td><strong>Classroom:</strong> Safety — blades, chemicals, heat, paint damage</td>
+</tr>
+<tr>
+<td>12:00 – 1:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>1:00 – 1:45</td>
+<td><strong>Demo:</strong> Full decon and prep sequence on door section</td>
+</tr>
+<tr>
+<td>1:45 – 3:15</td>
+<td><strong>Lab 1:</strong> Flat panel install — door section</td>
+</tr>
+<tr>
+<td>3:15 – 3:30</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>3:30 – 4:45</td>
+<td><strong>Lab 2:</strong> Edge work — wrap, tuck, and trim on practice panel</td>
+</tr>
+<tr>
+<td>4:45 – 5:00</td>
+<td>Day 1 knowledge check &amp; Q&amp;A</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Session 1: Vinyl Film Types &amp; Construction</h2>
+<h3>What Is Automotive Wrap Film?</h3>
+<p>Automotive wrap film is a conformable vinyl laminate applied to painted surfaces for color change, accent styling, or brand graphics. Unlike PPF, wrap film is designed primarily for aesthetics — though quality cast films also provide UV and minor abrasion protection.</p>
+<h3>Film Construction</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Face film / top coat</strong></td>
+<td>Color, gloss, or texture; UV and scratch resistance</td>
+</tr>
+<tr>
+<td><strong>Vinyl body</strong></td>
+<td>Conformability, opacity, dimensional stability</td>
+</tr>
+<tr>
+<td><strong>Adhesive</strong></td>
+<td>Pressure-sensitive; designed for clean removal within rated lifespan</td>
+</tr>
+<tr>
+<td><strong>Release liner</strong></td>
+<td>Protects adhesive until install</td>
+</tr>
+</tbody></table>
+<h3>Cast vs. Calendered Vinyl</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Manufacturing</th>
+<th>Characteristics</th>
+<th>Best Use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Cast vinyl</strong></td>
+<td>Liquid resin poured on casting sheet; cured</td>
+<td>Thin, stable, conforms to complex curves, minimal shrink</td>
+<td>Full vehicle wraps, hoods, bumpers, long-term installs</td>
+</tr>
+<tr>
+<td><strong>Calendered vinyl</strong></td>
+<td>Heated PVC rolled through calender rollers</td>
+<td>Thicker, less conformable, shrinks over time</td>
+<td>Flat signage, fleet graphics on box trucks, short-term promos</td>
+</tr>
+</tbody></table>
+<div class="callout tip">
+
+<p><strong>Installer tip:</strong> Always use <strong>cast vinyl</strong> for automotive body panels. Calendered film on compound curves will shrink, lift, and fail within months. If a customer brings their own material, verify it is automotive-grade cast before accepting the job.</p>
+</div>
+
+<h3>Common Finishes</h3>
+<p>Gloss, satin/matte, metallic/pearl, color-shift specialty, and textured (carbon fiber look) films are all available in cast construction. Metallic and pearl finishes show stretch and require careful post-heating; light colors reveal paint imperfections more than dark colors.</p>
+<hr>
+<h2>Session 2: Paint Assessment &amp; Correction Basics</h2>
+<h3>Before Any Wrap Install, Inspect Paint</h3>
+<p>Walk the vehicle in good lighting (preferably outdoors or with LED inspection lights):</p>
+<ul class="checklist">
+<li>Rock chips and deep scratches — document pre-existing damage; may show through light colors</li>
+<li>Swirl marks and oxidation — will telegraph through gloss and metallic films</li>
+<li>Repainted panels — adhesion can vary; test or disclose risk</li>
+<li>Contamination — tar, tree sap, rail dust, iron particles, wax residue</li>
+<li>Wrap-unfriendly surfaces — fresh paint (cure time), failing clear coat, rust, plasti-dip</li>
+<li>Existing PPF or partial wraps — removal may be required; factor time and cost</li>
+</ul>
+
+<h3>Paint Correction Decision</h3>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Light swirls, solid color film will hide minor defects</td>
+<td>Wash, decon, alcohol wipe — proceed</td>
+</tr>
+<tr>
+<td>Moderate swirls visible through film (especially gloss/metallic)</td>
+<td>Single-stage polish recommended</td>
+</tr>
+<tr>
+<td>Deep scratches, chips to primer</td>
+<td>Document; fill chips if needed; disclose to customer</td>
+</tr>
+<tr>
+<td>Fresh paint (&lt; 30 days)</td>
+<td>Do not install — outgas will cause adhesive failure and bubbles</td>
+</tr>
+<tr>
+<td>Failing clear coat</td>
+<td>Do not wrap — film will lift with failing paint</td>
+</tr>
+</tbody></table>
+<div class="callout warning">
+
+<p><strong>Always photograph pre-existing damage.</strong> Wrap makes paint look better — customers may blame you for damage that was already there. Light-colored films reveal imperfections that dark colors hide.</p>
+</div>
+
+<h3>Decontamination Sequence (Standard)</h3>
+<ol>
+<li><strong>Wash</strong> — two-bucket method, clean mitts, blow out emblems and gaps</li>
+<li><strong>Clay bar or clay mitt</strong> — remove bonded contamination with lubricant</li>
+<li><strong>Iron remover</strong> — dissolve embedded ferrous particles (purple reaction = working)</li>
+<li><strong>Tar/sap remover</strong> — spot treat as needed</li>
+<li><strong>Isopropyl alcohol wipe (70% IPA)</strong> — remove oils, wax, and residue; final prep</li>
+<li><strong>Inspect under light</strong> — any remaining particles must be removed before film contact</li>
+</ol>
+<hr>
+<h2>Session 3: Tools, Application Fluid &amp; Workspace</h2>
+<h3>Essential Wrap Tools</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Felt-edge squeegee</strong></td>
+<td>Primary wet-out tool; prevents scratching face film</td>
+</tr>
+<tr>
+<td><strong>Hard card / plastic squeegee</strong></td>
+<td>Tucking into gaps; firm pressure on edges</td>
+</tr>
+<tr>
+<td><strong>Soft squeegee / wrap glove</strong></td>
+<td>Final passes, delicate areas, large flat panels</td>
+</tr>
+<tr>
+<td><strong>Heat gun</strong></td>
+<td>Stretching, conforming, post-heating, memory reset</td>
+</tr>
+<tr>
+<td><strong>Snitty knife / plotter blade</strong></td>
+<td>Trimming film edges</td>
+</tr>
+<tr>
+<td><strong>Extension blade holder</strong></td>
+<td>Precise edge trimming in tight areas</td>
+</tr>
+<tr>
+<td><strong>Knifeless tape</strong></td>
+<td>Cut film at panel lines without blade on paint</td>
+</tr>
+<tr>
+<td><strong>Tape measure</strong></td>
+<td>Panel sizing, material estimation, alignment</td>
+</tr>
+<tr>
+<td><strong>Application fluid bottle</strong></td>
+<td>Positioning solution for wet apply or repositioning</td>
+</tr>
+<tr>
+<td><strong>Tack cloth / lint roller</strong></td>
+<td>Remove dust before film contact</td>
+</tr>
+<tr>
+<td><strong>Light bar / inspection lamp</strong></td>
+<td>Reveal contamination, stretch marks, and defects</td>
+</tr>
+</tbody></table>
+<h3>Knifeless Tape</h3>
+<p>Knifeless tape creates a safe cut line on the vehicle without running a blade directly on paint. A filament runs along the tape edge — pull the filament after film is applied and it cuts through the vinyl cleanly.</p>
+<p><img src="workbooks/assets/images/vinyl-wrap/tools/knifeless-tape-spool.jpg" alt="Knifeless tape spool — filament cut system for safe panel-line trimming"></p>
+<p>Use at hood-to-fender lines, door gaps, and anywhere a blade slip would damage paint.</p>
+<h3>Application Fluid vs. Dry Apply</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Purpose</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Application fluid</strong> (slip solution)</td>
+<td>Allows film to slide for positioning</td>
+<td>Complex panels, beginner installs, repositioning</td>
+</tr>
+<tr>
+<td><strong>Dry apply</strong></td>
+<td>Immediate tack; faster on flat panels</td>
+<td>Experienced installers, flat zones, some manufacturer specs</td>
+</tr>
+</tbody></table>
+<p><strong>Follow your film manufacturer&#39;s recommended method.</strong> Too much fluid = adhesive failure and edge lift. Not enough = cannot reposition on complex panels.</p>
+<h3>Workspace Requirements</h3>
+<ul>
+<li>Temperature: 65–75°F ideal for adhesive performance and conformability</li>
+<li>Dust control: avoid active sanding nearby; wet-mop floors; keep doors closed when possible</li>
+<li>Lighting: bright, angled light reveals every particle and stretch mark</li>
+<li>Organized film: rolls stored upright or on rack; handle edges carefully; note lot numbers for warranty</li>
+</ul>
+<hr>
+<h2>Session 4: Safety</h2>
+<div class="callout warning">
+
+<p><strong>Non-negotiable safety rules:</strong></p>
+<ol>
+<li>Blades cut paint and skin — use fresh blades; cut away from body and hands</li>
+<li>Heat guns reach 1,000°F+ — never hold stationary on paint, plastic, or film; keep moving</li>
+<li>Chemical PPE: gloves and eye protection when using IPA, iron remover, and adhesive removers</li>
+<li>Never install on a hot panel in direct sun — adhesive behaves unpredictably; film stretches unevenly</li>
+<li>Lift panels properly — hoods and doors are heavy; use props and assistance</li>
+<li>Ventilation — post-heating produces fumes; ensure adequate airflow in the bay</li>
+</ol>
+</div>
+
+<hr>
+<h2>Lab 1: Flat Panel Install — Door Section</h2>
+<div class="lab">
+
+<h3>Lab 1 — Door Section Install</h3>
+<p><strong>Objective:</strong> Prep a door section and install a piece of cast vinyl with clean wet-out and no trapped contamination.</p>
+<p><strong>Time:</strong> 90 minutes</p>
+<h4>Part A — Decon &amp; Prep (25 min)</h4>
+<ol>
+<li>Wash, clay, iron remover (if needed), IPA wipe</li>
+<li>Final inspection under light — zero particles allowed</li>
+<li><strong>Checkpoint:</strong> Panel squeaks clean under your hand</li>
+</ol>
+<h4>Part B — Film Handling &amp; Position (20 min)</h4>
+<ol>
+<li>Measure panel; cut film with 2–3&quot; margin</li>
+<li>Position film aligned to body lines; use application fluid if wet method</li>
+<li><strong>Checkpoint:</strong> Film positioned correctly before wet-out</li>
+</ol>
+<h4>Part C — Wet-Out (35 min)</h4>
+<ol>
+<li>Anchor center; work outward in overlapping strokes</li>
+<li>Push fluid to edges with firm, even felt-squeegee pressure</li>
+<li>Post-heat lightly if minor fingers remain (instructor guidance)</li>
+<li><strong>Checkpoint:</strong> No bubbles, contamination, or loose edges</li>
+</ol>
+<h4>Part D — Self-Assessment</h4>
+<p>Edge cleanliness ___ | Bubble count ___ | Contamination ___ | Overall (1–5) ___</p>
+<p><strong>Instructor sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<hr>
+<h2>Lab 2: Edge Work — Wrap, Tuck &amp; Trim</h2>
+<div class="lab">
+
+<h3>Lab 2 — Edge Techniques</h3>
+<p><strong>Objective:</strong> Practice the three primary edge finishing methods on a practice panel.</p>
+<p><strong>Time:</strong> 75 minutes</p>
+<h4>Edge Method 1 — Cut to Edge (Flush)</h4>
+<p>Film trimmed at panel edge; clean look with knifeless tape; vulnerable to lift without post-heat.</p>
+<h4>Edge Method 2 — Wrap Edge</h4>
+<p>Film wraps 2–3mm to backside; durable on hoods, fenders, doors; heat, squeegee, post-heat.</p>
+<h4>Edge Method 3 — Tuck into Gap</h4>
+<p>Film tucked into panel gaps for invisible finish; use extension blade or knifeless tape.</p>
+<p><strong>Practice all three methods</strong> on your assigned panel sections.</p>
+<p><strong>Instructor sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>Day 1 Knowledge Check</h2>
+<div class="knowledge-check">
+
+<ol>
+<li>What is the difference between cast and calendered vinyl, and which is required for automotive body panels?</li>
+<li>Name the four primary layers of wrap film construction.</li>
+<li>List the six steps of a standard decontamination sequence.</li>
+<li>Why should you never install wrap on fresh paint?</li>
+<li>What is the purpose of application fluid, and when might you dry apply instead?</li>
+<li>Name three edge finishing methods and when each is appropriate.</li>
+</ol>
+</div>
+
+<h2>Day 1 Notes</h2>
+<div class="notes-page">
+<h2>Day 1 — My Notes</h2>
+<div class="notes-lines"></div>
+</div>
+
+<div class="page-break"></div>
+
+<h1>Day 2 — Technique Development</h1>
+<h2>Day 2 Learning Objectives</h2>
+<p>By the end of Day 2, you will be able to:</p>
+<ol>
+<li>Apply controlled stretch to conform cast vinyl to moderate compound curves</li>
+<li>Use post-heating to set film memory and prevent long-term shrink</li>
+<li>Complete a full hood or door panel install with wrapped edges</li>
+<li>Install vinyl on a bumper section and mirror cap</li>
+<li>Identify and correct common defects: fingers, silvering, contamination, stretch marks, orange peel</li>
+</ol>
+<hr>
+<h2>Day 2 Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Session</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8:00 – 8:30</td>
+<td>Day 1 review &amp; Q&amp;A</td>
+</tr>
+<tr>
+<td>8:30 – 9:45</td>
+<td><strong>Classroom:</strong> Stretching, anchor points &amp; post-heating</td>
+</tr>
+<tr>
+<td>9:45 – 10:30</td>
+<td><strong>Demo:</strong> Hood install from bulk roll</td>
+</tr>
+<tr>
+<td>10:30 – 10:45</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:45 – 11:45</td>
+<td><strong>Classroom:</strong> Bumpers, mirrors &amp; complex curves</td>
+</tr>
+<tr>
+<td>11:45 – 12:00</td>
+<td><strong>Classroom:</strong> Troubleshooting — fingers, lift, stretch marks</td>
+</tr>
+<tr>
+<td>12:00 – 1:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>1:00 – 2:45</td>
+<td><strong>Lab 3:</strong> Full hood or door panel install (supervised)</td>
+</tr>
+<tr>
+<td>2:45 – 3:00</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>3:00 – 4:30</td>
+<td><strong>Lab 4:</strong> Bumper section + mirror cap install</td>
+</tr>
+<tr>
+<td>4:30 – 5:00</td>
+<td>Day 2 knowledge check &amp; Q&amp;A</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Session 5: Stretching, Anchors &amp; Post-Heating</h2>
+<h3>Controlled Stretch</h3>
+<p>Cast vinyl can stretch 10–30% depending on film type and technique. <strong>Controlled stretch</strong> means applying tension only where needed to conform to curves — not stretching the entire panel uniformly.</p>
+<h3>Anchor Point Strategy</h3>
+<p>Anchor the flattest zone first (center of hood or door), work toward curves with incremental stretch, use heat to assist, and never exceed manufacturer stretch limits — metallic films will color-shift and silver if overstretched.</p>
+<h3>Post-Heating — Critical Step</h3>
+<p>Post-heating resets the film&#39;s memory so it holds the new shape without shrinking back.</p>
+<p><strong>Post-heat process:</strong> Complete wet-out → heat film evenly at 6–8&quot; with constant motion → target ~180–200°F on edges, overlaps, and stretched zones → do not overheat.</p>
+<div class="callout warning">
+
+<p><strong>Silvering</strong> (whitish haze along adhesive) means the film was overstretched or adhesive was stressed. It may not disappear. Remove and replace the section.</p>
+</div>
+
+<h3>Relief Cuts (When Needed)</h3>
+<p>Relief cuts in <strong>excess margin only</strong> allow film to open around sharp compound curves. Cut from the edge inward one at a time; seal with heat and firm squeegee after conforming. Never cut in the visible install zone.</p>
+<hr>
+<h2>Session 6: Bumpers, Mirrors &amp; Complex Curves</h2>
+<h3>Bumper Strategy</h3>
+<p>Bumpers are the most complex wrap zone — compound curves, sensor cutouts, and tight edges.</p>
+<ol>
+<li><strong>Pattern vs. bulk</strong> — beginners should use plotter patterns when available</li>
+<li><strong>Work from center outward</strong> — same anchor principle as hood</li>
+<li><strong>Heat frequently</strong> — short bursts, keep moving</li>
+<li><strong>Post-heat entire bumper</strong> — edges and deep curves are shrink-prone</li>
+</ol>
+<h3>Mirror Caps</h3>
+<p>Remove cap when possible for bench install. On-vehicle: stretch from center, heavy heat on curves, wrap edges, post-heat entire cap.</p>
+<h3>Hood, Door &amp; Fender Notes</h3>
+<p>Anchor center on hoods and work to corners; use knifeless tape at hood lines. Remove door handles when possible; watch door cup depth. On fenders, blend at the door gap with knifeless tape for a clean panel-line break.</p>
+<hr>
+<h2>Session 7: Troubleshooting Common Defects</h2>
+<table>
+<thead>
+<tr>
+<th>Defect</th>
+<th>Likely Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Finger</strong></td>
+<td>Insufficient stretch/heat on curve</td>
+<td>Lift, reheat, re-squeegee; or remove and redo</td>
+</tr>
+<tr>
+<td><strong>Silvering</strong></td>
+<td>Overstretch or adhesive stress</td>
+<td>Remove section; install fresh film</td>
+</tr>
+<tr>
+<td><strong>Contamination</strong></td>
+<td>Skipped decon step or dusty shop</td>
+<td>Remove film, re-prep, reinstall</td>
+</tr>
+<tr>
+<td><strong>Edge lift</strong></td>
+<td>Incomplete post-heat or dirty edge</td>
+<td>Re-squeegee, post-heat, edge seal if specified</td>
+</tr>
+<tr>
+<td><strong>Stretch marks / color shift</strong></td>
+<td>Film pulled too hard (especially metallic)</td>
+<td>Remove and replace — marks don&#39;t heal</td>
+</tr>
+<tr>
+<td><strong>Orange peel in adhesive</strong></td>
+<td>Trapped application fluid</td>
+<td>Squeegee harder; post-heat; severe cases = redo</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Lab 3: Full Hood or Door Panel Install</h2>
+<div class="lab">
+
+<h3>Lab 3 — Full Hood or Door Panel Install</h3>
+<p><strong>Objective:</strong> Install cast vinyl on a full hood or door panel from bulk roll with wrapped edges and no visible defects.</p>
+<p><strong>Time:</strong> 105 minutes</p>
+<p><strong>Vehicle assigned:</strong> _______________________</p>
+<p><strong>Panel installed:</strong> ☐ Hood  ☐ Door (____ side)</p>
+<p><strong>Film color/finish:</strong> ________________________</p>
+<p><strong>Edge method:</strong> ☐ Wrap  ☐ Tuck  ☐ Knifeless flush</p>
+<p><strong>Post-heat completed:</strong> ☐ Yes  ☐ No</p>
+<p><strong>Instructor sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<hr>
+<h2>Lab 4: Bumper Section &amp; Mirror Cap</h2>
+<div class="lab">
+
+<h3>Lab 4 — Bumper &amp; Mirror Cap Install</h3>
+<p><strong>Objective:</strong> Install cast vinyl on a bumper section and mirror cap, using relief cuts if needed.</p>
+<p><strong>Time:</strong> 90 minutes</p>
+<p><strong>Bumper section:</strong> ________________________</p>
+<p><strong>Relief cuts used:</strong> ☐ Yes  ☐ No — Location: ___________</p>
+<p><strong>Mirror cap:</strong> ☐ On-vehicle  ☐ Off-vehicle</p>
+<p><strong>Post-heat completed:</strong> ☐ Yes  ☐ No</p>
+<p><strong>Instructor sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>Day 2 Knowledge Check</h2>
+<div class="knowledge-check">
+
+<ol>
+<li>What is an anchor point, and how do you choose one?</li>
+<li>Describe the post-heat process and why it matters for long-term durability.</li>
+<li>What causes silvering, and can it be fixed?</li>
+<li>Why are bumper installs considered more difficult than hood installs?</li>
+<li>When is a relief cut appropriate, and where should it never be placed?</li>
+<li>What is the maximum stretch approach — stretch everything or stretch only where needed?</li>
+</ol>
+</div>
+
+<h2>Day 2 Notes</h2>
+<div class="notes-page">
+<h2>Day 2 — My Notes</h2>
+<div class="notes-lines"></div>
+</div>
+
+<div class="page-break"></div>
+
+<h1>Day 3 — Professional Practice</h1>
+<h2>Day 3 Learning Objectives</h2>
+<p>By the end of Day 3, you will be able to:</p>
+<ol>
+<li>Explain common wrap packages (partial accent, multi-panel color change, full vehicle)</li>
+<li>Use knifeless tape for clean panel-line cuts without blade-on-paint risk</li>
+<li>Perform door jamb wrapping and basic inlay techniques</li>
+<li>Complete a supervised multi-panel capstone install to shop quality standards</li>
+<li>Perform a QC inspection using a standardized checklist</li>
+<li>Outline pricing structure for wrap services</li>
+</ol>
+<hr>
+<h2>Day 3 Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Session</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8:00 – 8:30</td>
+<td>Day 2 review &amp; Q&amp;A</td>
+</tr>
+<tr>
+<td>8:30 – 9:30</td>
+<td><strong>Classroom:</strong> Wrap packages, inlays &amp; door jambs</td>
+</tr>
+<tr>
+<td>9:30 – 10:15</td>
+<td><strong>Classroom:</strong> Knifeless tape technique &amp; seam planning</td>
+</tr>
+<tr>
+<td>10:15 – 10:30</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:30 – 11:00</td>
+<td><strong>Classroom:</strong> QC inspection &amp; customer delivery</td>
+</tr>
+<tr>
+<td>11:00 – 12:00</td>
+<td><strong>Demo:</strong> Knifeless tape hood line + door jamb walkthrough</td>
+</tr>
+<tr>
+<td>12:00 – 1:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>1:00 – 1:45</td>
+<td><strong>Classroom:</strong> Pricing, upselling, and business basics</td>
+</tr>
+<tr>
+<td>1:45 – 4:15</td>
+<td><strong>Lab 5:</strong> Multi-panel capstone install — hood + fenders or door package</td>
+</tr>
+<tr>
+<td>4:15 – 4:45</td>
+<td>Final knowledge check</td>
+</tr>
+<tr>
+<td>4:45 – 5:00</td>
+<td>Course wrap-up, certificates, feedback</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Session 8: Wrap Packages, Inlays &amp; Door Jambs</h2>
+<h3>Common Wrap Packages</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Typical Coverage</th>
+<th>Target Customer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Accent / partial</strong></td>
+<td>Roof, hood, mirrors, spoiler</td>
+<td>Enthusiast entry point</td>
+</tr>
+<tr>
+<td><strong>Two-tone / multi-panel</strong></td>
+<td>Hood + fenders, or roof + pillars</td>
+<td>Color-change without full vehicle cost</td>
+</tr>
+<tr>
+<td><strong>Full color change</strong></td>
+<td>Entire painted surface including jambs</td>
+<td>Complete transformation</td>
+</tr>
+<tr>
+<td><strong>Commercial / fleet</strong></td>
+<td>Logos, lettering, partial branding</td>
+<td>Business vehicles</td>
+</tr>
+<tr>
+<td><strong>Chrome delete</strong></td>
+<td>Window trim, grilles, badges</td>
+<td>Popular upsell on dark vehicles</td>
+</tr>
+</tbody></table>
+<h3>Door Jamb Coverage</h3>
+<p>Professional full color-change wraps include door jambs — the visible painted edges when doors are open.</p>
+<p><strong>Door jamb workflow:</strong> Open door → clean jamb thoroughly → apply smaller pieces with minimal stretch → wrap or knifeless-cut edges → post-heat all jamb sections.</p>
+<div class="callout tip">
+
+<p><strong>Upsell script:</strong> &quot;Wrapping the door jambs means when you open the door, you see the new color everywhere — not a factory color peeking through. It&#39;s the difference between a wrap job and a complete transformation.&quot;</p>
+</div>
+
+<h3>Inlay Technique</h3>
+<p>An <strong>inlay</strong> is a pre-trimmed piece set into a larger panel so seams fall on body lines — used at hood-to-fender lines, door cups, extreme bumper curves, and multi-color designs.</p>
+<p>Plan seams on body lines or recesses — never across a flat visible panel. Overlap 3–5mm in hidden zones and post-heat all inlay edges.</p>
+<hr>
+<h2>Session 9: Knifeless Tape Technique</h2>
+<p>Knifeless tape is the professional standard for safe, straight cuts at panel lines. Review the tool layout shown in the image from Session 3.</p>
+<h3>Knifeless Tape Workflow</h3>
+<ol>
+<li>Clean panel line → apply tape (filament toward cut zone) → apply vinyl → post-heat → pull filament → remove excess → post-heat cut edge</li>
+</ol>
+<div class="callout warning">
+
+<p><strong>Do not pull the filament before post-heating</strong> unless your film manufacturer specifies otherwise. Cutting cold film can leave ragged edges and incomplete adhesive contact.</p>
+</div>
+
+<p>Apply knifeless tape at hood-to-fender lines, door gaps, roof-to-pillar transitions, and factory bumper seam lines. Follow your shop&#39;s panel order workflow — fender-first or hood-first — consistently across the job.</p>
+<hr>
+<h2>Session 10: QC Inspection &amp; Customer Delivery</h2>
+<h3>QC Checklist — Every Install</h3>
+<ul class="checklist">
+<li>Paint prepped — decon and IPA complete; pre-existing damage documented</li>
+<li>No contamination under film (inspect with light at angle)</li>
+<li>No fingers, silvering, or stretch marks in visible areas</li>
+<li>Edges wrapped, tucked, or knifeless-cut per spec — no lift</li>
+<li>All panel pieces aligned — seams on body lines, not random locations</li>
+<li>Door jambs complete (if in package) — no factory color showing</li>
+<li>Emblems, badges, handles, and sensors properly handled</li>
+<li>ADAS sensors uncovered and functional</li>
+<li>Post-heat completed on all installed panels</li>
+<li>Customer paperwork with package details, color/film info, and warranty info</li>
+</ul>
+
+<h3>Customer Delivery</h3>
+<ol>
+<li>Walk the vehicle with the customer in good lighting</li>
+<li>Point out coverage zones and documented pre-existing damage</li>
+<li>Explain cure time: <strong>no wash for 48–72 hours</strong>; hand wash only for first week</li>
+<li>Provide aftercare sheet and explain film vs. workmanship warranty</li>
+</ol>
+<hr>
+<h2>Session 11: Pricing &amp; Business Basics</h2>
+<h3>Pricing Components</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Material cost</strong></td>
+<td>Film cost per sq ft × coverage area + 15–25% waste factor</td>
+</tr>
+<tr>
+<td><strong>Labor</strong></td>
+<td>Hours × shop rate (wrap labor rate is higher than tint)</td>
+</tr>
+<tr>
+<td><strong>Complexity premium</strong></td>
+<td>Exotics, deep bumpers, metallic/pearl films, jamb coverage</td>
+</tr>
+<tr>
+<td><strong>Correction add-on</strong></td>
+<td>Polish/decon if not included in base</td>
+</tr>
+<tr>
+<td><strong>Removal</strong></td>
+<td>Existing wrap or PPF removal billed separately</td>
+</tr>
+</tbody></table>
+<h3>Sample Package Pricing Framework</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Typical Retail Range*</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Accent (roof or hood)</td>
+<td>$400 – $900</td>
+</tr>
+<tr>
+<td>Multi-panel (hood + fenders)</td>
+<td>$1,200 – $2,500</td>
+</tr>
+<tr>
+<td>Full color change (with jambs)</td>
+<td>$3,500 – $7,000</td>
+</tr>
+<tr>
+<td>Full color change (exotic/large SUV)</td>
+<td>$5,000 – $10,000+</td>
+</tr>
+<tr>
+<td>Chrome delete</td>
+<td>$300 – $800</td>
+</tr>
+</tbody></table>
+<p><em>*Varies significantly by market, film type, and vehicle size. Research your local market.</em></p>
+<h3>Profitability Tips</h3>
+<ul>
+<li><strong>Film efficiency</strong> — nest cuts tightly; track waste per job; save usable offcuts for mirrors and accents</li>
+<li><strong>Bundle services</strong> — wrap + PPF on high-impact zones; wrap + ceramic coating</li>
+<li><strong>Deposit policy</strong> — 50% deposit on wrap bookings; material cost is high and non-returnable once cut</li>
+<li><strong>Photography</strong> — before/after photos are your best marketing asset; shoot in consistent lighting</li>
+</ul>
+<hr>
+<h2>Lab 5: Multi-Panel Capstone Install</h2>
+<div class="lab">
+
+<h3>Lab 5 — Multi-Panel Capstone Install</h3>
+<p><strong>Objective:</strong> Complete a supervised multi-panel wrap package meeting all QC checklist items.</p>
+<p><strong>Time:</strong> 150 minutes</p>
+<p><strong>Vehicle assigned:</strong> _______________________</p>
+<p><strong>Package includes:</strong>
+☐ Hood  ☐ Fenders  ☐ Mirrors  ☐ Door(s)  ☐ Door jambs  ☐ Bumper section</p>
+<p><strong>Film color/finish:</strong> ________________________</p>
+<p><strong>Install method:</strong> ☐ Bulk roll  ☐ Plotter pattern  ☐ Inlay sections</p>
+<p><strong>Knifeless tape used:</strong> ☐ Yes — Location: __________  ☐ No</p>
+<p><strong>Post-heat completed on all panels:</strong> ☐ Yes</p>
+<p><strong>QC checklist completed:</strong> ☐ Yes</p>
+<p><strong>Instructor final sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>Final Knowledge Check</h2>
+<div class="knowledge-check">
+
+<ol>
+<li>What is the difference between cast and calendered vinyl, and why does it matter for automotive installs?</li>
+<li>Describe the knifeless tape workflow from tape application to filament pull.</li>
+<li>List five items on the wrap QC checklist.</li>
+<li>Why is post-heating critical, and what happens if you skip it?</li>
+<li>Name three components of wrap pricing.</li>
+<li>What is an inlay, and when would you use one instead of a single large piece?</li>
+</ol>
+</div>
+
+<hr>
+<h2>Course Completion Record</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Completed</th>
+<th>Instructor Initials</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Day 1 Labs 1–2</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Day 2 Labs 3–4</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Day 3 Lab 5 (Capstone)</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>All knowledge checks</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Final capstone install (Pass)</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+</tbody></table>
+<p><strong>Certificate of Completion issued:</strong> ☐ Yes — Date: __________</p>
+<p><strong>Instructor signature:</strong> ___________________________</p>
+<hr>
+<h2>Resources &amp; Quick Reference</h2>
+<h3>Decon Sequence</h3>
+<p>Wash → Clay → Iron remover → Tar spot treat → IPA wipe → Inspect</p>
+<h3>Stretch Rule</h3>
+<p>Anchor flat zone first → stretch only where needed → heat assist → post-heat all panels</p>
+<h3>Edge Priority</h3>
+<p>Knifeless cut (safest at panel lines) → Tuck (best appearance) → Wrap (best durability) → Flush (hidden edges only)</p>
+<h3>Post-Heat Target</h3>
+<p>~180–200°F · constant motion · all edges and stretched zones</p>
+<h3>Aftercare</h3>
+<p>48–72 hrs no wash · Hand wash first week · No pressure on edges · Annual inspection recommended</p>
+<div class="notes-page">
+<h2>Day 3 — My Notes</h2>
+<div class="notes-lines"></div>
+</div>
+
+  <p class="footer-note">© Velox Wrap Co · Skill Forge Training · For enrolled students only. Reproduction prohibited without written permission.</p>
+</body>
+</html>

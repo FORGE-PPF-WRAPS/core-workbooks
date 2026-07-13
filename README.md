@@ -2,14 +2,14 @@
 
 Training workbooks for **Velox Wrap Co** Skill Forge — core automotive restyling courses.
 
-**GitHub:** `veloxwrapco/core-workbooks`  
+**GitHub:** `veloxwrapco-group/core-workbooks`  
 **GitLab:** `veloxwrapco/skill-forge-workbooks-v1.0` (legacy mirror)
 
 ## Core Courses (3-Day Beginner)
 
 | Course | Status | Source | Print Output |
 |--------|--------|--------|--------------|
-| Vinyl Wrap | Planned | — | — |
+| **Vinyl Wrap** | **Ready** | `workbooks/core/vinyl-wrap/workbook.md` | `workbooks/output/vinyl-wrap-workbook.pdf` |
 | **Window Tint** | **Ready** | `workbooks/core/window-tint/workbook.md` | `workbooks/output/window-tint-workbook.pdf` |
 | **PPF** | **Ready** | `workbooks/core/ppf/workbook.md` | `workbooks/output/ppf-workbook.pdf` |
 
@@ -30,6 +30,7 @@ npm run build:pdf    # HTML + PDF output
 
 Output files land in `workbooks/output/`:
 
+- `vinyl-wrap-workbook.html` / `.pdf`
 - `window-tint-workbook.html` / `.pdf`
 - `ppf-workbook.html` / `.pdf`
 

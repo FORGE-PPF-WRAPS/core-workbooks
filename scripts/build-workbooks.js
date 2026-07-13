@@ -10,6 +10,12 @@ const ASSETS = path.join(ROOT, 'workbooks', 'assets');
 
 const COURSES = [
   {
+    id: 'vinyl-wrap',
+    title: 'Vinyl Wrap Installation',
+    subtitle: 'Core Course — 3-Day Beginner Program',
+    source: path.join(ROOT, 'workbooks', 'core', 'vinyl-wrap', 'workbook.md'),
+  },
+  {
     id: 'window-tint',
     title: 'Window Tint Installation',
     subtitle: 'Core Course — 3-Day Beginner Program',
