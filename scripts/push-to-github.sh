@@ -10,7 +10,7 @@
 
 set -euo pipefail
 
-GITHUB_OWNER="${GITHUB_OWNER:-veloxwrapco}"
+GITHUB_OWNER="${GITHUB_OWNER:-FORGE-PPF-WRAPS}"
 GITHUB_REPO="${GITHUB_REPO:-core-workbooks}"
 BRANCH="${BRANCH:-main}"
 

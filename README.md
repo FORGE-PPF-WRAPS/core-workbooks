@@ -2,7 +2,7 @@
 
 Training workbooks for **Velox Wrap Co** Skill Forge — core automotive restyling courses.
 
-**GitHub:** `veloxwrapco/core-workbooks`  
+**GitHub:** https://github.com/FORGE-PPF-WRAPS/core-workbooks  
 **GitLab:** `veloxwrapco/skill-forge-workbooks-v1.0` (legacy mirror)
 
 ## Core Courses (3-Day Beginner)
