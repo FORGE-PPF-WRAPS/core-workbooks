@@ -1,0 +1,42 @@
+/* White-label theme — neutral, client-ready, no brand identity */
+
+:root {
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --color-text: #1a1a1a;
+  --color-heading: #222222;
+  --color-accent: #444444;
+  --color-border: #cccccc;
+  --color-border-light: #e0e0e0;
+  --color-muted: #666666;
+  --color-field-line: #999999;
+  --color-table-header: #f5f5f5;
+  --color-revision-bg: #fafafa;
+  --color-notes-line: #e0e0e0;
+
+  --callout-bg: #f7f7f7;
+  --callout-border: #555555;
+  --callout-warning-bg: #fff8e6;
+  --callout-warning-border: #c9a227;
+  --callout-tip-bg: #f4f9f4;
+  --callout-tip-border: #3d6b4f;
+
+  --cover-gradient: none;
+  --cover-text: #1a1a1a;
+  --cover-brand-text: #555555;
+  --cover-title: #222222;
+  --cover-subtitle: #555555;
+  --cover-meta: #666666;
+}
+
+body.theme-whitelabel .cover.has-brand-gradient {
+  background: none;
+  margin: 0;
+  padding: 1.5in 0 1in;
+}
+
+body.theme-whitelabel .cover .brand-logo,
+body.theme-whitelabel .cover .brand-mark.branded-only {
+  display: none !important;
+}
