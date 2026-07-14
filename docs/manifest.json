@@ -1,3 +1,116 @@
 {
-  "documents": []
+  "documents": [
+    {
+      "id": "vehicle-inspection-form",
+      "title": "Vehicle Inspection Form",
+      "subtitle": "Pre-service and delivery condition documentation",
+      "type": "Form",
+      "version": "1.0",
+      "source": "docs/forms/vehicle-inspection-form.md"
+    },
+    {
+      "id": "change-order-form",
+      "title": "Change Order Form",
+      "subtitle": "Authorized modification to original work order",
+      "type": "Form",
+      "version": "1.0",
+      "source": "docs/forms/change-order-form.md"
+    },
+    {
+      "id": "warranty-certificate",
+      "title": "Warranty Certificate",
+      "subtitle": "Workmanship and materials warranty documentation",
+      "type": "Certificate",
+      "version": "1.0",
+      "source": "docs/forms/warranty-certificate.md"
+    },
+    {
+      "id": "independent-contractor-agreement",
+      "title": "Independent Contractor Agreement",
+      "subtitle": "Services agreement between shop and contractor",
+      "type": "Agreement",
+      "version": "1.0",
+      "source": "docs/agreements/independent-contractor-agreement.md"
+    },
+    {
+      "id": "referral-partner-agreement",
+      "title": "Referral Partner Agreement",
+      "subtitle": "Referral fee program terms",
+      "type": "Agreement",
+      "version": "1.0",
+      "source": "docs/agreements/referral-partner-agreement.md"
+    },
+    {
+      "id": "training-student-agreement",
+      "title": "Training Student Agreement",
+      "subtitle": "Enrollment terms for hands-on training programs",
+      "type": "Agreement",
+      "version": "1.0",
+      "source": "docs/agreements/training-student-agreement.md"
+    },
+    {
+      "id": "forge-license-agreement",
+      "title": "Forge License Agreement",
+      "subtitle": "License to use training systems and operational frameworks",
+      "type": "Agreement",
+      "version": "1.0",
+      "source": "docs/agreements/forge-license-agreement.md"
+    },
+    {
+      "id": "white-label-agreement",
+      "title": "White-Label Agreement",
+      "subtitle": "Authorization to rebrand licensed materials",
+      "type": "Agreement",
+      "version": "1.0",
+      "source": "docs/agreements/white-label-agreement.md"
+    },
+    {
+      "id": "service-agreement",
+      "title": "Service Agreement",
+      "subtitle": "Automotive restyling services contract",
+      "type": "Agreement",
+      "version": "1.0",
+      "source": "docs/agreements/service-agreement.md"
+    },
+    {
+      "id": "asset-ownership-agreement",
+      "title": "Asset Ownership Agreement",
+      "subtitle": "Ownership and use of tools, equipment, and materials",
+      "type": "Agreement",
+      "version": "1.0",
+      "source": "docs/agreements/asset-ownership-agreement.md"
+    },
+    {
+      "id": "ip-assignment-agreement",
+      "title": "IP Assignment Agreement",
+      "subtitle": "Assignment of intellectual property rights",
+      "type": "Agreement",
+      "version": "1.0",
+      "source": "docs/agreements/ip-assignment-agreement.md"
+    },
+    {
+      "id": "terms-of-service",
+      "title": "Terms of Service",
+      "subtitle": "Website and service terms",
+      "type": "Policy",
+      "version": "1.0",
+      "source": "docs/policies/terms-of-service.md"
+    },
+    {
+      "id": "privacy-policy",
+      "title": "Privacy Policy",
+      "subtitle": "How we collect, use, and protect information",
+      "type": "Policy",
+      "version": "1.0",
+      "source": "docs/policies/privacy-policy.md"
+    },
+    {
+      "id": "trademark-usage-policy",
+      "title": "Trademark Usage Policy",
+      "subtitle": "Guidelines for authorized use of company marks",
+      "type": "Policy",
+      "version": "1.0",
+      "source": "docs/policies/trademark-usage-policy.md"
+    }
+  ]
 }

@@ -15,6 +15,25 @@ docs/
 └── forms/                 ← intake, inspection, sign-off forms
 ```
 
+## Document library
+
+| ID | Title | Category |
+|----|-------|----------|
+| `vehicle-inspection-form` | Vehicle Inspection Form | forms |
+| `change-order-form` | Change Order Form | forms |
+| `warranty-certificate` | Warranty Certificate | forms |
+| `independent-contractor-agreement` | Independent Contractor Agreement | agreements |
+| `referral-partner-agreement` | Referral Partner Agreement | agreements |
+| `training-student-agreement` | Training Student Agreement | agreements |
+| `forge-license-agreement` | Forge License Agreement | agreements |
+| `white-label-agreement` | White-Label Agreement | agreements |
+| `service-agreement` | Service Agreement | agreements |
+| `asset-ownership-agreement` | Asset Ownership Agreement | agreements |
+| `ip-assignment-agreement` | IP Assignment Agreement | agreements |
+| `terms-of-service` | Terms of Service | policies |
+| `privacy-policy` | Privacy Policy | policies |
+| `trademark-usage-policy` | Trademark Usage Policy | policies |
+
 ## Themes
 
 | Theme | Command | Use case |

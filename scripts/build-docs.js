@@ -109,14 +109,14 @@ function buildPdf(htmlPath, pdfPath) {
   while (Date.now() < deadline) {
     if (fs.existsSync(pdfPath) && fs.statSync(pdfPath).size > 1000) {
       child.kill('SIGKILL');
-      fs.rmSync(userDataDir, { recursive: true, force: true });
+      try { fs.rmSync(userDataDir, { recursive: true, force: true }); } catch { /* ignore */ }
       return;
     }
     const waitUntil = Date.now() + 300;
     while (Date.now() < waitUntil) { /* sync wait */ }
   }
   child.kill('SIGKILL');
-  fs.rmSync(userDataDir, { recursive: true, force: true });
+  try { fs.rmSync(userDataDir, { recursive: true, force: true }); } catch { /* ignore */ }
   throw new Error(`Timed out generating PDF: ${pdfPath}`);
 }
 
