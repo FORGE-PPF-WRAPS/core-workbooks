@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Skill Forge monogram">
+  <defs>
+    <linearGradient id="sf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2DAA"/>
+      <stop offset="50%" stop-color="#7A3FFF"/>
+      <stop offset="100%" stop-color="#15D8FF"/>
+    </linearGradient>
+    <linearGradient id="sf-shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="54" fill="none" stroke="url(#sf-grad)" stroke-width="2.5"/>
+  <g stroke="url(#sf-grad)" stroke-width="2" stroke-linecap="round">
+    <line x1="60" y1="8" x2="60" y2="20"/>
+    <line x1="60" y1="100" x2="60" y2="112"/>
+    <line x1="8" y1="60" x2="20" y2="60"/>
+    <line x1="100" y1="60" x2="112" y2="60"/>
+    <line x1="22" y1="22" x2="30" y2="30"/>
+    <line x1="90" y1="90" x2="98" y2="98"/>
+    <line x1="98" y1="22" x2="90" y2="30"/>
+    <line x1="30" y1="90" x2="22" y2="98"/>
+  </g>
+  <path fill="url(#sf-grad)" d="M44 34h32v10H56v12h16v10H56v20H44V34z"/>
+  <path fill="url(#sf-shine)" d="M44 34h32v10H56v12h16v10H56v20H44V34z"/>
+</svg>

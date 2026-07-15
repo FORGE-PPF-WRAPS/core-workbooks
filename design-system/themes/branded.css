@@ -1,4 +1,4 @@
-/* Branded theme — Skill Forge / Forge PPF */
+/* Branded theme — Skill Forge / Forge PPF (official brand kit) */
 
 @font-face {
   font-family: "Skill Forge Display";
@@ -6,44 +6,67 @@
        url("../../workbooks/assets/brand/fonts/skill-forge-display.woff") format("woff"),
        url("../../workbooks/assets/brand/fonts/skill-forge-display.otf") format("opentype");
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
   font-display: swap;
 }
 
 :root {
+  /* Brand palette — see workbooks/assets/brand/brand-tokens.json */
+  --brand-magenta: #FF2DAA;
+  --brand-purple: #7A3FFF;
+  --brand-cyan: #15D8FF;
+  --brand-gold: #D4AF37;
+  --brand-black: #0A0A0F;
+  --brand-silver: #B8BDC9;
+  --brand-white: #FFFFFF;
+
   --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --font-heading: "Skill Forge Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --font-display: "Skill Forge Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Skill Forge Display", "Arial Black", Impact, sans-serif;
+  --font-display: "Skill Forge Display", "Arial Black", Impact, sans-serif;
+  --font-label: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 
   --color-text: #1a1a1a;
-  --color-heading: #0d1b2a;
-  --color-accent: #1b4965;
+  --color-heading: var(--brand-black);
+  --color-accent: var(--brand-purple);
   --color-border: #cccccc;
-  --color-border-light: #bee9e8;
-  --color-muted: #666666;
-  --color-field-line: #999999;
-  --color-table-header: #e8f4f8;
-  --color-revision-bg: #f0f7fa;
+  --color-border-light: #d8dce6;
+  --color-muted: #5c6370;
+  --color-field-line: var(--brand-silver);
+  --color-table-header: #f3f0fa;
+  --color-revision-bg: #f8f6fc;
   --color-notes-line: #e0e0e0;
 
-  --callout-bg: #f0f7fa;
-  --callout-border: #1b4965;
+  --callout-bg: #f8f6fc;
+  --callout-border: var(--brand-purple);
   --callout-warning-bg: #fff8e6;
-  --callout-warning-border: #e6a817;
-  --callout-tip-bg: #eef9ee;
-  --callout-tip-border: #2d6a4f;
+  --callout-warning-border: var(--brand-gold);
+  --callout-tip-bg: #eef9fc;
+  --callout-tip-border: #0d7a8c;
 
-  --cover-gradient: linear-gradient(135deg, #ff2d8a 0%, #9b4dff 45%, #00c8ff 100%);
-  --cover-text: #ffffff;
-  --cover-brand-text: rgba(255, 255, 255, 0.9);
-  --cover-title: #ffffff;
+  --cover-gradient: linear-gradient(135deg, #FF2DAA 0%, #7A3FFF 50%, #15D8FF 100%);
+  --cover-text: var(--brand-white);
+  --cover-brand-text: var(--brand-silver);
+  --cover-title: var(--brand-white);
   --cover-subtitle: rgba(255, 255, 255, 0.92);
   --cover-meta: rgba(255, 255, 255, 0.8);
 
-  --surface-lesson-border: #1b4965;
-  --surface-quiz-bg: #f0f7fa;
-  --surface-quiz-border: #bee9e8;
-  --surface-certificate-border: #1b4965;
+  --surface-lesson-border: var(--brand-purple);
+  --surface-quiz-bg: #f8f6fc;
+  --surface-quiz-border: #d8cce8;
+  --surface-certificate-border: var(--brand-gold);
+}
+
+body.theme-branded h1 {
+  border-bottom-color: var(--brand-purple);
+}
+
+body.theme-branded h2 {
+  border-bottom-color: var(--brand-cyan);
+}
+
+body.theme-branded .cover.has-brand-gradient,
+body.theme-branded .layout-cover.has-brand-gradient {
+  background-color: var(--brand-black);
 }
 
 body.theme-branded .cover.has-brand-gradient h1,
@@ -62,4 +85,31 @@ body.theme-branded .layout-cover .doc-fields p,
 body.theme-branded .layout-cover .student-fields p {
   border-bottom-color: rgba(255, 255, 255, 0.45);
   color: var(--cover-text);
+}
+
+body.theme-branded .cover .brand-tagline,
+body.theme-branded .layout-cover .brand-tagline {
+  font-family: var(--font-label);
+  font-size: 9pt;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brand-silver);
+  margin: 0.15in 0 0.35in;
+}
+
+body.theme-branded .cover .brand-logo,
+body.theme-branded .layout-cover .brand-logo {
+  max-height: 1.4in;
+  max-width: 5in;
+}
+
+body.theme-branded .cover .brand-logo--monogram,
+body.theme-branded .layout-cover .brand-logo--monogram {
+  max-height: 0.45in;
+  max-width: 0.45in;
+}
+
+body.theme-branded .running-header .header-logo {
+  max-height: 0.4in;
 }

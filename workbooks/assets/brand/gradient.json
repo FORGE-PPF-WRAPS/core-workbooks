@@ -1,0 +1,8 @@
+{
+  "angle": 135,
+  "stops": [
+    { "color": "#FF2DAA", "position": "0%" },
+    { "color": "#7A3FFF", "position": "50%" },
+    { "color": "#15D8FF", "position": "100%" }
+  ]
+}

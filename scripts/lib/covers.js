@@ -4,12 +4,12 @@ function buildWorkbookCover(course, theme) {
   const branded = theme === 'branded';
   const logo = branded ? resolveBrandLogo() : null;
   const logoHtml = logo
-    ? `<img class="brand-logo branded-only" src="${logo}" alt="" />`
+    ? `<img class="brand-logo branded-only" src="${logo}" alt="Skill Forge" />`
     : '';
 
-  const brandMark = branded
+  const brandMark = branded && !logo
     ? '<div class="brand-mark branded-only">Skill Forge</div>'
-    : '<div class="brand-mark whitelabel-only">Training Workbook</div>';
+    : '';
 
   const version = course.version || '1.0';
   const docType = course.docType || 'Student Workbook';
@@ -34,13 +34,13 @@ function buildDocCover(doc, theme) {
   const branded = theme === 'branded';
   const logo = branded ? resolveBrandLogo() : null;
   const logoHtml = logo
-    ? `<img class="brand-logo branded-only" src="${logo}" alt="" />`
+    ? `<img class="brand-logo branded-only" src="${logo}" alt="Skill Forge" />`
     : '';
 
   return `
   <div class="cover layout-cover${branded ? ' has-brand-gradient' : ''}">
     ${logoHtml}
-    <div class="brand-mark ${branded ? 'branded-only' : 'whitelabel-only'}">Skill Forge</div>
+    <div class="brand-mark ${branded && !logo ? 'branded-only' : 'whitelabel-only'}">Skill Forge</div>
     <div class="brand-mark whitelabel-only">Standard Operating Procedure</div>
     <h1>${doc.title}</h1>
     ${doc.subtitle ? `<p class="subtitle">${doc.subtitle}</p>` : ''}
@@ -56,14 +56,14 @@ function buildDocCover(doc, theme) {
 
 function buildWorkbookFooter(theme) {
   if (theme === 'branded') {
-    return '<p class="footer-note branded-only">© Skill Forge Training · For enrolled students only. Reproduction prohibited without written permission.</p>';
+    return '<p class="footer-note branded-only">© Skill Forge · Where Students Become Teachers · For enrolled students only.</p>';
   }
   return '<p class="footer-note whitelabel-only">Confidential — Training materials for enrolled students only. Reproduction prohibited without written authorization.</p>';
 }
 
 function buildDocFooter(theme) {
   if (theme === 'branded') {
-    return '<p class="footer-note branded-only">Confidential — Internal use. Skill Forge training operations.</p>';
+    return '<p class="footer-note branded-only">Confidential — Skill Forge training operations.</p>';
   }
   return '<p class="footer-note whitelabel-only">Confidential — Internal use only. Reproduction prohibited without written authorization.</p>';
 }

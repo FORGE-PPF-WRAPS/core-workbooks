@@ -1,0 +1,17 @@
+# Skill Forge Display Font
+
+Drop the official headline font here:
+
+```
+skill-forge-display.woff2   ← preferred
+skill-forge-display.woff    ← fallback
+skill-forge-display.otf     ← fallback
+```
+
+The branded theme loads this font for all `h1`–`h4` headings and cover titles. Characteristics from the brand kit:
+
+- Italic sans-serif
+- Bold / heavy weight
+- Distressed or brushed texture (baked into the font file)
+
+Until the font file is added, headings use **Arial Black / Impact** italic as a close fallback.

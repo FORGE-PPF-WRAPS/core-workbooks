@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" role="img" aria-label="Skill Forge">
+  <defs>
+    <linearGradient id="sf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2DAA"/>
+      <stop offset="50%" stop-color="#7A3FFF"/>
+      <stop offset="100%" stop-color="#15D8FF"/>
+    </linearGradient>
+    <linearGradient id="sf-shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8, 20)">
+    <circle cx="60" cy="60" r="54" fill="none" stroke="url(#sf-grad)" stroke-width="2.5"/>
+    <g stroke="url(#sf-grad)" stroke-width="2" stroke-linecap="round">
+      <line x1="60" y1="8" x2="60" y2="20"/>
+      <line x1="60" y1="100" x2="60" y2="112"/>
+      <line x1="8" y1="60" x2="20" y2="60"/>
+      <line x1="100" y1="60" x2="112" y2="60"/>
+    </g>
+    <path fill="url(#sf-grad)" d="M44 34h32v10H56v12h16v10H56v20H44V34z"/>
+    <path fill="url(#sf-shine)" d="M44 34h32v10H56v12h16v10H56v20H44V34z"/>
+  </g>
+  <text x="150" y="72" fill="#FFFFFF" font-family="Arial Black, Impact, sans-serif" font-size="42" font-weight="900" font-style="italic" letter-spacing="2">SKILL FORGE</text>
+  <line x1="150" y1="92" x2="220" y2="92" stroke="#B8BDC9" stroke-width="1"/>
+  <text x="230" y="96" fill="#B8BDC9" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="3">WHERE STUDENTS BECOME TEACHERS</text>
+  <line x1="450" y1="92" x2="470" y2="92" stroke="#B8BDC9" stroke-width="1"/>
+</svg>

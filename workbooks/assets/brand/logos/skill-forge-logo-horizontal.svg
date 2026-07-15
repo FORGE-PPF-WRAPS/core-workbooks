@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" role="img" aria-label="Skill Forge">
+  <defs>
+    <linearGradient id="sf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2DAA"/>
+      <stop offset="50%" stop-color="#7A3FFF"/>
+      <stop offset="100%" stop-color="#15D8FF"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4, 8) scale(0.55)">
+    <circle cx="60" cy="60" r="54" fill="none" stroke="url(#sf-grad)" stroke-width="2.5"/>
+    <path fill="url(#sf-grad)" d="M44 34h32v10H56v12h16v10H56v20H44V34z"/>
+  </g>
+  <text x="84" y="48" fill="#0A0A0F" font-family="Arial Black, Impact, sans-serif" font-size="28" font-weight="900" font-style="italic" letter-spacing="1.5">SKILL FORGE</text>
+</svg>

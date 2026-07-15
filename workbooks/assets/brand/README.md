@@ -1,64 +1,72 @@
-# Skill Forge Brand Assets
+# Skill Forge Brand Kit
 
-Drop your brand files here. The workbook build uses these paths and names.
+Official brand assets for CORE Workbooks branded PDF output (`npm run build:branded:pdf`).
+
+## Brand palette
+
+| Token | Hex | Use |
+|-------|-----|-----|
+| Magenta | `#FF2DAA` | Gradient start, accent highlights |
+| Purple | `#7A3FFF` | Gradient mid, headings, borders |
+| Cyan | `#15D8FF` | Gradient end, secondary accents |
+| Gold | `#D4AF37` | Certificates, premium callouts |
+| Black | `#0A0A0F` | Cover background, heading text |
+| Silver | `#B8BDC9` | Taglines, muted labels |
+| White | `#FFFFFF` | Cover text on gradient |
+
+**Gradient:** `135deg` — `#FF2DAA` → `#7A3FFF` → `#15D8FF`
+
+Defined in `brand-tokens.json` and applied via `design-system/themes/branded.css`.
 
 ## Folder structure
 
 ```
 workbooks/assets/brand/
+├── brand-tokens.json              ← colors, gradient, typography, tagline
+├── gradient.json                  ← gradient stops only
 ├── logos/
-│   ├── skill-forge-monogram.svg      ← monogram (Skill Forge primary / secondary)
-│   ├── skill-forge-monogram.png      ← PNG fallback if no SVG
-│   ├── skill-forge-logo.svg          ← full logo with avatar (arms crossed)
-│   ├── skill-forge-logo.png          ← PNG fallback
-│   ├── velox-wrapco-logo.svg         ← Velox Wrap Co wordmark (optional)
-│   └── velox-wrapco-logo.png
-├── fonts/
-│   └── skill-forge-display.woff2     ← the Forge PPF display font (preferred)
-│   └── skill-forge-display.woff      ← fallback
-│   └── skill-forge-display.otf       ← or .ttf if that's what you have
-└── gradient.json                     ← optional: gradient color stops (see below)
+│   ├── skill-forge-monogram.svg   ← crosshair F icon (headers, favicons)
+│   ├── skill-forge-logo.svg       ← full lockup for cover pages
+│   └── skill-forge-logo-horizontal.svg  ← compact horizontal lockup
+└── fonts/
+    └── skill-forge-display.woff2  ← headline font (add your file)
 ```
 
-## Naming rules
+## Logo files
 
-| File | Use on workbook |
-|------|-----------------|
-| `skill-forge-monogram.svg` | Cover corner mark, page headers, footer |
-| `skill-forge-logo.svg` | Cover hero — full lockup with avatar |
-| `velox-wrapco-logo.svg` | “Presented by Velox Wrap Co” line on cover |
-| `skill-forge-display.woff2` | All headings — same typeface as “Forge PPF” |
+| File | Use |
+|------|-----|
+| `skill-forge-monogram.svg` | Page headers, small marks, watermarks |
+| `skill-forge-logo.svg` | Cover hero — monogram + wordmark + tagline |
+| `skill-forge-logo-horizontal.svg` | Inline headers on light backgrounds |
 
-**Prefer SVG for logos** (sharp at any print size). Add a matching `.png` at 2× resolution only if you don’t have SVG.
+SVG logos ship with the repo as vector placeholders based on the brand style guide. Replace with your production artwork when available — keep the same filenames.
 
-**Font:** Name it `skill-forge-display` with the correct extension (`.woff2`, `.woff`, or `.otf`). Use this filename even if the source font file has a different name — the build script expects one predictable path.
+## Typography
 
-## gradient.json (optional)
+| Role | Font | File |
+|------|------|------|
+| Headlines | Skill Forge Display (italic, distressed) | `fonts/skill-forge-display.woff2` |
+| Body | Segoe UI / Helvetica Neue | System |
+| Labels / tagline | Geometric sans, all-caps | System |
 
-If the gradient isn’t baked into the logo files, add:
+**To enable the display font:** drop `skill-forge-display.woff2` (or `.woff` / `.otf`) into `fonts/`. Until then, branded headings fall back to Arial Black / Impact italic.
 
-```json
-{
-  "angle": 135,
-  "stops": [
-    { "color": "#______", "position": "0%" },
-    { "color": "#______", "position": "100%" }
-  ]
-}
-```
+## Tagline
 
-## After you add files
+> WHERE STUDENTS BECOME TEACHERS
 
-Commit and push to the branch, then tell the agent to wire branding in. Or run locally:
+Rendered automatically on branded cover pages from `brand-tokens.json`.
 
-```bash
-npm run build:pdf
-```
+## Service brand (Forge PPF)
 
-## Minimum to get started
+The Forge PPF service identity uses the same palette and monogram. Service-specific marketing assets (vehicle photography, QR codes, social handles) are not used in workbook print output.
 
-At least these three:
+## Replacing placeholder assets
 
-1. `logos/skill-forge-monogram.svg`
-2. `logos/skill-forge-logo.svg`
-3. `fonts/skill-forge-display.woff2` (or `.otf` / `.ttf`)
+1. Export production SVGs from your design tool
+2. Overwrite files in `logos/` using the same names
+3. Add `skill-forge-display.woff2` to `fonts/`
+4. Rebuild: `npm run build:branded:pdf`
+
+No CSS changes required when filenames match.
