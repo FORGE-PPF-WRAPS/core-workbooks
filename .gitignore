@@ -4,3 +4,9 @@ node_modules/
 *.iml
 .idea/
 .vscode/
+
+# Generated build output
+workbooks/output/**
+!workbooks/output/.gitkeep
+docs/output/**
+!docs/output/.gitkeep
