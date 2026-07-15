@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint Protection Film (PPF) — Workbook</title>
+  <style>/* CORE Workbooks — Design tokens (theme files override semantic values) */
+
+:root {
+  /* Typography */
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-heading);
+
+  --font-size-body: 10.5pt;
+  --font-size-body-print: 10pt;
+  --font-size-h1: 22pt;
+  --font-size-h2: 15pt;
+  --font-size-h3: 12pt;
+  --font-size-h4: 10.5pt;
+  --font-size-cover-title: 28pt;
+  --font-size-cover-subtitle: 14pt;
+  --font-size-cover-meta: 11pt;
+  --font-size-cover-brand: 11pt;
+  --font-size-footer: 8.5pt;
+  --font-size-table: 9.5pt;
+  --font-size-running: 8.5pt;
+
+  --line-height-body: 1.45;
+  --letter-spacing-brand: 0.15em;
+
+  /* Colors — semantic */
+  --color-text: #1a1a1a;
+  --color-heading: #222222;
+  --color-accent: #444444;
+  --color-border: #cccccc;
+  --color-border-light: #e0e0e0;
+  --color-muted: #666666;
+  --color-field-line: #999999;
+  --color-table-header: #f5f5f5;
+  --color-revision-bg: #fafafa;
+  --color-notes-line: #e0e0e0;
+
+  /* Callouts */
+  --callout-bg: #f7f7f7;
+  --callout-border: #555555;
+  --callout-warning-bg: #fff8e6;
+  --callout-warning-border: #c9a227;
+  --callout-tip-bg: #f4f9f4;
+  --callout-tip-border: #3d6b4f;
+
+  /* Cover */
+  --cover-gradient: none;
+  --cover-text: #1a1a1a;
+  --cover-brand-text: #555555;
+  --cover-title: #222222;
+  --cover-subtitle: #555555;
+  --cover-meta: #666666;
+
+  /* Spacing scale */
+  --space-2xs: 0.15em;
+  --space-xs: 0.2em;
+  --space-sm: 0.35em;
+  --space-md: 0.5em;
+  --space-lg: 0.8em;
+  --space-xl: 1em;
+  --space-2xl: 1.4em;
+  --space-3xl: 2em;
+
+  --space-cover-pad-y: 1.5in;
+  --space-cover-pad-bottom: 1in;
+  --space-cover-brand-gap: 0.5in;
+  --space-cover-fields-top: 1.2in;
+
+  /* Borders & radii */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-heading: 3px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  /* Shadows (screen preview) */
+  --shadow-preview: 0 1px 4px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  /* Page layout */
+  --page-size: letter;
+  --page-margin-top: 0.75in;
+  --page-margin-x: 0.85in;
+  --page-margin-first: 0.5in;
+  --page-margin-footer: 0.65in;
+  --content-max-width: 7.5in;
+
+  /* Layout surfaces */
+  --surface-lesson-border: var(--color-accent);
+  --surface-quiz-bg: #fafafa;
+  --surface-quiz-border: var(--color-border);
+  --surface-certificate-border: var(--color-accent);
+  --surface-appendix-bg: #fafafa;
+}
+
+/* CORE Workbooks — Base typography, page setup, tables */
+
+@page {
+  size: var(--page-size);
+  margin: var(--page-margin-top) var(--page-margin-x) var(--page-margin-footer);
+}
+
+@page :first {
+  margin-top: var(--page-margin-first);
+}
+
+@page {
+  @bottom-center {
+    content: counter(page);
+    font-family: var(--font-body);
+    font-size: var(--font-size-running);
+    color: var(--color-muted);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0;
+  counter-reset: page;
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-heading);
+  page-break-after: avoid;
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  border-bottom: var(--border-width-heading) solid var(--color-accent);
+  padding-bottom: var(--space-xs);
+  margin-top: 0;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  margin-top: var(--space-2xl);
+  border-bottom: var(--border-width-thin) solid var(--color-border-light);
+  padding-bottom: var(--space-2xs);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  margin-top: var(--space-xl);
+  color: var(--color-accent);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  margin-top: var(--space-lg);
+}
+
+p { margin: var(--space-md) 0; }
+
+ul, ol {
+  margin: 0.4em 0;
+  padding-left: 1.4em;
+}
+
+li { margin: var(--space-xs) 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-lg) 0;
+  font-size: var(--font-size-table);
+  page-break-inside: avoid;
+}
+
+th, td {
+  border: var(--border-width-thin) solid var(--color-border);
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--color-table-header);
+  font-weight: 600;
+}
+
+/* Utilities */
+
+.page-break { page-break-before: always; }
+.no-break { page-break-inside: avoid; }
+
+.whitelabel-only { display: block; }
+.branded-only { display: none; }
+
+body.theme-branded .whitelabel-only { display: none; }
+body.theme-branded .branded-only { display: block; }
+
+@media print {
+  body { font-size: var(--font-size-body-print); }
+  a { color: inherit; text-decoration: none; }
+  .no-print { display: none; }
+}
+
+@media screen {
+  body {
+    padding: 1in;
+    background: #f0f0f0;
+  }
+  .cover,
+  .layout-cover,
+  .page-break,
+  [class*="layout-"] {
+    background: white;
+    padding: 1in;
+    margin-bottom: 1em;
+    box-shadow: var(--shadow-preview);
+  }
+}
+
+/* CORE Workbooks — Reusable UI components */
+
+.callout {
+  background: var(--callout-bg);
+  border-left: 4px solid var(--callout-border);
+  padding: 0.6em 0.8em;
+  margin: var(--space-lg) 0;
+  page-break-inside: avoid;
+}
+
+.callout.warning {
+  background: var(--callout-warning-bg);
+  border-left-color: var(--callout-warning-border);
+}
+
+.callout.tip {
+  background: var(--callout-tip-bg);
+  border-left-color: var(--callout-tip-border);
+}
+
+/* Procedure / SOP block */
+.procedure,
+.sop-page {
+  border: var(--border-width-medium) solid var(--surface-lesson-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+}
+
+.procedure h3,
+.sop-page h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+/* Lesson / lab block */
+.lab,
+.lesson-page {
+  border: var(--border-width-medium) solid var(--surface-lesson-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+}
+
+.lab h3,
+.lesson-page h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+/* Checklists */
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li::before {
+  content: "☐ ";
+  font-size: 12pt;
+}
+
+/* Quiz / knowledge check */
+.knowledge-check,
+.quiz-page {
+  background: var(--surface-quiz-bg);
+  border: var(--border-width-thin) solid var(--surface-quiz-border);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+}
+
+.knowledge-check ol,
+.quiz-page ol {
+  margin: 0;
+}
+
+/* Worksheet */
+.worksheet,
+.worksheet-page {
+  border: var(--border-width-thin) dashed var(--color-border);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  min-height: 3in;
+  page-break-inside: avoid;
+}
+
+.worksheet-page h3,
+.worksheet h3 {
+  margin-top: 0;
+}
+
+/* Review */
+.review-page {
+  border: var(--border-width-thin) solid var(--color-border-light);
+  background: var(--color-revision-bg);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+}
+
+/* Revision / doc metadata */
+.revision-block {
+  background: var(--color-revision-bg);
+  border: var(--border-width-thin) solid var(--color-border);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  font-size: var(--font-size-table);
+  page-break-inside: avoid;
+}
+
+/* Notes */
+.notes-page {
+  border: var(--border-width-thin) dashed var(--color-border);
+  min-height: 8in;
+  padding: 0.5in;
+  page-break-before: always;
+}
+
+.notes-page h2 {
+  border: none;
+  color: var(--color-muted);
+  font-size: var(--font-size-h3);
+}
+
+.notes-lines {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 23px,
+    var(--color-notes-line) 23px,
+    var(--color-notes-line) 24px
+  );
+  min-height: 7in;
+  margin-top: var(--space-md);
+}
+
+/* Schedule tables (workbooks) */
+.schedule-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+  width: 22%;
+}
+
+/* Document chrome */
+.doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-running);
+  color: var(--color-muted);
+  border-bottom: var(--border-width-thin) solid var(--color-border-light);
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+.doc-header .header-logo {
+  max-height: 0.35in;
+}
+
+.footer-note {
+  font-size: var(--font-size-footer);
+  color: var(--color-muted);
+  margin-top: var(--space-3xl);
+  border-top: var(--border-width-thin) solid var(--color-border-light);
+  padding-top: var(--space-md);
+}
+
+/* CORE Workbooks — Page layout templates */
+
+/* Cover page */
+.cover,
+.layout-cover {
+  text-align: center;
+  padding: var(--space-cover-pad-y) 0 var(--space-cover-pad-bottom);
+  page-break-after: always;
+  position: relative;
+}
+
+.cover.has-brand-gradient,
+.layout-cover.has-brand-gradient {
+  background: var(--cover-gradient);
+  margin: calc(-1 * var(--page-margin-first)) calc(-1 * var(--page-margin-x)) 0;
+  padding: 2in var(--page-margin-x) 1.2in;
+  color: var(--cover-text);
+}
+
+.cover .brand-logo,
+.layout-cover .brand-logo {
+  max-height: 1.2in;
+  max-width: 4in;
+  margin: 0 auto 0.4in;
+  display: block;
+}
+
+.cover .brand,
+.cover .brand-mark,
+.layout-cover .brand,
+.layout-cover .brand-mark {
+  font-size: var(--font-size-cover-brand);
+  letter-spacing: var(--letter-spacing-brand);
+  text-transform: uppercase;
+  color: var(--cover-brand-text);
+  margin-bottom: var(--space-cover-brand-gap);
+}
+
+.cover h1,
+.layout-cover h1 {
+  font-size: var(--font-size-cover-title);
+  border: none;
+  margin: 0.3in 0;
+  color: var(--cover-title);
+  font-family: var(--font-display);
+}
+
+.cover .subtitle,
+.layout-cover .subtitle {
+  font-size: var(--font-size-cover-subtitle);
+  color: var(--cover-subtitle);
+  margin: 0.2in 0;
+}
+
+.cover .meta,
+.layout-cover .meta {
+  margin-top: 0.8in;
+  font-size: var(--font-size-cover-meta);
+  color: var(--cover-meta);
+}
+
+.cover .doc-fields,
+.cover .student-fields,
+.layout-cover .doc-fields,
+.layout-cover .student-fields {
+  margin-top: var(--space-cover-fields-top);
+  text-align: left;
+  max-width: 4.5in;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cover .doc-fields p,
+.cover .student-fields p,
+.layout-cover .doc-fields p,
+.layout-cover .student-fields p {
+  border-bottom: var(--border-width-thin) solid var(--color-field-line);
+  padding-bottom: var(--space-xs);
+  margin: var(--space-lg) 0;
+}
+
+/* Certificate layout */
+.certificate-page,
+.layout-certificate {
+  border: var(--border-width-medium) double var(--surface-certificate-border);
+  padding: 0.75in 1in;
+  margin: var(--space-xl) 0;
+  text-align: center;
+  page-break-inside: avoid;
+}
+
+.certificate-page h1,
+.certificate-page h2,
+.layout-certificate h1,
+.layout-certificate h2 {
+  border: none;
+  text-align: center;
+}
+
+.certificate-page .certificate-body,
+.layout-certificate .certificate-body {
+  text-align: left;
+  margin-top: var(--space-xl);
+}
+
+.certificate-page .signature-row,
+.layout-certificate .signature-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1in;
+  margin-top: 1.5in;
+  text-align: left;
+}
+
+.certificate-page .signature-row p,
+.layout-certificate .signature-row p {
+  flex: 1;
+  border-top: var(--border-width-thin) solid var(--color-field-line);
+  padding-top: var(--space-xs);
+  font-size: var(--font-size-table);
+}
+
+/* Appendix layout */
+.appendix-page,
+.layout-appendix {
+  background: var(--surface-appendix-bg);
+  border: var(--border-width-thin) solid var(--color-border-light);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-before: always;
+}
+
+.appendix-page h2,
+.layout-appendix h2 {
+  margin-top: 0;
+}
+
+/* Running header (optional per-section) */
+.running-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-running);
+  color: var(--color-muted);
+  border-bottom: var(--border-width-thin) solid var(--color-border-light);
+  padding-bottom: 0.25em;
+  margin-bottom: var(--space-lg);
+  page-break-after: avoid;
+}
+
+.running-header .doc-title {
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.running-footer {
+  font-size: var(--font-size-footer);
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-md);
+  border-top: var(--border-width-thin) solid var(--color-border-light);
+}
+
+/* White-label theme — neutral, client-ready */
+
+:root {
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-heading);
+
+  --color-text: #1a1a1a;
+  --color-heading: #222222;
+  --color-accent: #444444;
+  --color-border: #cccccc;
+  --color-border-light: #e0e0e0;
+  --color-muted: #666666;
+  --color-field-line: #999999;
+  --color-table-header: #f5f5f5;
+  --color-revision-bg: #fafafa;
+  --color-notes-line: #e0e0e0;
+
+  --callout-bg: #f7f7f7;
+  --callout-border: #555555;
+  --callout-warning-bg: #fff8e6;
+  --callout-warning-border: #c9a227;
+  --callout-tip-bg: #f4f9f4;
+  --callout-tip-border: #3d6b4f;
+
+  --cover-gradient: none;
+  --cover-text: #1a1a1a;
+  --cover-brand-text: #555555;
+  --cover-title: #222222;
+  --cover-subtitle: #555555;
+  --cover-meta: #666666;
+
+  --surface-lesson-border: #444444;
+  --surface-quiz-bg: #fafafa;
+  --surface-quiz-border: #dddddd;
+  --surface-certificate-border: #444444;
+}
+
+body.theme-whitelabel .cover.has-brand-gradient,
+body.theme-whitelabel .layout-cover.has-brand-gradient {
+  background: none;
+  margin: 0;
+  padding: var(--space-cover-pad-y) 0 var(--space-cover-pad-bottom);
+}
+
+body.theme-whitelabel .cover .brand-logo,
+body.theme-whitelabel .layout-cover .brand-logo,
+body.theme-whitelabel .cover .brand-mark.branded-only,
+body.theme-whitelabel .layout-cover .brand-mark.branded-only {
+  display: none !important;
+}
+</style>
+</head>
+<body class="theme-whitelabel">
+  
+  <div class="cover layout-cover">
+    
+    <div class="brand-mark whitelabel-only">Training Workbook</div>
+    <h1>Paint Protection Film (PPF)</h1>
+    <p class="subtitle">Core Course — 3-Day Beginner Program</p>
+    <p class="meta">Student Workbook · Version 1.0</p>
+    <div class="student-fields doc-fields">
+      <p>Student Name: _________________________________</p>
+      <p>Class Date: ___________________________________</p>
+      <p>Instructor: ___________________________________</p>
+      <p>Location: ____________________________________</p>
+    </div>
+  </div>
+  <h1>Paint Protection Film (PPF) — Student Workbook</h1>
+<p><strong>Skill Forge Core Course · 3-Day Beginner Program</strong></p>
+<hr>
+<h2>Welcome</h2>
+<p>Welcome to the Skill Forge Paint Protection Film (PPF) Core Course. Over three intensive days you will learn the foundational skills to install automotive paint protection film — from surface preparation and your first flat-panel install to completing a professional partial-front package under supervision.</p>
+<p>PPF is one of the highest-value services in automotive restyling. This course gives you the hands-on practice and quality standards to start offering PPF with confidence.</p>
+<div class="callout">
+
+<p><strong>What &quot;Core&quot; means:</strong> This course is designed for beginners with little or no PPF experience. Vinyl wrap or window tint experience helps but is not required. By Day 3 you will have completed multiple panel installs and a supervised partial-front package. Advanced techniques (full vehicle wraps, color PPF, complex bumpers) are covered in our Advanced courses.</p>
+</div>
+
+<hr>
+<h2>Pre-Course Checklist</h2>
+<div class="no-break">
+
+<h3>Before You Arrive</h3>
+<ul class="checklist">
+<li>Wear closed-toe shoes and shop-appropriate clothing all three days</li>
+<li>Bring safety glasses (loaners available)</li>
+<li>Remove rings, watches, and bracelets that can scratch paint or film</li>
+<li>Trim fingernails — you will handle adhesive film constantly</li>
+<li>If you have tint or wrap experience, bring one question you want answered about PPF differences</li>
+</ul>
+
+<h3>Provided Each Day</h3>
+<ul>
+<li>Practice panels and vehicle access for supervised installs</li>
+<li>PPF film (practice and project material)</li>
+<li>Tools: squeegees, slip solution, heat gun, blades, tack cloths, prep chemicals</li>
+<li>Lunch and refreshments</li>
+</ul>
+</div>
+
+<hr>
+<h2>Course Schedule Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Theme</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Day 1</strong></td>
+<td>Foundations</td>
+<td>Film science, paint assessment, tools, prep, flat panels</td>
+</tr>
+<tr>
+<td><strong>Day 2</strong></td>
+<td>Technique</td>
+<td>Stretching, edges, hood, bumpers, mirrors, complex curves</td>
+</tr>
+<tr>
+<td><strong>Day 3</strong></td>
+<td>Professional Practice</td>
+<td>Packages, patterns, QC, business basics, assessment</td>
+</tr>
+</tbody></table>
+<div class="page-break"></div>
+
+<h1>Day 1 — Foundations</h1>
+<h2>Day 1 Learning Objectives</h2>
+<p>By the end of Day 1, you will be able to:</p>
+<ol>
+<li>Identify PPF film types and explain TPU vs. older PVC constructions</li>
+<li>Assess paint condition and determine if correction is needed before install</li>
+<li>Set up a PPF workstation with contamination control</li>
+<li>Perform a complete paint decontamination and prep sequence</li>
+<li>Install film on a flat practice panel with clean edges and no lift</li>
+</ol>
+<hr>
+<h2>Day 1 Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Session</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8:00 – 8:30</td>
+<td>Welcome, introductions, course overview</td>
+</tr>
+<tr>
+<td>8:30 – 9:30</td>
+<td><strong>Classroom:</strong> PPF film types, construction &amp; self-healing</td>
+</tr>
+<tr>
+<td>9:30 – 10:15</td>
+<td><strong>Classroom:</strong> Paint assessment &amp; correction basics</td>
+</tr>
+<tr>
+<td>10:15 – 10:30</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:30 – 11:30</td>
+<td><strong>Classroom:</strong> Tools, slip solution, workspace setup</td>
+</tr>
+<tr>
+<td>11:30 – 12:00</td>
+<td><strong>Classroom:</strong> Safety — blades, chemicals, heat, paint damage</td>
+</tr>
+<tr>
+<td>12:00 – 1:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>1:00 – 1:45</td>
+<td><strong>Demo:</strong> Full decon and prep sequence on hood section</td>
+</tr>
+<tr>
+<td>1:45 – 3:15</td>
+<td><strong>Lab 1:</strong> Flat panel install — hood section</td>
+</tr>
+<tr>
+<td>3:15 – 3:30</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>3:30 – 4:45</td>
+<td><strong>Lab 2:</strong> Edge work — wrap, tuck, and trim on practice panel</td>
+</tr>
+<tr>
+<td>4:45 – 5:00</td>
+<td>Day 1 knowledge check &amp; Q&amp;A</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Session 1: PPF Film Types &amp; Construction</h2>
+<h3>What Is Paint Protection Film?</h3>
+<p>PPF is a thick, optically clear (or colored/textured) polyurethane film applied to painted surfaces to protect against rock chips, scratches, bug acids, bird droppings, and UV damage. Modern films are <strong>TPU (thermoplastic polyurethane)</strong> — flexible, self-healing, and durable.</p>
+<h3>Film Construction</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Top coat</strong></td>
+<td>Self-healing, stain resistance, hydrophobic properties</td>
+</tr>
+<tr>
+<td><strong>TPU body</strong></td>
+<td>Impact absorption, flexibility, clarity</td>
+</tr>
+<tr>
+<td><strong>Adhesive</strong></td>
+<td>Pressure-sensitive; designed for clean removal without paint damage</td>
+</tr>
+<tr>
+<td><strong>Release liner</strong></td>
+<td>Protects adhesive until install</td>
+</tr>
+</tbody></table>
+<h3>Film Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Common Use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Standard gloss</strong></td>
+<td>Crystal clear, high gloss</td>
+<td>Full front, high-impact zones</td>
+</tr>
+<tr>
+<td><strong>Matte / satin</strong></td>
+<td>Reduces gloss of factory paint</td>
+<td>Matte wraps, stealth packages</td>
+</tr>
+<tr>
+<td><strong>Colored PPF</strong></td>
+<td>Pigmented TPU</td>
+<td>Color-change protection</td>
+</tr>
+<tr>
+<td><strong>Textured</strong></td>
+<td>Carbon fiber look, etc.</td>
+<td>Accent panels, trim</td>
+</tr>
+</tbody></table>
+<div class="callout tip">
+
+<p><strong>Installer tip:</strong> Self-healing works with heat — light scratches disappear with sun exposure or warm water. Explain this to customers; it&#39;s a major selling point for premium films.</p>
+</div>
+
+<h3>Self-Healing Explained</h3>
+<p>The top coat is an elastomeric polymer that flows back into place when heated above ~140°F. This is <strong>not</strong> magic — deep gouges that penetrate the TPU body cannot self-heal. Set customer expectations accurately.</p>
+<hr>
+<h2>Session 2: Paint Assessment &amp; Correction Basics</h2>
+<h3>Before Any PPF Install, Inspect Paint</h3>
+<p>Walk the vehicle in good lighting (preferably outdoors or with LED inspection lights):</p>
+<ul class="checklist">
+<li>Rock chips and deep scratches — document pre-existing damage</li>
+<li>Swirl marks and oxidation — may need polish before film</li>
+<li>Repainted panels — adhesion can vary; test or disclose risk</li>
+<li>Contamination — tar, tree sap, rail dust, iron particles</li>
+<li>PPF-unfriendly surfaces — fresh paint (cure time), vinyl wraps, plasti-dip</li>
+</ul>
+
+<h3>Paint Correction Decision</h3>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Light swirls, film will hide minor defects</td>
+<td>Wash, decon, alcohol wipe — proceed</td>
+</tr>
+<tr>
+<td>Moderate swirls visible through film</td>
+<td>Single-stage polish recommended</td>
+</tr>
+<tr>
+<td>Deep scratches, chips to primer</td>
+<td>Document; fill chips if needed; disclose to customer</td>
+</tr>
+<tr>
+<td>Fresh paint (&lt; 30 days)</td>
+<td>Do not install — outgas will cause adhesive failure</td>
+</tr>
+</tbody></table>
+<div class="callout warning">
+
+<p><strong>Always photograph pre-existing damage.</strong> PPF makes paint look better — customers may blame you for damage that was already there.</p>
+</div>
+
+<h3>Decontamination Sequence (Standard)</h3>
+<ol>
+<li><strong>Wash</strong> — two-bucket method, clean mitts, blow out emblems and gaps</li>
+<li><strong>Clay bar or clay mitt</strong> — remove bonded contamination with lubricant</li>
+<li><strong>Iron remover</strong> — dissolve embedded ferrous particles (purple reaction = working)</li>
+<li><strong>Tar/sap remover</strong> — spot treat as needed</li>
+<li><strong>Isopropyl alcohol wipe (70% IPA)</strong> — remove oils and residue; final prep</li>
+<li><strong>Inspect under light</strong> — any remaining particles must be removed before film</li>
+</ol>
+<hr>
+<h2>Session 3: Tools, Slip Solution &amp; Workspace</h2>
+<h3>Essential PPF Tools</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Hard squeegee (with felt or low-friction sleeve)</strong></td>
+<td>Primary wet-out tool</td>
+</tr>
+<tr>
+<td><strong>Soft squeegee</strong></td>
+<td>Final passes, delicate areas</td>
+</tr>
+<tr>
+<td><strong>Slip/tack solution bottles</strong></td>
+<td>Positioning and final adhesion</td>
+</tr>
+<tr>
+<td><strong>Heat gun</strong></td>
+<td>Stretching, conforming, post-heating</td>
+</tr>
+<tr>
+<td><strong>Snitty knife / plotter blade</strong></td>
+<td>Trimming film edges</td>
+</tr>
+<tr>
+<td><strong>Extension blade holder</strong></td>
+<td>Precise edge trimming in tight areas</td>
+</tr>
+<tr>
+<td><strong>Tack cloth / lint roller</strong></td>
+<td>Remove dust before film contact</td>
+</tr>
+<tr>
+<td><strong>Plotter</strong> (shop)</td>
+<td>Pre-cut patterns — introduced Day 3</td>
+</tr>
+<tr>
+<td><strong>Light bar / inspection lamp</strong></td>
+<td>Reveal contamination and defects</td>
+</tr>
+</tbody></table>
+<h3>Slip vs. Tack Solution</h3>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Purpose</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Slip</strong> (soapy water)</td>
+<td>Allows film to slide for positioning</td>
+<td>During placement and initial squeegee</td>
+</tr>
+<tr>
+<td><strong>Tack</strong> (higher alcohol or dedicated tack solution)</td>
+<td>Increases adhesion for final tack</td>
+<td>Edges, wraps, and problem areas</td>
+</tr>
+</tbody></table>
+<p><strong>Follow your film manufacturer&#39;s recommended ratios.</strong> Too much slip = film won&#39;t stick. Too much tack too early = can&#39;t reposition.</p>
+<h3>Workspace Requirements</h3>
+<ul>
+<li>Temperature: 65–75°F ideal for adhesive performance</li>
+<li>Dust control: avoid active sanding nearby; wet-mop floors</li>
+<li>Lighting: bright, angled light reveals every particle</li>
+<li>Organized film: rolls stored flat or on rack; handle edges carefully</li>
+</ul>
+<hr>
+<h2>Session 4: Safety</h2>
+<div class="callout warning">
+
+<p><strong>Non-negotiable safety rules:</strong></p>
+<ol>
+<li>Blades cut paint and skin — use fresh blades; cut away from body</li>
+<li>Heat guns reach extreme temperatures — never hold stationary on paint or film</li>
+<li>Chemical PPE: gloves and eye protection when using IPA, iron remover, and adhesives</li>
+<li>Never install on a hot panel in direct sun — adhesive behaves unpredictably</li>
+<li>Lift panels properly — hoods and doors are heavy; use props and assistance</li>
+</ol>
+</div>
+
+<hr>
+<h2>Lab 1: Flat Panel Install — Hood Section</h2>
+<div class="lab">
+
+<h3>Lab 1 — Hood Section Install</h3>
+<p><strong>Objective:</strong> Prep a hood section and install a piece of PPF with clean wet-out and no trapped contamination.</p>
+<p><strong>Time:</strong> 90 minutes</p>
+<h4>Part A — Decon &amp; Prep (25 min)</h4>
+<ol>
+<li>Wash and clay the hood section</li>
+<li>Iron remover if needed; rinse and dry</li>
+<li>IPA wipe the entire install zone</li>
+<li>Final inspection under light — zero particles allowed</li>
+<li><strong>Checkpoint:</strong> Panel squeaks clean under your hand</li>
+</ol>
+<h4>Part B — Film Handling &amp; Position (20 min)</h4>
+<ol>
+<li>Cut film from roll with 1–2&quot; margin beyond panel edges</li>
+<li>Peel liner partially; spray adhesive side with slip solution</li>
+<li>Spray panel with slip solution</li>
+<li>Position film; align with body lines or panel edges</li>
+<li><strong>Checkpoint:</strong> Film slides freely for final positioning</li>
+</ol>
+<h4>Part C — Wet-Out (35 min)</h4>
+<ol>
+<li>Anchor the center — light tack squeegee pass in the middle</li>
+<li>Work outward in overlapping strokes; push solution to edges</li>
+<li>Use firm, even pressure — PPF is thicker than tint</li>
+<li>Post-heat lightly if minor fingers remain (instructor guidance)</li>
+<li><strong>Checkpoint:</strong> No bubbles, no visible contamination, film fully adhered</li>
+</ol>
+<h4>Part D — Self-Assessment</h4>
+<p>Edge cleanliness ___ | Bubble count ___ | Contamination ___ | Overall (1–5) ___</p>
+</div>
+
+<hr>
+<h2>Lab 2: Edge Work — Wrap, Tuck &amp; Trim</h2>
+<div class="lab">
+
+<h3>Lab 2 — Edge Techniques</h3>
+<p><strong>Objective:</strong> Practice the three primary edge finishing methods on a practice panel.</p>
+<p><strong>Time:</strong> 75 minutes</p>
+<h4>Edge Method 1 — Cut to Edge (Flush)</h4>
+<ul>
+<li>Film trimmed exactly at panel edge</li>
+<li>Clean look; no wrap</li>
+<li>Requires precise cutting; edge is vulnerable to lift over time</li>
+</ul>
+<h4>Edge Method 2 — Wrap Edge</h4>
+<ul>
+<li>Film wraps 2–3mm around panel edge to backside</li>
+<li>More durable; preferred on hoods, fenders, doors</li>
+<li>Use heat to conform; squeegee wrap zone firmly</li>
+</ul>
+<h4>Edge Method 3 — Tuck into Gap</h4>
+<ul>
+<li>Film tucked into panel gaps (hood-to-fender, door jambs)</li>
+<li>Invisible edge; premium finish</li>
+<li>Requires gap access and precise trimming with extension blade</li>
+</ul>
+<p><strong>Practice all three methods</strong> on your assigned panel sections.</p>
+<p><strong>Instructor sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>Day 1 Knowledge Check</h2>
+<div class="knowledge-check">
+
+<ol>
+<li>What does TPU stand for, and why is it preferred over older PVC films?</li>
+<li>How does self-healing work, and what are its limitations?</li>
+<li>List the six steps of a standard decontamination sequence.</li>
+<li>Why should you never install PPF on fresh paint?</li>
+<li>What is the difference between slip solution and tack solution?</li>
+<li>Name three edge finishing methods and when each is appropriate.</li>
+</ol>
+</div>
+
+<h2>Day 1 Notes</h2>
+<div class="notes-page">
+<h2>Day 1 — My Notes</h2>
+<div class="notes-lines"></div>
+</div>
+
+<div class="page-break"></div>
+
+<h1>Day 2 — Technique Development</h1>
+<h2>Day 2 Learning Objectives</h2>
+<p>By the end of Day 2, you will be able to:</p>
+<ol>
+<li>Apply controlled stretch to conform film to moderate compound curves</li>
+<li>Use relief cuts appropriately without compromising coverage</li>
+<li>Complete a full hood install with wrapped edges</li>
+<li>Install film on a bumper section and mirror cap</li>
+<li>Identify and correct common defects: fingers, silvering, contamination, stretch marks</li>
+</ol>
+<hr>
+<h2>Day 2 Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Session</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8:00 – 8:30</td>
+<td>Day 1 review &amp; Q&amp;A</td>
+</tr>
+<tr>
+<td>8:30 – 9:45</td>
+<td><strong>Classroom:</strong> Stretching, anchor points &amp; relief cuts</td>
+</tr>
+<tr>
+<td>9:45 – 10:30</td>
+<td><strong>Demo:</strong> Hood install from bulk roll</td>
+</tr>
+<tr>
+<td>10:30 – 10:45</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:45 – 11:45</td>
+<td><strong>Classroom:</strong> Bumpers, mirrors &amp; complex curves</td>
+</tr>
+<tr>
+<td>11:45 – 12:00</td>
+<td><strong>Classroom:</strong> Troubleshooting — fingers, silvering, lift</td>
+</tr>
+<tr>
+<td>12:00 – 1:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>1:00 – 2:45</td>
+<td><strong>Lab 3:</strong> Full hood install (supervised)</td>
+</tr>
+<tr>
+<td>2:45 – 3:00</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>3:00 – 4:30</td>
+<td><strong>Lab 4:</strong> Bumper section + mirror cap install</td>
+</tr>
+<tr>
+<td>4:30 – 5:00</td>
+<td>Day 2 knowledge check &amp; Q&amp;A</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Session 5: Stretching, Anchors &amp; Relief Cuts</h2>
+<h3>Controlled Stretch</h3>
+<p>PPF can stretch 10–40% depending on film brand and technique. <strong>Controlled stretch</strong> means applying tension only where needed to conform to curves — not stretching the entire panel uniformly.</p>
+<h3>Anchor Point Strategy</h3>
+<ol>
+<li><strong>Identify the flattest zone</strong> — anchor here first (center of hood, flat bumper section)</li>
+<li><strong>Work toward curves</strong> — stretch incrementally as you squeegee outward</li>
+<li><strong>Heat assists stretch</strong> — warm film conforms without excessive force</li>
+<li><strong>Never stretch beyond manufacturer limit</strong> — film thins, adhesives stress, silvering appears</li>
+</ol>
+<h3>Relief Cuts</h3>
+<p>A relief cut is a carefully placed slit in excess film (not in the installed area) that allows the film to open and conform around sharp compound curves, mirror bases, and badge areas.</p>
+<p><strong>Rules for relief cuts:</strong></p>
+<ul>
+<li>Cut in <strong>excess margin only</strong> — never in the visible install zone</li>
+<li>Cut from the edge inward — stops before the adhered area</li>
+<li>One cut at a time — reassess after each</li>
+<li>Seal cut edges with heat and tack solution after conforming</li>
+</ul>
+<div class="callout warning">
+
+<p><strong>Silvering</strong> (whitish haze along adhesive) means the film was overstretched or adhesive was stressed. It may not disappear. Remove and replace the section.</p>
+</div>
+
+<hr>
+<h2>Session 6: Bumpers, Mirrors &amp; Complex Curves</h2>
+<h3>Bumper Strategy</h3>
+<p>Bumpers are the most complex PPF install zone — compound curves, sensor cutouts, and tight edges.</p>
+<ol>
+<li><strong>Pattern vs. bulk</strong> — beginners should use plotter patterns when available</li>
+<li><strong>Work from center outward</strong> — same anchor principle as hood</li>
+<li><strong>Heat frequently</strong> — short bursts, keep moving</li>
+<li><strong>Sensor and camera cutouts</strong> — punch or trim precisely; don&#39;t cover ADAS sensors unless customer waives (not recommended)</li>
+<li><strong>Relief cuts are normal</strong> on aggressive bumper curves — hide them in inconspicuous zones</li>
+</ol>
+<h3>Mirror Caps</h3>
+<ol>
+<li>Remove cap if possible — flat install on bench is easier</li>
+<li>If on-vehicle: stretch from center; heavy heat on compound curves</li>
+<li>Wrap edges for durability — mirror caps see abrasion</li>
+<li>Post-heat entire cap after install</li>
+</ol>
+<hr>
+<h2>Session 7: Troubleshooting Common Defects</h2>
+<table>
+<thead>
+<tr>
+<th>Defect</th>
+<th>Likely Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Finger</strong></td>
+<td>Insufficient stretch/heat on curve</td>
+<td>Lift, reheat, re-squeegee; or remove and redo</td>
+</tr>
+<tr>
+<td><strong>Silvering</strong></td>
+<td>Overstretch or adhesive stress</td>
+<td>Remove section; install fresh film</td>
+</tr>
+<tr>
+<td><strong>Contamination</strong></td>
+<td>Skipped decon step or dusty shop</td>
+<td>Remove film, re-prep, reinstall</td>
+</tr>
+<tr>
+<td><strong>Edge lift</strong></td>
+<td>Incomplete tack on wrap zone</td>
+<td>Tack solution + firm squeegee + post-heat</td>
+</tr>
+<tr>
+<td><strong>Stretch marks</strong></td>
+<td>Film pulled too hard</td>
+<td>Remove and replace — marks don&#39;t heal</td>
+</tr>
+<tr>
+<td><strong>Orange peel in adhesive</strong></td>
+<td>Trapped solution</td>
+<td>Squeegee harder; post-heat; severe cases = redo</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Lab 3: Full Hood Install</h2>
+<div class="lab">
+
+<h3>Lab 3 — Full Hood Install</h3>
+<p><strong>Objective:</strong> Install PPF on a full hood from bulk roll with wrapped edges and no visible defects.</p>
+<p><strong>Time:</strong> 105 minutes</p>
+<p><strong>Vehicle assigned:</strong> _______________________</p>
+<p><strong>Film used:</strong> ____________________________</p>
+<p><strong>Edge method:</strong> ☐ Wrap  ☐ Tuck  ☐ Flush</p>
+<p><strong>Instructor sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<hr>
+<h2>Lab 4: Bumper Section &amp; Mirror Cap</h2>
+<div class="lab">
+
+<h3>Lab 4 — Bumper &amp; Mirror Cap Install</h3>
+<p><strong>Objective:</strong> Install PPF on a bumper section and mirror cap, using relief cuts if needed.</p>
+<p><strong>Time:</strong> 90 minutes</p>
+<p><strong>Bumper section:</strong> ________________________</p>
+<p><strong>Relief cuts used:</strong> ☐ Yes  ☐ No — Location: ___________</p>
+<p><strong>Mirror cap:</strong> ☐ On-vehicle  ☐ Off-vehicle</p>
+<p><strong>Instructor sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>Day 2 Knowledge Check</h2>
+<div class="knowledge-check">
+
+<ol>
+<li>What is an anchor point, and how do you choose one?</li>
+<li>When is a relief cut appropriate, and where should it never be placed?</li>
+<li>What causes silvering, and can it be fixed?</li>
+<li>Why are bumper installs considered more difficult than hood installs?</li>
+<li>Describe the post-heat process and why it matters.</li>
+<li>What is the maximum stretch approach — stretch everything or stretch only where needed?</li>
+</ol>
+</div>
+
+<h2>Day 2 Notes</h2>
+<div class="notes-page">
+<h2>Day 2 — My Notes</h2>
+<div class="notes-lines"></div>
+</div>
+
+<div class="page-break"></div>
+
+<h1>Day 3 — Professional Practice</h1>
+<h2>Day 3 Learning Objectives</h2>
+<p>By the end of Day 3, you will be able to:</p>
+<ol>
+<li>Explain common PPF packages (partial front, full front, track, full body)</li>
+<li>Use pattern/plotter software at a beginner level (or follow pre-cut patterns)</li>
+<li>Complete a supervised partial-front package to shop quality standards</li>
+<li>Perform a QC inspection using a standardized checklist</li>
+<li>Outline pricing structure for PPF services</li>
+</ol>
+<hr>
+<h2>Day 3 Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Session</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8:00 – 8:30</td>
+<td>Day 2 review &amp; Q&amp;A</td>
+</tr>
+<tr>
+<td>8:30 – 9:30</td>
+<td><strong>Classroom:</strong> PPF packages &amp; coverage zones</td>
+</tr>
+<tr>
+<td>9:30 – 10:15</td>
+<td><strong>Classroom:</strong> Pattern software &amp; bulk vs. plotter workflow</td>
+</tr>
+<tr>
+<td>10:15 – 10:30</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:30 – 11:00</td>
+<td><strong>Classroom:</strong> QC inspection &amp; customer delivery</td>
+</tr>
+<tr>
+<td>11:00 – 12:00</td>
+<td><strong>Demo:</strong> Partial front package walkthrough</td>
+</tr>
+<tr>
+<td>12:00 – 1:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>1:00 – 1:45</td>
+<td><strong>Classroom:</strong> Pricing, upselling, and business basics</td>
+</tr>
+<tr>
+<td>1:45 – 4:15</td>
+<td><strong>Lab 5:</strong> Partial front package — capstone install</td>
+</tr>
+<tr>
+<td>4:15 – 4:45</td>
+<td>Final knowledge check</td>
+</tr>
+<tr>
+<td>4:45 – 5:00</td>
+<td>Course wrap-up, certificates, feedback</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Session 8: PPF Packages &amp; Coverage Zones</h2>
+<h3>Common Packages</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Typical Coverage</th>
+<th>Target Customer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>High-wear</strong></td>
+<td>Headlights, mirrors, door cups, rocker panels</td>
+<td>Budget-conscious; high-impact zones</td>
+</tr>
+<tr>
+<td><strong>Partial front</strong></td>
+<td>Partial hood, partial fenders, full bumper, mirrors</td>
+<td>Most popular entry package</td>
+</tr>
+<tr>
+<td><strong>Full front</strong></td>
+<td>Full hood, full fenders, bumper, mirrors, headlights</td>
+<td>Premium daily-driver protection</td>
+</tr>
+<tr>
+<td><strong>Track package</strong></td>
+<td>Full front + rocker panels, A-pillars, rear splash</td>
+<td>Enthusiast / track use</td>
+</tr>
+<tr>
+<td><strong>Full body</strong></td>
+<td>Entire painted surface</td>
+<td>Collector, exotic, long-term ownership</td>
+</tr>
+</tbody></table>
+<h3>Coverage Zone Diagram (Partial Front)</h3>
+<pre><code>        ┌─────────────────────────┐
+        │    PARTIAL HOOD (24&quot;)   │
+        ├──────┬──────────┬───────┤
+        │ P.F. │          │ P.F.  │  ← Partial fenders
+        │      │  BUMPER  │       │     (wraps to door edge)
+        │      │  (full)  │       │
+        └──────┴──────────┴───────┘
+              Mirrors + headlights (optional add-ons)
+</code></pre>
+<div class="callout tip">
+
+<p><strong>Upsell script:</strong> &quot;The partial front covers where 80% of rock chips happen. Full front adds complete hood and fender coverage — most customers who plan to keep the car 3+ years go full front.&quot;</p>
+</div>
+
+<hr>
+<h2>Session 9: Pattern Software &amp; Workflow</h2>
+<h3>Bulk Roll vs. Plotter Pattern</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Bulk roll</strong></td>
+<td>No software cost; full control</td>
+<td>More waste; slower; harder on complex panels</td>
+</tr>
+<tr>
+<td><strong>Plotter pattern</strong></td>
+<td>Precise fit; faster; less waste</td>
+<td>Software subscription; database gaps for new models</td>
+</tr>
+</tbody></table>
+<h3>Beginner Workflow (Plotter)</h3>
+<ol>
+<li>Select vehicle year/make/model/trim in pattern software</li>
+<li>Choose kit (partial front, full hood, etc.)</li>
+<li>Nest patterns on roll for material efficiency</li>
+<li>Plot/cut on machine</li>
+<li>Weed liner from cut pieces</li>
+<li>Install each piece in logical order: center panels first, then edges, then details</li>
+</ol>
+<h3>Pattern Software at Your Shop</h3>
+<p>Your shop will use one plotter pattern platform. Learn that system deeply — vehicle lookup, kit selection, nesting, and cut workflow. Ask your instructor which platform you will train on and where to find vehicle patterns for new models.</p>
+<hr>
+<h2>Session 10: QC Inspection &amp; Customer Delivery</h2>
+<h3>QC Checklist — Every Install</h3>
+<ul class="checklist">
+<li>Paint prepped — decon and IPA complete; pre-existing damage documented</li>
+<li>No contamination under film (inspect with light at angle)</li>
+<li>No fingers, silvering, or stretch marks in visible areas</li>
+<li>Edges wrapped, tucked, or flushed per spec — no lift</li>
+<li>All plotter pieces aligned — no visible seams misaligned at panel lines</li>
+<li>Emblems, badges, and sensors properly handled</li>
+<li>ADAS sensors uncovered and functional</li>
+<li>Post-heat completed on all installed panels</li>
+<li>Customer paperwork with package details and warranty info</li>
+</ul>
+
+<h3>Customer Delivery</h3>
+<ol>
+<li>Walk the vehicle with the customer in good lighting</li>
+<li>Point out coverage zones and any documented pre-existing paint damage</li>
+<li>Explain cure time: <strong>no wash for 48 hours</strong>; hand wash only for first week</li>
+<li>Provide written aftercare: no pressure washer directly on edges, no abrasive compounds on film</li>
+<li>Explain warranty: film warranty (manufacturer) vs. workmanship warranty (your shop)</li>
+</ol>
+<hr>
+<h2>Session 11: Pricing &amp; Business Basics</h2>
+<h3>Pricing Components</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Material cost</strong></td>
+<td>Film cost per sq ft × coverage area + 15–20% waste factor</td>
+</tr>
+<tr>
+<td><strong>Labor</strong></td>
+<td>Hours × shop rate (PPF labor rate is higher than tint)</td>
+</tr>
+<tr>
+<td><strong>Complexity premium</strong></td>
+<td>Exotics, tight bumpers, color PPF</td>
+</tr>
+<tr>
+<td><strong>Correction add-on</strong></td>
+<td>Polish/decon if not included in base</td>
+</tr>
+</tbody></table>
+<h3>Sample Package Pricing Framework</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Typical Retail Range*</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>High-wear</td>
+<td>$300 – $600</td>
+</tr>
+<tr>
+<td>Partial front</td>
+<td>$800 – $1,400</td>
+</tr>
+<tr>
+<td>Full front</td>
+<td>$1,500 – $2,500</td>
+</tr>
+<tr>
+<td>Full body</td>
+<td>$5,000 – $10,000+</td>
+</tr>
+</tbody></table>
+<p><em>*Varies significantly by market, film brand, and vehicle type. Research your local market.</em></p>
+<h3>Profitability Tips</h3>
+<ul>
+<li><strong>Film efficiency</strong> — nest patterns tightly; track waste per job</li>
+<li><strong>Bundle services</strong> — PPF + ceramic coating on film is a strong upsell</li>
+<li><strong>Deposit policy</strong> — 50% deposit on PPF bookings; material cost is high</li>
+<li><strong>Photography</strong> — before/after photos are your best marketing asset</li>
+</ul>
+<hr>
+<h2>Lab 5: Partial Front Package — Capstone Install</h2>
+<div class="lab">
+
+<h3>Lab 5 — Partial Front Package (Capstone)</h3>
+<p><strong>Objective:</strong> Complete a supervised partial-front PPF package meeting all QC checklist items.</p>
+<p><strong>Time:</strong> 150 minutes</p>
+<p><strong>Vehicle assigned:</strong> _______________________</p>
+<p><strong>Package includes:</strong>
+☐ Partial hood  ☐ Partial fenders  ☐ Full bumper  ☐ Mirrors  ☐ Headlights</p>
+<p><strong>Film brand &amp; thickness:</strong> __________________</p>
+<p><strong>Install method:</strong> ☐ Plotter pattern  ☐ Bulk roll</p>
+<p><strong>QC checklist completed:</strong> ☐ Yes</p>
+<p><strong>Instructor final sign-off:</strong> ☐ Pass  ☐ Redo</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>Final Knowledge Check</h2>
+<div class="knowledge-check">
+
+<ol>
+<li>What panels are typically included in a partial front package?</li>
+<li>What is the difference between bulk roll and plotter pattern installs?</li>
+<li>List five items on the PPF QC checklist.</li>
+<li>How long should a customer wait before washing their vehicle?</li>
+<li>Name three components of PPF pricing.</li>
+<li>What is silvering, and how do you prevent it?</li>
+</ol>
+</div>
+
+<hr>
+<h2>Course Completion Record</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Completed</th>
+<th>Instructor Initials</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Day 1 Labs 1–2</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Day 2 Labs 3–4</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Day 3 Lab 5 (Capstone)</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>All knowledge checks</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+<tr>
+<td>Final capstone install (Pass)</td>
+<td>☐</td>
+<td>_____</td>
+</tr>
+</tbody></table>
+<p><strong>Certificate of Completion issued:</strong> ☐ Yes — Date: __________</p>
+<p><strong>Instructor signature:</strong> ___________________________</p>
+<hr>
+<h2>Resources &amp; Quick Reference</h2>
+<h3>Decon Sequence</h3>
+<p>Wash → Clay → Iron remover → Tar spot treat → IPA wipe → Inspect</p>
+<h3>Stretch Rule</h3>
+<p>Anchor flat zone first → stretch only where needed → heat assist → post-heat all panels</p>
+<h3>Edge Priority</h3>
+<p>Tuck (best appearance) → Wrap (best durability) → Flush (acceptable on hidden edges)</p>
+<h3>Aftercare</h3>
+<p>48 hrs no wash · Hand wash first week · No pressure on edges · Annual inspection recommended</p>
+<div class="notes-page">
+<h2>Day 3 — My Notes</h2>
+<div class="notes-lines"></div>
+</div>
+
+  <p class="footer-note whitelabel-only">Confidential — Training materials for enrolled students only. Reproduction prohibited without written authorization.</p>
+</body>
+</html>

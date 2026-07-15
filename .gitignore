@@ -1,8 +1,5 @@
 node_modules/
-workbooks/output/*
-!workbooks/output/.gitkeep
-docs/output/*
-!docs/output/.gitkeep
+
 .DS_Store
 *.iml
 .idea/

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warranty Certificate</title>
+  <style>/* CORE Workbooks — Design tokens (theme files override semantic values) */
+
+:root {
+  /* Typography */
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-heading);
+
+  --font-size-body: 10.5pt;
+  --font-size-body-print: 10pt;
+  --font-size-h1: 22pt;
+  --font-size-h2: 15pt;
+  --font-size-h3: 12pt;
+  --font-size-h4: 10.5pt;
+  --font-size-cover-title: 28pt;
+  --font-size-cover-subtitle: 14pt;
+  --font-size-cover-meta: 11pt;
+  --font-size-cover-brand: 11pt;
+  --font-size-footer: 8.5pt;
+  --font-size-table: 9.5pt;
+  --font-size-running: 8.5pt;
+
+  --line-height-body: 1.45;
+  --letter-spacing-brand: 0.15em;
+
+  /* Colors — semantic */
+  --color-text: #1a1a1a;
+  --color-heading: #222222;
+  --color-accent: #444444;
+  --color-border: #cccccc;
+  --color-border-light: #e0e0e0;
+  --color-muted: #666666;
+  --color-field-line: #999999;
+  --color-table-header: #f5f5f5;
+  --color-revision-bg: #fafafa;
+  --color-notes-line: #e0e0e0;
+
+  /* Callouts */
+  --callout-bg: #f7f7f7;
+  --callout-border: #555555;
+  --callout-warning-bg: #fff8e6;
+  --callout-warning-border: #c9a227;
+  --callout-tip-bg: #f4f9f4;
+  --callout-tip-border: #3d6b4f;
+
+  /* Cover */
+  --cover-gradient: none;
+  --cover-text: #1a1a1a;
+  --cover-brand-text: #555555;
+  --cover-title: #222222;
+  --cover-subtitle: #555555;
+  --cover-meta: #666666;
+
+  /* Spacing scale */
+  --space-2xs: 0.15em;
+  --space-xs: 0.2em;
+  --space-sm: 0.35em;
+  --space-md: 0.5em;
+  --space-lg: 0.8em;
+  --space-xl: 1em;
+  --space-2xl: 1.4em;
+  --space-3xl: 2em;
+
+  --space-cover-pad-y: 1.5in;
+  --space-cover-pad-bottom: 1in;
+  --space-cover-brand-gap: 0.5in;
+  --space-cover-fields-top: 1.2in;
+
+  /* Borders & radii */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-heading: 3px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  /* Shadows (screen preview) */
+  --shadow-preview: 0 1px 4px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  /* Page layout */
+  --page-size: letter;
+  --page-margin-top: 0.75in;
+  --page-margin-x: 0.85in;
+  --page-margin-first: 0.5in;
+  --page-margin-footer: 0.65in;
+  --content-max-width: 7.5in;
+
+  /* Layout surfaces */
+  --surface-lesson-border: var(--color-accent);
+  --surface-quiz-bg: #fafafa;
+  --surface-quiz-border: var(--color-border);
+  --surface-certificate-border: var(--color-accent);
+  --surface-appendix-bg: #fafafa;
+}
+
+/* CORE Workbooks — Base typography, page setup, tables */
+
+@page {
+  size: var(--page-size);
+  margin: var(--page-margin-top) var(--page-margin-x) var(--page-margin-footer);
+}
+
+@page :first {
+  margin-top: var(--page-margin-first);
+}
+
+@page {
+  @bottom-center {
+    content: counter(page);
+    font-family: var(--font-body);
+    font-size: var(--font-size-running);
+    color: var(--color-muted);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0;
+  counter-reset: page;
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-heading);
+  page-break-after: avoid;
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  border-bottom: var(--border-width-heading) solid var(--color-accent);
+  padding-bottom: var(--space-xs);
+  margin-top: 0;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  margin-top: var(--space-2xl);
+  border-bottom: var(--border-width-thin) solid var(--color-border-light);
+  padding-bottom: var(--space-2xs);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  margin-top: var(--space-xl);
+  color: var(--color-accent);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  margin-top: var(--space-lg);
+}
+
+p { margin: var(--space-md) 0; }
+
+ul, ol {
+  margin: 0.4em 0;
+  padding-left: 1.4em;
+}
+
+li { margin: var(--space-xs) 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-lg) 0;
+  font-size: var(--font-size-table);
+  page-break-inside: avoid;
+}
+
+th, td {
+  border: var(--border-width-thin) solid var(--color-border);
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--color-table-header);
+  font-weight: 600;
+}
+
+/* Utilities */
+
+.page-break { page-break-before: always; }
+.no-break { page-break-inside: avoid; }
+
+.whitelabel-only { display: block; }
+.branded-only { display: none; }
+
+body.theme-branded .whitelabel-only { display: none; }
+body.theme-branded .branded-only { display: block; }
+
+@media print {
+  body { font-size: var(--font-size-body-print); }
+  a { color: inherit; text-decoration: none; }
+  .no-print { display: none; }
+}
+
+@media screen {
+  body {
+    padding: 1in;
+    background: #f0f0f0;
+  }
+  .cover,
+  .layout-cover,
+  .page-break,
+  [class*="layout-"] {
+    background: white;
+    padding: 1in;
+    margin-bottom: 1em;
+    box-shadow: var(--shadow-preview);
+  }
+}
+
+/* CORE Workbooks — Reusable UI components */
+
+.callout {
+  background: var(--callout-bg);
+  border-left: 4px solid var(--callout-border);
+  padding: 0.6em 0.8em;
+  margin: var(--space-lg) 0;
+  page-break-inside: avoid;
+}
+
+.callout.warning {
+  background: var(--callout-warning-bg);
+  border-left-color: var(--callout-warning-border);
+}
+
+.callout.tip {
+  background: var(--callout-tip-bg);
+  border-left-color: var(--callout-tip-border);
+}
+
+/* Procedure / SOP block */
+.procedure,
+.sop-page {
+  border: var(--border-width-medium) solid var(--surface-lesson-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+}
+
+.procedure h3,
+.sop-page h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+/* Lesson / lab block */
+.lab,
+.lesson-page {
+  border: var(--border-width-medium) solid var(--surface-lesson-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+}
+
+.lab h3,
+.lesson-page h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+/* Checklists */
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li::before {
+  content: "☐ ";
+  font-size: 12pt;
+}
+
+/* Quiz / knowledge check */
+.knowledge-check,
+.quiz-page {
+  background: var(--surface-quiz-bg);
+  border: var(--border-width-thin) solid var(--surface-quiz-border);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+}
+
+.knowledge-check ol,
+.quiz-page ol {
+  margin: 0;
+}
+
+/* Worksheet */
+.worksheet,
+.worksheet-page {
+  border: var(--border-width-thin) dashed var(--color-border);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  min-height: 3in;
+  page-break-inside: avoid;
+}
+
+.worksheet-page h3,
+.worksheet h3 {
+  margin-top: 0;
+}
+
+/* Review */
+.review-page {
+  border: var(--border-width-thin) solid var(--color-border-light);
+  background: var(--color-revision-bg);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+}
+
+/* Revision / doc metadata */
+.revision-block {
+  background: var(--color-revision-bg);
+  border: var(--border-width-thin) solid var(--color-border);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  font-size: var(--font-size-table);
+  page-break-inside: avoid;
+}
+
+/* Notes */
+.notes-page {
+  border: var(--border-width-thin) dashed var(--color-border);
+  min-height: 8in;
+  padding: 0.5in;
+  page-break-before: always;
+}
+
+.notes-page h2 {
+  border: none;
+  color: var(--color-muted);
+  font-size: var(--font-size-h3);
+}
+
+.notes-lines {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 23px,
+    var(--color-notes-line) 23px,
+    var(--color-notes-line) 24px
+  );
+  min-height: 7in;
+  margin-top: var(--space-md);
+}
+
+/* Schedule tables (workbooks) */
+.schedule-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+  width: 22%;
+}
+
+/* Document chrome */
+.doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-running);
+  color: var(--color-muted);
+  border-bottom: var(--border-width-thin) solid var(--color-border-light);
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+.doc-header .header-logo {
+  max-height: 0.35in;
+}
+
+.footer-note {
+  font-size: var(--font-size-footer);
+  color: var(--color-muted);
+  margin-top: var(--space-3xl);
+  border-top: var(--border-width-thin) solid var(--color-border-light);
+  padding-top: var(--space-md);
+}
+
+/* CORE Workbooks — Page layout templates */
+
+/* Cover page */
+.cover,
+.layout-cover {
+  text-align: center;
+  padding: var(--space-cover-pad-y) 0 var(--space-cover-pad-bottom);
+  page-break-after: always;
+  position: relative;
+}
+
+.cover.has-brand-gradient,
+.layout-cover.has-brand-gradient {
+  background: var(--cover-gradient);
+  margin: calc(-1 * var(--page-margin-first)) calc(-1 * var(--page-margin-x)) 0;
+  padding: 2in var(--page-margin-x) 1.2in;
+  color: var(--cover-text);
+}
+
+.cover .brand-logo,
+.layout-cover .brand-logo {
+  max-height: 1.2in;
+  max-width: 4in;
+  margin: 0 auto 0.4in;
+  display: block;
+}
+
+.cover .brand,
+.cover .brand-mark,
+.layout-cover .brand,
+.layout-cover .brand-mark {
+  font-size: var(--font-size-cover-brand);
+  letter-spacing: var(--letter-spacing-brand);
+  text-transform: uppercase;
+  color: var(--cover-brand-text);
+  margin-bottom: var(--space-cover-brand-gap);
+}
+
+.cover h1,
+.layout-cover h1 {
+  font-size: var(--font-size-cover-title);
+  border: none;
+  margin: 0.3in 0;
+  color: var(--cover-title);
+  font-family: var(--font-display);
+}
+
+.cover .subtitle,
+.layout-cover .subtitle {
+  font-size: var(--font-size-cover-subtitle);
+  color: var(--cover-subtitle);
+  margin: 0.2in 0;
+}
+
+.cover .meta,
+.layout-cover .meta {
+  margin-top: 0.8in;
+  font-size: var(--font-size-cover-meta);
+  color: var(--cover-meta);
+}
+
+.cover .doc-fields,
+.cover .student-fields,
+.layout-cover .doc-fields,
+.layout-cover .student-fields {
+  margin-top: var(--space-cover-fields-top);
+  text-align: left;
+  max-width: 4.5in;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cover .doc-fields p,
+.cover .student-fields p,
+.layout-cover .doc-fields p,
+.layout-cover .student-fields p {
+  border-bottom: var(--border-width-thin) solid var(--color-field-line);
+  padding-bottom: var(--space-xs);
+  margin: var(--space-lg) 0;
+}
+
+/* Certificate layout */
+.certificate-page,
+.layout-certificate {
+  border: var(--border-width-medium) double var(--surface-certificate-border);
+  padding: 0.75in 1in;
+  margin: var(--space-xl) 0;
+  text-align: center;
+  page-break-inside: avoid;
+}
+
+.certificate-page h1,
+.certificate-page h2,
+.layout-certificate h1,
+.layout-certificate h2 {
+  border: none;
+  text-align: center;
+}
+
+.certificate-page .certificate-body,
+.layout-certificate .certificate-body {
+  text-align: left;
+  margin-top: var(--space-xl);
+}
+
+.certificate-page .signature-row,
+.layout-certificate .signature-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1in;
+  margin-top: 1.5in;
+  text-align: left;
+}
+
+.certificate-page .signature-row p,
+.layout-certificate .signature-row p {
+  flex: 1;
+  border-top: var(--border-width-thin) solid var(--color-field-line);
+  padding-top: var(--space-xs);
+  font-size: var(--font-size-table);
+}
+
+/* Appendix layout */
+.appendix-page,
+.layout-appendix {
+  background: var(--surface-appendix-bg);
+  border: var(--border-width-thin) solid var(--color-border-light);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-before: always;
+}
+
+.appendix-page h2,
+.layout-appendix h2 {
+  margin-top: 0;
+}
+
+/* Running header (optional per-section) */
+.running-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-running);
+  color: var(--color-muted);
+  border-bottom: var(--border-width-thin) solid var(--color-border-light);
+  padding-bottom: 0.25em;
+  margin-bottom: var(--space-lg);
+  page-break-after: avoid;
+}
+
+.running-header .doc-title {
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.running-footer {
+  font-size: var(--font-size-footer);
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-md);
+  border-top: var(--border-width-thin) solid var(--color-border-light);
+}
+
+/* White-label theme — neutral, client-ready */
+
+:root {
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-heading);
+
+  --color-text: #1a1a1a;
+  --color-heading: #222222;
+  --color-accent: #444444;
+  --color-border: #cccccc;
+  --color-border-light: #e0e0e0;
+  --color-muted: #666666;
+  --color-field-line: #999999;
+  --color-table-header: #f5f5f5;
+  --color-revision-bg: #fafafa;
+  --color-notes-line: #e0e0e0;
+
+  --callout-bg: #f7f7f7;
+  --callout-border: #555555;
+  --callout-warning-bg: #fff8e6;
+  --callout-warning-border: #c9a227;
+  --callout-tip-bg: #f4f9f4;
+  --callout-tip-border: #3d6b4f;
+
+  --cover-gradient: none;
+  --cover-text: #1a1a1a;
+  --cover-brand-text: #555555;
+  --cover-title: #222222;
+  --cover-subtitle: #555555;
+  --cover-meta: #666666;
+
+  --surface-lesson-border: #444444;
+  --surface-quiz-bg: #fafafa;
+  --surface-quiz-border: #dddddd;
+  --surface-certificate-border: #444444;
+}
+
+body.theme-whitelabel .cover.has-brand-gradient,
+body.theme-whitelabel .layout-cover.has-brand-gradient {
+  background: none;
+  margin: 0;
+  padding: var(--space-cover-pad-y) 0 var(--space-cover-pad-bottom);
+}
+
+body.theme-whitelabel .cover .brand-logo,
+body.theme-whitelabel .layout-cover .brand-logo,
+body.theme-whitelabel .cover .brand-mark.branded-only,
+body.theme-whitelabel .layout-cover .brand-mark.branded-only {
+  display: none !important;
+}
+</style>
+</head>
+<body class="theme-whitelabel">
+  
+  <div class="cover layout-cover">
+    
+    <div class="brand-mark whitelabel-only">Skill Forge</div>
+    <div class="brand-mark whitelabel-only">Standard Operating Procedure</div>
+    <h1>Warranty Certificate</h1>
+    <p class="subtitle">Workmanship and materials warranty documentation</p>
+    <p class="meta">Certificate · Version 1.0</p>
+    <div class="doc-fields">
+      <p>Organization: _________________________________</p>
+      <p>Document ID: warranty-certificate</p>
+      <p>Effective Date: _______________________________</p>
+      <p>Approved By: __________________________________</p>
+    </div>
+  </div>
+  <h1>Warranty Certificate</h1>
+<p><strong>Workmanship &amp; materials warranty documentation</strong></p>
+<hr>
+<h2>Certificate information</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Certificate #</td>
+<td></td>
+</tr>
+<tr>
+<td>Issue date</td>
+<td></td>
+</tr>
+<tr>
+<td>Customer name</td>
+<td></td>
+</tr>
+<tr>
+<td>Phone</td>
+<td></td>
+</tr>
+<tr>
+<td>Email</td>
+<td></td>
+</tr>
+<tr>
+<td>Vehicle year / make / model</td>
+<td></td>
+</tr>
+<tr>
+<td>VIN</td>
+<td></td>
+</tr>
+<tr>
+<td>License plate</td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Services covered</h2>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Material / product type</th>
+<th>Coverage area</th>
+<th>Install date</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Warranty terms</h2>
+<h3>Workmanship warranty</h3>
+<p>The installing shop warrants that services were performed in accordance with industry standards and manufacturer guidelines for the products installed.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Workmanship warranty period</td>
+<td>_______ months / years from install date</td>
+</tr>
+<tr>
+<td>Covered defects</td>
+<td>Peeling, lifting, bubbling, or adhesion failure due to improper installation</td>
+</tr>
+<tr>
+<td>Not covered</td>
+<td>See exclusions below</td>
+</tr>
+</tbody></table>
+<h3>Material warranty</h3>
+<p>Material warranties are provided by the product manufacturer where applicable. This certificate documents workmanship coverage by the installing shop and references manufacturer terms when supplied.</p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Manufacturer warranty term</th>
+<th>Registration required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td>☐ Yes ☐ No ☐ N/A</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>☐ Yes ☐ No ☐ N/A</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Exclusions</h2>
+<p>The following are <strong>not</strong> covered under this workmanship warranty:</p>
+<ul class="checklist">
+<li>Pre-existing paint, glass, or body damage documented before service</li>
+<li>Damage from accidents, collisions, vandalism, or environmental events</li>
+<li>Improper care, abrasive cleaners, or failure to follow aftercare instructions</li>
+<li>Modifications by third parties after install</li>
+<li>Normal wear, fading, or cosmetic changes per manufacturer specifications</li>
+<li>Commercial or fleet use beyond stated limits (if applicable)</li>
+<li>Removal and reinstallation by parties other than the issuing shop</li>
+</ul>
+
+<hr>
+<h2>Customer responsibilities</h2>
+<p>To maintain warranty coverage, the customer agrees to:</p>
+<ol>
+<li>Follow all written and verbal aftercare instructions provided at delivery</li>
+<li>Notify the shop promptly of any defect within the warranty period</li>
+<li>Allow the shop reasonable opportunity to inspect and remedy covered claims</li>
+<li>Not attempt self-repair of warranted installations</li>
+</ol>
+<hr>
+<h2>Claim procedure</h2>
+<ol>
+<li>Contact the shop within the warranty period with certificate # and description of issue</li>
+<li>Provide photos if requested</li>
+<li>Schedule inspection at shop location (or as mutually agreed)</li>
+<li>Covered claims will be remedied at no charge for labor; material costs per manufacturer policy</li>
+</ol>
+<p><strong>Warranty claims contact:</strong> _________________________ <strong>Phone:</strong> _________________________</p>
+<hr>
+<h2>Issuing shop</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Shop / business name</td>
+<td></td>
+</tr>
+<tr>
+<td>Address</td>
+<td></td>
+</tr>
+<tr>
+<td>Phone</td>
+<td></td>
+</tr>
+<tr>
+<td>Email</td>
+<td></td>
+</tr>
+<tr>
+<td>Authorized representative</td>
+<td>_________________________</td>
+</tr>
+<tr>
+<td>Signature</td>
+<td>_________________________ Date: _________</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Customer acknowledgment</h2>
+<p>I have received aftercare instructions and understand the warranty terms, coverage period, and exclusions stated above.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Customer signature</td>
+<td>_________________________ Date: _________</td>
+</tr>
+<tr>
+<td>Printed name</td>
+<td></td>
+</tr>
+</tbody></table>
+<div class="revision-block">
+
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Effective</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.0</td>
+<td></td>
+<td>Standard workmanship certificate template</td>
+</tr>
+</tbody></table>
+</div>
+
+  <p class="footer-note whitelabel-only">Confidential — Internal use only. Reproduction prohibited without written authorization.</p>
+</body>
+</html>
