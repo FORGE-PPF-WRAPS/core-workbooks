@@ -6,6 +6,8 @@
   "scripts": {
     "build": "node scripts/build-workbooks.js",
     "build:pdf": "node scripts/build-workbooks.js --pdf",
+    "build:branded": "node scripts/build-workbooks.js --branded",
+    "build:branded:pdf": "node scripts/build-workbooks.js --branded --pdf",
     "build:docs": "node scripts/build-docs.js",
     "build:docs:pdf": "node scripts/build-docs.js --pdf",
     "build:docs:branded": "node scripts/build-docs.js --branded",

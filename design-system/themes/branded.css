@@ -1,0 +1,65 @@
+/* Branded theme — Skill Forge / Forge PPF */
+
+@font-face {
+  font-family: "Skill Forge Display";
+  src: url("../../workbooks/assets/brand/fonts/skill-forge-display.woff2") format("woff2"),
+       url("../../workbooks/assets/brand/fonts/skill-forge-display.woff") format("woff"),
+       url("../../workbooks/assets/brand/fonts/skill-forge-display.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Skill Forge Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Skill Forge Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --color-text: #1a1a1a;
+  --color-heading: #0d1b2a;
+  --color-accent: #1b4965;
+  --color-border: #cccccc;
+  --color-border-light: #bee9e8;
+  --color-muted: #666666;
+  --color-field-line: #999999;
+  --color-table-header: #e8f4f8;
+  --color-revision-bg: #f0f7fa;
+  --color-notes-line: #e0e0e0;
+
+  --callout-bg: #f0f7fa;
+  --callout-border: #1b4965;
+  --callout-warning-bg: #fff8e6;
+  --callout-warning-border: #e6a817;
+  --callout-tip-bg: #eef9ee;
+  --callout-tip-border: #2d6a4f;
+
+  --cover-gradient: linear-gradient(135deg, #ff2d8a 0%, #9b4dff 45%, #00c8ff 100%);
+  --cover-text: #ffffff;
+  --cover-brand-text: rgba(255, 255, 255, 0.9);
+  --cover-title: #ffffff;
+  --cover-subtitle: rgba(255, 255, 255, 0.92);
+  --cover-meta: rgba(255, 255, 255, 0.8);
+
+  --surface-lesson-border: #1b4965;
+  --surface-quiz-bg: #f0f7fa;
+  --surface-quiz-border: #bee9e8;
+  --surface-certificate-border: #1b4965;
+}
+
+body.theme-branded .cover.has-brand-gradient h1,
+body.theme-branded .cover.has-brand-gradient h2,
+body.theme-branded .cover.has-brand-gradient h3,
+body.theme-branded .layout-cover.has-brand-gradient h1,
+body.theme-branded .layout-cover.has-brand-gradient h2,
+body.theme-branded .layout-cover.has-brand-gradient h3 {
+  color: var(--cover-title);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+body.theme-branded .cover .doc-fields p,
+body.theme-branded .cover .student-fields p,
+body.theme-branded .layout-cover .doc-fields p,
+body.theme-branded .layout-cover .student-fields p {
+  border-bottom-color: rgba(255, 255, 255, 0.45);
+  color: var(--cover-text);
+}

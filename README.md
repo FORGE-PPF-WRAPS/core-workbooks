@@ -9,9 +9,10 @@ Training workbooks, SOPs, and operational documents for automotive restyling.
 
 | Path | Contents |
 |------|----------|
+| `design-system/` | Master print design system (tokens, components, themes) |
 | `workbooks/` | Student training workbooks (Tint, PPF, Vinyl Wrap) |
 | `docs/` | White-label SOPs, policies, checklists, forms |
-| `styles/` | Print CSS — `whitelabel/` and `branded/` themes |
+| `styles/` | Deprecated CSS shims — see `design-system/` |
 
 ## Core Courses (3-Day Beginner)
 
@@ -47,14 +48,17 @@ See `docs/README.md` for adding documents. Drop reference files in `docs/referen
 
 ```bash
 npm install
-npm run build        # HTML output
-npm run build:pdf    # HTML + PDF output
+npm run build              # white-label HTML
+npm run build:pdf          # white-label HTML + PDF
+npm run build:branded:pdf  # branded HTML + PDF (Skill Forge theme)
 ```
 
-Output files land in `workbooks/output/`:
+Output files land in `workbooks/output/<theme>/`:
 
-- `window-tint-workbook.html` / `.pdf`
-- `ppf-workbook.html` / `.pdf`
+- `whitelabel/window-tint-workbook.html` / `.pdf`
+- `whitelabel/ppf-workbook.html` / `.pdf`
+
+See `design-system/README.md` and `docs/ARCHITECTURE.md` for the design system and layout components.
 
 ### Print from Browser
 

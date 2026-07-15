@@ -77,15 +77,28 @@ Output: `docs/output/whitelabel/` and `docs/output/branded/`
 
 ## Markdown components
 
-Use the same HTML blocks as workbooks:
+Shared layout components from `design-system/` (legacy aliases in parentheses):
+
+| Layout | Class | Legacy alias |
+|--------|-------|--------------|
+| Callout | `callout`, `callout warning`, `callout tip` | — |
+| SOP / procedure | `sop-page` | `procedure` |
+| Checklist | `checklist` | — |
+| Quiz | `quiz-page` | `knowledge-check` |
+| Revision history | `revision-block` | — |
+| Page break | `page-break` | — |
+
+Examples:
 
 - `<div class="callout">` — general notice
 - `<div class="callout warning">` — safety / compliance
 - `<div class="callout tip">` — best practice
-- `<div class="procedure">` — step-by-step block
+- `<div class="procedure">` or `<div class="sop-page">` — step-by-step block
 - `<ul class="checklist">` — printable checkboxes
 - `<div class="revision-block">` — version history table
 - `<div class="page-break"></div>` — force new page
+
+See `design-system/README.md` and `docs/ARCHITECTURE.md` for the full component library.
 
 ## Reference files
 
