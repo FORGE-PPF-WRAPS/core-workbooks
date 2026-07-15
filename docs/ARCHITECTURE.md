@@ -103,7 +103,7 @@ Existing Markdown classes map to design system components:
 - **Vinyl Wrap workbook** — Add content and manifest entry
 - **SOP documents** — Populate `docs/sops/` and register in `docs/manifest.json`
 - **Running headers** — Per-section `.running-header` in Markdown where needed
-- **Brand kit** — Upload monogram SVG and display font to `workbooks/assets/brand/`
+- **Brand kit** — Production display font (`skill-forge-display.woff2`) can replace SVG placeholder logos
 - **CI build** — GitHub Action to verify `npm run build:all:pdf` on push
 - **Remove deprecated shims** — Delete `styles/` duplicate paths once external refs are gone
 
