@@ -38,7 +38,7 @@ function buildHtml(course, theme) {
   });
 }
 
-function main() {
+async function main() {
   const { theme, pdf } = parseThemeArgs();
   const courses = loadCourses();
 
@@ -61,7 +61,7 @@ function main() {
     console.log(`    → ${htmlPath}`);
 
     if (pdf) {
-      buildPdf(htmlPath, pdfPath, { tmpPrefix: 'core-workbooks-' });
+      await buildPdf(htmlPath, pdfPath, { tmpPrefix: 'core-workbooks-' });
       console.log(`    → ${pdfPath}`);
     }
   }
@@ -69,4 +69,7 @@ function main() {
   console.log('Done.');
 }
 
-main();
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
+});

@@ -16,6 +16,7 @@
     "build:all:pdf": "npm run build:pdf && npm run build:docs:pdf"
   },
   "dependencies": {
-    "marked": "^15.0.0"
+    "marked": "^15.0.0",
+    "puppeteer": "^25.3.0"
   }
 }
