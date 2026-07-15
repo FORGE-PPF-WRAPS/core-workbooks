@@ -29,5 +29,14 @@
     "monogram": "logos/skill-forge-monogram.svg",
     "primary": "logos/skill-forge-logo.svg",
     "horizontal": "logos/skill-forge-logo-horizontal.svg"
+  },
+  "resources": {
+    "url": "https://forgeppf.com/skill-forge",
+    "label": "Skill Forge Resources"
+  },
+  "days": {
+    "1": { "color": "#FF2DAA", "label": "Day 1" },
+    "2": { "color": "#7A3FFF", "label": "Day 2" },
+    "3": { "color": "#15D8FF", "label": "Day 3" }
   }
 }

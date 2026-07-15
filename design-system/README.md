@@ -65,7 +65,19 @@ Use these HTML classes in Markdown source. Legacy aliases remain supported.
 </ul>
 ```
 
-## Adding a new workbook
+## Branded workbook enhancements
+
+When built with `--branded`, workbooks automatically include:
+
+- **Carbon fiber texture** on gradient covers and chapter dividers (low opacity)
+- **Monogram watermark** behind cover titles and divider pages
+- **Chapter divider pages** — full-width gradient opener for each Day
+- **Day edge markers** — colored left border + tab (Day 1 magenta, Day 2 purple, Day 3 cyan)
+- **Type icons** — Labs, Safety, Tips, and Knowledge Checks get labeled icons
+- **Certificate of Completion** — gradient frame, checklist, and QR code to Skill Forge resources
+
+Configure the QR link in `workbooks/assets/brand/brand-tokens.json` → `resources.url`.
+
 
 1. Add `workbooks/core/<course>/workbook.md`
 2. Register in `workbooks/manifest.json`

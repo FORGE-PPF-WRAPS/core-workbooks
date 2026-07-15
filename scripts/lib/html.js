@@ -1,8 +1,9 @@
 const { marked } = require('marked');
 const { loadDesignSystemCss } = require('./theme');
 
-function wrapDocument({ title, body, cover = '', footer = '', theme = 'whitelabel', css }) {
+function wrapDocument({ title, body, cover = '', footer = '', theme = 'whitelabel', css, bodyClass = '' }) {
   const stylesheet = css || loadDesignSystemCss(theme);
+  const extraClass = bodyClass ? ` ${bodyClass}` : '';
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,7 @@ function wrapDocument({ title, body, cover = '', footer = '', theme = 'whitelabe
   <title>${title}</title>
   <style>${stylesheet}</style>
 </head>
-<body class="theme-${theme}">
+<body class="theme-${theme}${extraClass}">
   ${cover}
   ${body}
   ${footer}

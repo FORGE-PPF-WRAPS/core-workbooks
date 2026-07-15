@@ -1,8 +1,14 @@
-const { resolveBrandLogo } = require('./assets');
+const { resolveBrandLogo, resolveBrandMonogram } = require('./assets');
+
+function watermarkDiv(monogramUri) {
+  if (!monogramUri) return '';
+  return `<div class="cover-watermark" aria-hidden="true" style="background-image: url('${monogramUri}')"></div>`;
+}
 
 function buildWorkbookCover(course, theme) {
   const branded = theme === 'branded';
   const logo = branded ? resolveBrandLogo() : null;
+  const monogram = branded ? resolveBrandMonogram() : null;
   const logoHtml = logo
     ? `<img class="brand-logo branded-only" src="${logo}" alt="Skill Forge" />`
     : '';
@@ -11,14 +17,23 @@ function buildWorkbookCover(course, theme) {
     ? '<div class="brand-mark branded-only">Skill Forge</div>'
     : '';
 
+  const texture = branded
+    ? '<div class="cover-texture texture-carbon" aria-hidden="true"></div>'
+    : '';
+  const watermark = branded ? watermarkDiv(monogram) : '';
+
   const version = course.version || '1.0';
   const docType = course.docType || 'Student Workbook';
 
   return `
   <div class="cover layout-cover${branded ? ' has-brand-gradient' : ''}">
+    ${texture}
+    ${watermark}
     ${logoHtml}
     ${brandMark}
-    <h1>${course.title}</h1>
+    <div class="cover-title-block">
+      <h1>${course.title}</h1>
+    </div>
     ${course.subtitle ? `<p class="subtitle">${course.subtitle}</p>` : ''}
     <p class="meta">${docType} · Version ${version}</p>
     <div class="student-fields doc-fields">

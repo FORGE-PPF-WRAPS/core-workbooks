@@ -7,7 +7,9 @@ const DESIGN_SYSTEM = path.join(ROOT, 'design-system');
 const CSS_LAYERS = [
   'tokens.css',
   'base.css',
+  'textures.css',
   'components.css',
+  'icons.css',
   'layouts.css',
 ];
 

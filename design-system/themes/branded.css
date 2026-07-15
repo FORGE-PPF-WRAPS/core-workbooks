@@ -113,3 +113,14 @@ body.theme-branded .layout-cover .brand-logo--monogram {
 body.theme-branded .running-header .header-logo {
   max-height: 0.4in;
 }
+
+body.theme-branded.workbook .cover,
+body.theme-branded.workbook .layout-cover {
+  isolation: isolate;
+}
+
+body.theme-branded.workbook .cover-title-block h1,
+body.theme-branded.workbook .layout-cover .cover-title-block h1 {
+  position: relative;
+  z-index: 2;
+}

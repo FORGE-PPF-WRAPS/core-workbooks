@@ -3,9 +3,10 @@
 .callout {
   background: var(--callout-bg);
   border-left: 4px solid var(--callout-border);
-  padding: 0.6em 0.8em;
+  padding: 0.6em 0.8em 0.6em 0.8em;
   margin: var(--space-lg) 0;
   page-break-inside: avoid;
+  position: relative;
 }
 
 .callout.warning {
@@ -39,9 +40,10 @@
 .lesson-page {
   border: var(--border-width-medium) solid var(--surface-lesson-border);
   border-radius: var(--radius-sm);
-  padding: var(--space-lg) 1em;
+  padding: var(--space-lg) 1em 0.8em 1em;
   margin: var(--space-xl) 0;
   page-break-inside: avoid;
+  position: relative;
 }
 
 .lab h3,
@@ -66,9 +68,10 @@
 .quiz-page {
   background: var(--surface-quiz-bg);
   border: var(--border-width-thin) solid var(--surface-quiz-border);
-  padding: var(--space-lg) 1em;
+  padding: var(--space-lg) 1em 0.8em 1em;
   margin: var(--space-xl) 0;
   page-break-inside: avoid;
+  position: relative;
 }
 
 .knowledge-check ol,

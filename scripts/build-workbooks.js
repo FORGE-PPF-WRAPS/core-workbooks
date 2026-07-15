@@ -5,6 +5,7 @@ const path = require('path');
 const { ROOT, parseThemeArgs } = require('./lib/theme');
 const { wrapDocument, markdownToHtml } = require('./lib/html');
 const { buildWorkbookCover, buildWorkbookFooter } = require('./lib/covers');
+const { enhanceWorkbookHtml } = require('./lib/workbook-enhance');
 const { buildPdf } = require('./lib/pdf');
 
 const OUTPUT = path.join(ROOT, 'workbooks', 'output');
@@ -18,14 +19,15 @@ function loadCourses() {
   return manifest.courses || [];
 }
 
-function buildHtml(course, theme) {
+async function buildHtml(course, theme) {
   const source = path.join(ROOT, course.source);
   if (!fs.existsSync(source)) {
     throw new Error(`Missing source: ${course.source}`);
   }
 
   const md = fs.readFileSync(source, 'utf8');
-  const body = markdownToHtml(md);
+  const rawBody = markdownToHtml(md);
+  const body = await enhanceWorkbookHtml(rawBody, course, theme);
   const cover = buildWorkbookCover(course, theme);
   const footer = buildWorkbookFooter(theme);
 
@@ -35,6 +37,7 @@ function buildHtml(course, theme) {
     cover,
     footer,
     theme,
+    bodyClass: 'workbook',
   });
 }
 
@@ -53,7 +56,7 @@ async function main() {
 
   for (const course of courses) {
     console.log(`  ${course.id}...`);
-    const html = buildHtml(course, theme);
+    const html = await buildHtml(course, theme);
     const htmlPath = path.join(outDir, `${course.id}-workbook.html`);
     const pdfPath = path.join(outDir, `${course.id}-workbook.pdf`);
 

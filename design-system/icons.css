@@ -1,0 +1,100 @@
+/* CORE Workbooks — Component type icons (print-safe SVG) */
+
+:root {
+  --icon-lab: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231b4965' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 3h6v7l4 9H5l4-9V3z'/%3E%3Cpath d='M9 3h6'/%3E%3Cpath d='M7 15h10'/%3E%3C/svg%3E");
+  --icon-safety: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9a227' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z'/%3E%3Cpath d='M12 8v4'/%3E%3Cpath d='M12 16h.01'/%3E%3C/svg%3E");
+  --icon-tip: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232d6a4f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6'/%3E%3Cpath d='M10 22h4'/%3E%3Cpath d='M12 2a6 6 0 0 0-4 10.5V15h8v-2.5A6 6 0 0 0 12 2z'/%3E%3C/svg%3E");
+  --icon-quiz: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237A3FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-.8.7-1.2 1.2-1.2 2.2'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E");
+}
+
+body.theme-branded {
+  --icon-lab: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237A3FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 3h6v7l4 9H5l4-9V3z'/%3E%3Cpath d='M9 3h6'/%3E%3Cpath d='M7 15h10'/%3E%3C/svg%3E");
+  --icon-safety: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z'/%3E%3Cpath d='M12 8v4'/%3E%3Cpath d='M12 16h.01'/%3E%3C/svg%3E");
+  --icon-tip: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2315D8FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6'/%3E%3Cpath d='M10 22h4'/%3E%3Cpath d='M12 2a6 6 0 0 0-4 10.5V15h8v-2.5A6 6 0 0 0 12 2z'/%3E%3C/svg%3E");
+  --icon-quiz: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF2DAA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-.8.7-1.2 1.2-1.2 2.2'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E");
+}
+
+.type-icon-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  page-break-after: avoid;
+}
+
+h2.type-lab,
+h2.type-safety,
+h2.type-quiz {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+}
+
+.type-icon-header::before {
+  content: '';
+  display: inline-block;
+  width: 1.35em;
+  height: 1.35em;
+  flex-shrink: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h2.type-lab::before,
+h2.type-lab-header::before { background-image: var(--icon-lab); }
+h2.type-safety::before,
+h2.type-safety-header::before { background-image: var(--icon-safety); }
+h2.type-quiz::before,
+h2.type-quiz-header::before { background-image: var(--icon-quiz); }
+
+.lab::before,
+.lesson-page::before,
+.callout.warning::before,
+.callout.tip::before,
+.knowledge-check::before,
+.quiz-page::before {
+  content: '';
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  margin-bottom: 0.4em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.lab::before,
+.lesson-page::before {
+  background-image: var(--icon-lab);
+}
+
+.callout.warning::before {
+  background-image: var(--icon-safety);
+}
+
+.callout.tip::before {
+  background-image: var(--icon-tip);
+}
+
+.knowledge-check::before,
+.quiz-page::before {
+  background-image: var(--icon-quiz);
+}
+
+.type-label {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.35em;
+}
+
+.lab .type-label,
+.lesson-page .type-label { color: var(--color-accent); }
+.callout.warning .type-label { color: var(--callout-warning-border); }
+.callout.tip .type-label { color: var(--callout-tip-border); }
+.knowledge-check .type-label,
+.quiz-page .type-label { color: var(--brand-purple, var(--color-accent)); }
