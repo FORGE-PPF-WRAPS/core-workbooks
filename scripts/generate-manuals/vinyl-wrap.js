@@ -1928,7 +1928,7 @@ function chInstallerCertificationPathway() {
 // MAIN EXPORT
 // ─────────────────────────────────────────────────────────────────────────────
 
-function generateVinylWrapManual(baseDir) {
+function generateVinylWrapManual() {
   const chapters = [
     { title: 'Film Technology & Types',                        content: chFilmTechnology() },
     { title: 'Adhesive Systems & Chemistry',                   content: chAdhesiveSystems() },
@@ -1961,7 +1961,7 @@ function generateVinylWrapManual(baseDir) {
     { title: 'Appendices',                                     content: chAppendicesWrap() },
   ];
 
-  writeChapters(baseDir, chapters);
+  return chapters;
 }
 
 module.exports = { generateVinylWrapManual, WRAP_PANELS };

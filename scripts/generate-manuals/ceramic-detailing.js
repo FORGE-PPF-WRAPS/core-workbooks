@@ -4530,7 +4530,7 @@ function dtChDetailingKPIs() {
 // MAIN EXPORTS
 // ─────────────────────────────────────────────────────────────────────────────
 
-function generateCeramicManual(baseDir) {
+function generateCeramicManual() {
   const chapters = [
     { title: 'Coating Chemistry & Technology',                 content: ccChCoatingChemistry() },
     { title: 'Paint Assessment & Defect Classification',       content: ccChPaintAssessment() },
@@ -4572,10 +4572,10 @@ function generateCeramicManual(baseDir) {
     { title: 'Appendices',                                     content: ccChAppendices() },
   ];
 
-  writeChapters(baseDir, chapters);
+  return chapters;
 }
 
-function generateDetailingManual(baseDir) {
+function generateDetailingManual() {
   const chapters = [
     { title: 'Wash Methods',                                   content: dtChWashMethods() },
     { title: 'Decontamination',                                content: dtChDecontamination() },
@@ -4621,7 +4621,7 @@ function generateDetailingManual(baseDir) {
     { title: 'Appendices',                                     content: dtChAppendices() },
   ];
 
-  writeChapters(baseDir, chapters);
+  return chapters;
 }
 
 module.exports = {

@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "manuals": [
+    {
+      "id": "ppf-master-install",
+      "title": "PPF Master Install Manual",
+      "subtitle": "Complete Paint Protection Film Installation Reference",
+      "type": "Installation Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/ppf-master-install/chapters"
+    },
+    {
+      "id": "window-tint-master-install",
+      "title": "Window Tint Master Install Manual",
+      "subtitle": "Complete Automotive Window Film Installation Reference",
+      "type": "Installation Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/window-tint-master-install/chapters"
+    },
+    {
+      "id": "customer-service-operations",
+      "title": "Customer Service Operations Manual",
+      "subtitle": "Front-of-House, Sales, and Client Experience Standards",
+      "type": "Operations Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/customer-service-operations/chapters"
+    },
+    {
+      "id": "vinyl-wrap-master-install",
+      "title": "Vinyl Wrap Master Install Manual",
+      "subtitle": "Complete Vehicle Wrap Installation Reference",
+      "type": "Installation Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/vinyl-wrap-master-install/chapters"
+    },
+    {
+      "id": "ceramic-coating-application",
+      "title": "Ceramic Coating Application Manual",
+      "subtitle": "Surface Prep, Application, Cure, and Warranty Standards",
+      "type": "Application Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/ceramic-coating-application/chapters"
+    },
+    {
+      "id": "paint-correction-detailing",
+      "title": "Paint Correction & Detailing Manual",
+      "subtitle": "Correction, Protection, and Detailing Operations Reference",
+      "type": "Operations Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/paint-correction-detailing/chapters"
+    }
+  ]
+}

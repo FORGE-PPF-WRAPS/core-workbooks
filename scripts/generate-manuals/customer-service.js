@@ -2101,7 +2101,7 @@ function chInternalCulture() {
   return c;
 }
 
-function generateCustomerServiceManual(baseDir) {
+function generateCustomerServiceManual() {
   const chapters = [
     { title: 'Brand Standards & Service Philosophy',         content: chBrandStandards() },
     { title: 'Team Roles & Organizational Structure',        content: chTeamRoles() },
@@ -2139,7 +2139,7 @@ function generateCustomerServiceManual(baseDir) {
     { title: 'Appendices',                                   content: chAppendices() },
   ];
 
-  writeChapters(baseDir, chapters);
+  return chapters;
 }
 
 module.exports = { generateCustomerServiceManual };
