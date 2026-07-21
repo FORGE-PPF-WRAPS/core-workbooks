@@ -9,7 +9,7 @@ Material waste management in a vinyl wrap shop has financial, environmental, and
 | Waste Source | Typical % of Material Waste | Reduction Strategy |
 | --- | --- | --- |
 | Panel overage (standard) | 10–15% | Optimize measurement; use remnant pieces for smaller panels (mirrors, pillars) before ordering |
-| Re-dos (defect or error) | 5–20% depending on skill level | Reduce through proper prep and training; track by installer for coaching |
+| Re-dos (defect or error) | 5–20% depending on skill level | Reduce through proper prep and SOP adherence; track by installer for coaching |
 | Pattern matching waste (directional film) | 5–15% | Plan panel nesting efficiently; order in longer rolls to reduce end-cut waste |
 | Liner material | 100% of all installed film | Recycle through a film liner recycling program; do not add to general waste stream |
 | Blade snaps and sharps | High volume | Use sharps container; full container is collected by a sharps disposal service |

@@ -2,7 +2,7 @@
 
 # Chapter 35 — Complete Coating Prep Workflow — Step by Step
 
-This chapter consolidates the complete vehicle workflow from customer drop-off through coating delivery into a single reference document. It is designed for use as an operational standard operating procedure and as a training guide for new coating technicians. Every step is sequenced precisely; no step may be skipped; each step has a defined completion criterion before the next begins.
+This chapter consolidates the complete vehicle workflow from customer drop-off through coating delivery into a single reference document. It is the operational standard operating procedure for coating technicians. Every step is sequenced precisely; no step may be skipped; each step has a defined completion criterion before the next begins.
 
 ## Phase 1 — Vehicle Intake (15–20 minutes)
 

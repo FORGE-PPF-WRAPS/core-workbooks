@@ -19,14 +19,14 @@ A technically excellent tint shop that operates with poor business discipline wi
 
 ### Multi-Installer Quality Consistency
 
-When a shop employs multiple installers at different skill levels, maintaining consistent quality requires explicit systems — not just training.
+When a shop employs multiple installers at different skill levels, maintaining consistent quality requires explicit systems — documented SOPs, QC gates, and supervision standards.
 
 <ul class="checklist">
 <li>Written step-by-step procedures posted in the bay (this manual)</li>
 <li>Defined QC checklist that every installer must complete before vehicle release — regardless of experience level</li>
 <li>Periodic QC audits: shop manager inspects completed vehicles before they leave the lot at random intervals</li>
 <li>Defect log: all re-dos are documented with the installer name, defect type, and root cause — reviewed monthly</li>
-<li>Cross-training: experienced installers rotate bay positions with trainees so experienced eyes see trainee work directly</li>
+<li>Supervision rotation: experienced installers rotate bay positions with developing technicians so experienced eyes verify work directly</li>
 <li>Customer satisfaction tracking: follow-up contact 2 weeks after each installation to capture any post-cure complaints</li>
 </ul>
 

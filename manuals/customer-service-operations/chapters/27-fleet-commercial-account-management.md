@@ -57,7 +57,7 @@ Dealer partnerships — where the shop provides protection packages as an add-on
 4. Agree on service packaging: two or three tiers that work for the F&I menu; keep it simple for the F&I team to present
 5. Agree on turnaround commitment: dealers need vehicles returned within 24–48 hours on average
 6. Establish a dispatch protocol: dealer calls or emails when a vehicle is sold; shop schedules intake within 24 hours
-7. Provide the F&I team with training and leave-behind materials they can use during the sales presentation
+7. Provide the F&I team with approved leave-behind materials and talking points they can use during the sales presentation
 8. Track monthly volume per dealer in CRM; provide a monthly performance summary to the dealer GM
 
 </div>

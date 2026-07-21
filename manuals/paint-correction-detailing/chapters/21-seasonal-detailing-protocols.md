@@ -50,6 +50,6 @@ Winter demand slows for outdoor-dependent services but creates specific opportun
 <li>Interior deep clean and leather conditioning: protect dried leather during the dry winter indoor environment</li>
 <li>Paint correction for vehicles stored indoors: collectors and enthusiasts want their stored vehicles corrected and coated before spring return to service</li>
 <li>Gift certificates: holiday season gift certificate sales to automotive enthusiasts; market to partners and spouses</li>
-<li>Training and process improvement: slower winter season is the time to train staff, refine procedures, and update the service menu for the coming year</li>
+<li>Process improvement and competency development: slower winter season is the time to refine procedures, update the service menu, and complete manufacturer certifications for the coming year</li>
 <li>Pre-season ceramic coating specials: book spring coating appointments in winter at a modest discount to smooth revenue flow</li>
 </ul>

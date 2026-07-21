@@ -2,7 +2,7 @@
 
 # Chapter 37 — Surface Procedure Library
 
-The following surface procedure cards provide application references for each major surface type encountered in professional ceramic coating services. Use them during training and as QC standards during post-application inspection.
+The following surface procedure cards provide application references for each major surface type encountered in professional ceramic coating services. Use them as mandatory QC standards during post-application inspection and in-bay reference during live operations.
 
 
 ### Clear Coat Paint — Standard — Master Procedure

@@ -167,7 +167,7 @@ const TINT_PANELS = [
     time: '15–25 min',
     orientation: 'Interior flat application; no rolling or shrinking required',
     overview:
-      'Fixed quarter windows are small, generally flat panes located behind the rear doors or between the B and C pillars. They require no heat shrinking and are a good training panel for new installers. The primary skill is clean cutting around any complex shapes — some quarter windows are triangular, trapezoidal, or have aggressive curves at one corner.',
+      'Fixed quarter windows are small, generally flat panes located behind the rear doors or between the B and C pillars. They require no heat shrinking and are an ideal entry-level panel for developing cutting technique. The primary skill is clean cutting around any complex shapes — some quarter windows are triangular, trapezoidal, or have aggressive curves at one corner.',
     prep: [
       'Clean interior glass with glass cleaner and dry thoroughly',
       'Inspect for factory tint — document baseline VLT before adding aftermarket film',
@@ -550,7 +550,7 @@ const TINT_PANELS = [
     time: '15–30 min per pane',
     orientation: 'Interior flat application; no heat required',
     overview:
-      'Some vehicles — particularly executive sedans, limousines, and specialty vehicles — include interior partition glass between the driver and passenger compartment. This glass is flat and presents no shrinking challenges. It is an excellent training panel and a high-margin add-on service. The primary concern is optical clarity, since customers view through this glass at close range.',
+      'Some vehicles — particularly executive sedans, limousines, and specialty vehicles — include interior partition glass between the driver and passenger compartment. This glass is flat and presents no shrinking challenges. It is an excellent entry-level panel and a high-margin add-on service. The primary concern is optical clarity, since customers view through this glass at close range.',
     prep: [
       'Identify the partition glass material — confirm it is glass, not polycarbonate (acrylic)',
       'Do not apply film designed for glass to polycarbonate — use film specified for polycarbonate',
@@ -590,11 +590,11 @@ const TINT_PANELS = [
 
 function ch01_introduction() {
   return [
-    h2('Welcome to Professional Window Tinting'),
-    p('Window tinting is one of the most accessible and rewarding services in the automotive finishing industry. With the right training, tools, and discipline, an installer can consistently produce work that protects vehicles, improves occupant comfort, and generates strong revenue for the shop. This manual exists to give you the complete technical foundation — from understanding the physics of solar energy to executing a flawless rear-window shrink on the most difficult glass shapes on the market.'),
-    p('This manual is the companion reference for the CORE Workbooks master tint training program. It is organized to support both classroom learning and in-bay reference use. The panel procedures section is designed to be placed in a binder at your workstation and consulted during live installations until the steps become second nature.'),
-    callout('tip', 'Experienced tinters use this manual not as a substitute for practice, but as a framework for building consistent habits. The difference between an average installer and a master installer is not talent — it is consistent attention to every step of every procedure on every vehicle.'),
-    h3('What This Manual Covers'),
+    h2('Core Manual — Complete Window Film Operations Reference'),
+    p('This manual is the authoritative core reference for professional automotive window film installation. It is not a training course summary — it is the complete operational document covering film science, legal compliance, every glass type, shop standards, troubleshooting, fleet operations, and business systems.'),
+    p('Every technician, estimator, and manager in a professional tint operation should treat this manual as the governing SOP source. Panel procedures are designed for in-bay reference during live installations. Technical bulletins and core reference chapters address every operational domain a tint shop must master.'),
+    callout('tip', 'The difference between an average shop and a master shop is not talent — it is consistent adherence to documented standards on every vehicle, every day.'),
+    h3('Complete Scope — Every Aspect Covered'),
     checklist([
       'Film science — construction, types, properties, and performance grades',
       'Legal compliance — VLT laws, certification, and documentation',
@@ -618,7 +618,7 @@ function ch01_introduction() {
     ]),
     h3('How to Use This Manual'),
     p('Chapters 1–8 build the foundational knowledge required before touching film. Chapters 9–17 cover hands-on installation techniques by glass type. Chapters 18–23 address business operations, troubleshooting, and reference material. The panel procedures at the end of this manual are self-contained reference cards for each glass type.'),
-    callout('', 'This manual assumes no prior tinting experience. If you are an experienced installer refreshing your skills or training a new employee, use the table of contents to navigate directly to the sections most relevant to your needs.'),
+    callout('', 'This manual is written for professional reference at every experience level. Experienced installers refreshing procedures or onboarding a new technician should use the table of contents to navigate directly to the sections most relevant to their needs.'),
     h3('A Word on Professional Standards'),
     p('The standards described in this manual represent best practices for a professional installation. They are not minimum acceptable standards — they are the target. Every shortcut taken during installation increases the probability of a defect, a re-do, or a dissatisfied customer. A re-do costs more in materials and labor than doing the job right the first time. A dissatisfied customer costs more still in lost referrals and reputation damage.'),
     p('Commit to the standard on every vehicle, regardless of vehicle age, customer budget, or how busy the shop is on a given day.'),
@@ -1634,13 +1634,13 @@ function ch21_businessOperations() {
       ]
     ),
     h3('Multi-Installer Quality Consistency'),
-    p('When a shop employs multiple installers at different skill levels, maintaining consistent quality requires explicit systems — not just training.'),
+    p('When a shop employs multiple installers at different skill levels, maintaining consistent quality requires explicit systems — documented SOPs, QC gates, and supervision standards.'),
     checklist([
       'Written step-by-step procedures posted in the bay (this manual)',
       'Defined QC checklist that every installer must complete before vehicle release — regardless of experience level',
       'Periodic QC audits: shop manager inspects completed vehicles before they leave the lot at random intervals',
       'Defect log: all re-dos are documented with the installer name, defect type, and root cause — reviewed monthly',
-      'Cross-training: experienced installers rotate bay positions with trainees so experienced eyes see trainee work directly',
+      'Supervision rotation: experienced installers rotate bay positions with developing technicians so experienced eyes verify work directly',
       'Customer satisfaction tracking: follow-up contact 2 weeks after each installation to capture any post-cure complaints',
     ]),
     h3('Scheduling and Booking Standards'),
@@ -1835,7 +1835,7 @@ function ch23_appendices() {
 
 function generateTintManual() {
   const chapters = [
-    { title: 'Introduction — Welcome to Professional Window Tinting', content: ch01_introduction() },
+    { title: 'Introduction — Core Manual Scope & Authority', content: ch01_introduction() },
     { title: 'Film Types, Construction, and Performance', content: ch02_filmTypes() },
     { title: 'VLT Regulations, Legal Compliance, and Documentation', content: ch03_vltAndLaws() },
     { title: 'Tools of the Trade — Professional Tinting Kit', content: ch04_tools() },

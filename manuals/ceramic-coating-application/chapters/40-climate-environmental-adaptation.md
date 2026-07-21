@@ -2,7 +2,7 @@
 
 # Chapter 40 — Climate & Environmental Adaptation
 
-Environmental conditions affect Ceramic Coating Application outcomes. Adapt procedures — never copy-paste the same approach across climates.
+Environmental conditions directly affect Ceramic Coating Application outcomes. This chapter defines adaptation standards — not optional variations.
 
 ### Hot / Arid
 
@@ -10,7 +10,7 @@ Accelerated adhesive cure; manage slip drying speed. Heat post-heat carefully �
 
 <div class="callout tip">
 
-**Hot / Arid tip:** Log ambient temperature and humidity on every job card. Patterns in comebacks often trace to environmental variables.
+**Hot / Arid standard:** Log ambient temperature and humidity on every job card. Comeback patterns frequently trace to ignored environmental variables.
 
 </div>
 
@@ -20,7 +20,7 @@ Extended cure before edge trimming. Dehumidify bay when possible.
 
 <div class="callout tip">
 
-**Hot / Humid tip:** Log ambient temperature and humidity on every job card. Patterns in comebacks often trace to environmental variables.
+**Hot / Humid standard:** Log ambient temperature and humidity on every job card. Comeback patterns frequently trace to ignored environmental variables.
 
 </div>
 
@@ -30,7 +30,7 @@ Film acclimation 24hr minimum. Extend wash hold on customer aftercare.
 
 <div class="callout tip">
 
-**Cold / Northern tip:** Log ambient temperature and humidity on every job card. Patterns in comebacks often trace to environmental variables.
+**Cold / Northern standard:** Log ambient temperature and humidity on every job card. Comeback patterns frequently trace to ignored environmental variables.
 
 </div>
 
@@ -40,7 +40,7 @@ Emphasize corrosion-prone zones: rockers, behind wheels, lower doors.
 
 <div class="callout tip">
 
-**Coastal / Salt tip:** Log ambient temperature and humidity on every job card. Patterns in comebacks often trace to environmental variables.
+**Coastal / Salt standard:** Log ambient temperature and humidity on every job card. Comeback patterns frequently trace to ignored environmental variables.
 
 </div>
 
@@ -50,7 +50,7 @@ Recommend premium UV-stable film tiers. Annual inspection upsell.
 
 <div class="callout tip">
 
-**High Altitude UV tip:** Log ambient temperature and humidity on every job card. Patterns in comebacks often trace to environmental variables.
+**High Altitude UV standard:** Log ambient temperature and humidity on every job card. Comeback patterns frequently trace to ignored environmental variables.
 
 </div>
 
@@ -60,6 +60,6 @@ High gravel and debris — default to expanded front packages.
 
 <div class="callout tip">
 
-**Urban / Construction tip:** Log ambient temperature and humidity on every job card. Patterns in comebacks often trace to environmental variables.
+**Urban / Construction standard:** Log ambient temperature and humidity on every job card. Comeback patterns frequently trace to ignored environmental variables.
 
 </div>

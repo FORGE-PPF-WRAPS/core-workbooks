@@ -2,7 +2,7 @@
 
 # Chapter 19 — Advanced Installer Reference — Techniques & Problem-Solving
 
-This chapter consolidates the advanced technique references that experienced installers use to diagnose problems, adapt to unusual situations, and consistently achieve results beyond the industry baseline. It serves as both a training reference for developing installers and a field guide for experienced professionals encountering challenging scenarios.
+This chapter consolidates advanced technique references that lead installers use to diagnose problems, adapt to unusual situations, and maintain results beyond industry baseline. It is the governing field reference for complex scenarios — not a course supplement.
 
 ## Temperature Management — Full Reference
 

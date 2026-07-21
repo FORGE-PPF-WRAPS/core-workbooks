@@ -49,8 +49,8 @@ const TROUBLESHOOTING = [
 function midChapter(title, summary, idx) {
   return `
 ${p(summary)}
-${h2('Core Standards')}
-${procedure(`${title} — Shop Standard Sequence`, [
+${h2('Operational Standards')}
+${procedure(`${title} — Shop SOP Sequence`, [
   'Review work order and confirm vehicle/package match',
   'Verify environmental conditions (temperature, humidity, cleanliness)',
   'Stage all tools and materials before vehicle enters install zone',
@@ -58,24 +58,24 @@ ${procedure(`${title} — Shop Standard Sequence`, [
   'Document completion with photos where required',
   'Lead installer signs QC before customer notification',
 ])}
-${h2('Reference Table — Key Decision Points')}
+${h2('Decision Matrix')}
 ${table(['Situation', 'Action', 'Escalate If'], [
-  ['Substrate questionable', 'Stop; test spot; disclose', 'Adhesion test fails'],
-  ['Customer adds panel mid-job', 'Change order signed before work', 'Refusal to sign'],
+  ['Substrate questionable', 'Stop; test spot; disclose to customer', 'Adhesion test fails'],
+  ['Customer adds scope mid-job', 'Change order signed before work continues', 'Customer refuses'],
   ['Contamination found mid-install', 'Stop; assess redo scope', 'Larger than dime zone'],
   ['Pattern does not fit', 'Verify VIN/year; re-plot', 'Software confirms mismatch'],
   ['Edge lift at QC', 'Re-tuck or section redo', 'Repeat on same panel type'],
 ])}
-${h2('Training Checklist')}
+${h2('Lead Installer Verification')}
 ${checklist([
-  'Trainee can explain this chapter without reading notes',
-  'Trainee demonstrates procedure on practice panel',
-  'Lead installer observes full execution once',
-  'Comeback rate on this topic tracked monthly',
-  'SOP updated when procedure changes',
+  'Technician can execute this domain per SOP without reference',
+  'QC audit passed on last three jobs in this domain',
+  'Comeback rate for this domain within shop threshold',
+  'SOP revision logged if procedure changed',
+  'All documentation fields complete on job card',
 ])}
-${callout('tip', '**Shop tip:** Build a one-page cheat sheet from this chapter for bay posting. Installers reference cards beat re-reading the full manual during production.')}
-${h2('Common Mistakes')}
+${callout('tip', `**Shop standard:** Post a one-page ${title} quick-reference at the bay. Field crews reference SOPs during production — not after comebacks.`)}
+${h2('Common Failures')}
 ${troubleshootingSection(TROUBLESHOOTING.slice(idx * 2, idx * 2 + 4))}
 `;
 }
@@ -97,33 +97,43 @@ function generatePpfManual() {
     ['Quality Control & Inspection Protocol', 'Cross-light method, edge audit, contamination scan, seam review, photo documentation, and sign-off checklist.'],
     ['Packages, Coverage Zones & Upsell Logic', 'Partial front definitions, full front, track pack, high-impact add-ons, and consultative selling.'],
     ['Pricing, Margins & Warranty Administration', 'Labor hours by panel, material waste factor, warranty registration, claim documentation, and customer education.'],
-    ['Business Operations & Installer Development', 'KPIs, comebacks, training path Level 1–4, comeback root cause analysis, and portfolio standards.'],
+    ['Business Operations & Installer Development', 'KPIs, comebacks, competency authorization Level 1–4, comeback root cause analysis, and portfolio standards.'],
   ];
 
   return [
     {
       title: 'Introduction & Manual Scope',
       content: `
-${p('This Master Install Manual is the definitive reference for professional automotive paint protection film installation. It covers every phase of shop operations from vehicle intake through warranty delivery — written for lead installers, trainees, and shop managers building a PPF program.')}
-${callout('tip', '**How to use this manual:** Train new installers chapter-by-chapter. Reference panel procedures on the floor via tablet. Use troubleshooting tables during QC reviews.')}
-${h2('Scope of Coverage')}
-${p('This manual addresses TPU-based paint protection film on passenger vehicles, light trucks, SUVs, and commercial fleet applications.')}
-${table(['Topic', 'Covered', 'Not Covered'], [
-  ['TPU gloss/clear PPF', 'Yes', ''],
-  ['Matte/satin PPF', 'Yes', ''],
-  ['Colored PPF', 'Partial', 'Advanced color-change program'],
-  ['Paint correction before PPF', 'Yes — basics', 'Advanced multi-stage correction'],
-  ['Pattern software workflow', 'Yes — generic', 'Brand-specific software UI'],
-  ['Headlight protection', 'Yes', ''],
+${p('This is the authoritative core manual for professional automotive paint protection film operations. It is not a course outline or abbreviated overview — it is the complete shop reference covering every phase from material science through warranty administration, fleet programs, and comeback analysis.')}
+${p('Use this manual to establish SOPs, verify technician competency, settle technical disputes, and maintain consistent output across every installer and every vehicle platform.')}
+${callout('tip', '**How to use this manual:** Lead installers reference panel procedures during live installs. Managers use competency standards for authorization. QC uses troubleshooting tables for comeback analysis. Estimators use package and vehicle matrix chapters for scoping.')}
+${h2('Complete Scope — What This Manual Covers')}
+${checklist([
+  'TPU film science, product tiers, and selection criteria',
+  'Shop setup, contamination control, and environmental standards',
+  'Complete tool and equipment specifications',
+  'Safety, chemical handling, and regulatory compliance',
+  'Vehicle intake, documentation, and liability protection',
+  'Paint assessment, correction prerequisites, and refusal criteria',
+  'Full surface preparation and decontamination sequences',
+  'Pattern software, plotting, nesting, and material management',
+  'Wet install method, squeegee technique, and edge engineering',
+  'Post-heat standards, cure timelines, and delivery protocols',
+  'Every major panel and coverage zone — full procedures',
+  'Package definitions, pricing, warranty, and business operations',
+  'Troubleshooting encyclopedia — 35+ defects with corrective action',
+  'Vehicle application matrix — 20 platform types',
+  '50 core operational domains — complete shop reference',
+  'Technician competency standards and field scenario analysis',
 ])}
-${h2('Skill Levels Defined')}
-${table(['Level', 'Description', 'Typical Panels'], [
-  ['Level 1', 'Can prep, assist, install flat zones', 'Door edges, flat hood sections'],
-  ['Level 2', 'Independent on intermediate panels', 'Full hood, fenders, rockers'],
-  ['Level 3', 'Complex curves and bumpers', 'Bumpers, mirrors, capstones'],
-  ['Level 4', 'Lead installer / trainer', 'Full front, fleet, QC sign-off'],
+${h2('Technician Authorization Tiers')}
+${table(['Tier', 'Authorization', 'Typical Scope'], [
+  ['Tier I — Prep & Support', 'Surface prep, assist, flat zones', 'Decon, masking, door edges'],
+  ['Tier II — Panel Installer', 'Independent on intermediate panels', 'Hood, fenders, rockers'],
+  ['Tier III — Advanced Installer', 'Complex curves, bumpers, mirrors', 'Full bumpers, capstone panels'],
+  ['Tier IV — Lead / QC', 'Sign-off authority, comeback resolution', 'Full packages, fleet, warranty'],
 ])}
-${checklist(['Procedures in numbered boxes are mandatory sequence', 'Warning callouts indicate safety or paint damage risk', 'Tip callouts indicate efficiency improvements', 'Checklists are minimum standards', 'All temperatures are Fahrenheit unless noted'])}
+${checklist(['Numbered procedures are mandatory SOP sequence', 'Warning callouts indicate safety or paint damage risk', 'All temperatures Fahrenheit unless noted', 'Deviations require lead installer authorization and documentation'])}
 `,
     },
     {
@@ -164,7 +174,7 @@ ${table(['Customer Profile', 'Recommended Tier', 'Package Starting Point'], [
     {
       title: 'Troubleshooting Encyclopedia',
       content: `
-${p('Comprehensive defect reference for lead installers and QC. Use during comebacks, training reviews, and warranty evaluations.')}
+${p('Comprehensive defect reference for lead installers, QC, and warranty evaluation. Cross-reference with Extended Troubleshooting Reference and relevant Technical Bulletins.')}
 ${troubleshootingSection(TROUBLESHOOTING)}
 `,
     },

@@ -133,7 +133,7 @@ The following stage cards provide a quick-reference overview of each detailing s
 | --- | --- |
 | Duration | 1–2 days (depending on vehicle size and defect severity) |
 | Typical Price Range | $500–$1,500+ |
-| Key Notes | Paint correction detailing is a skilled service requiring machine polishing experience. Never assign this stage to a technician who has not completed supervised correction training. |
+| Key Notes | Paint correction detailing is a skilled service requiring machine polishing experience. Never assign this stage to a technician who has not completed supervised correction authorization. |
 
 <div class="procedure">
 

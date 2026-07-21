@@ -50,10 +50,10 @@ function buildToc(chaptersDir) {
 function buildCover(manual) {
   return `
   <div class="cover manual-cover">
-    <div class="brand">Skill Forge · Master Reference</div>
+    <div class="brand">Skill Forge · Core Operations Manual</div>
     <h1>${manual.title}</h1>
     <p class="subtitle">${manual.subtitle}</p>
-    <p class="meta">${manual.type} · Version ${manual.version}</p>
+    <p class="meta">${manual.type} · Version ${manual.version} · Complete Reference</p>
     <div class="doc-fields">
       <p>Organization: _________________________________</p>
       <p>Document ID: ${manual.id}</p>
@@ -81,7 +81,7 @@ function buildHtml(manual, css) {
   ${cover}
   ${toc}
   ${parsed}
-  <p class="footer-note">Confidential — Internal use only. Skill Forge Master Reference. Reproduction prohibited without written authorization.</p>
+  <p class="footer-note">Confidential — Internal operations reference. Skill Forge Core Operations Manual. Reproduction prohibited without written authorization.</p>
 </body>
 </html>`;
 }

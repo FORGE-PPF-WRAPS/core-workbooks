@@ -732,7 +732,7 @@ function ccChTroubleshooting() {
 
 function ccChSurfacePanelsContent() {
   let c = '';
-  c += p('The following surface procedure cards provide application references for each major surface type encountered in professional ceramic coating services. Use them during training and as QC standards during post-application inspection.');
+  c += p('The following surface procedure cards provide application references for each major surface type encountered in professional ceramic coating services. Use them as mandatory QC standards during post-application inspection and in-bay reference during live operations.');
 
   for (const surface of SURFACE_PANELS) {
     c += panelProcedure('Ceramic Coating', surface);
@@ -877,7 +877,7 @@ const DETAIL_STAGES = [
     ],
     duration: '1–2 days (depending on vehicle size and defect severity)',
     price_range: '$500–$1,500+',
-    notes: 'Paint correction detailing is a skilled service requiring machine polishing experience. Never assign this stage to a technician who has not completed supervised correction training.',
+    notes: 'Paint correction detailing is a skilled service requiring machine polishing experience. Never assign this stage to a technician who has not completed supervised correction authorization.',
   },
   {
     name: 'Stage 4 — Show Preparation Detail',
@@ -3221,7 +3221,7 @@ function dtChSeasonalProtocols() {
     'Interior deep clean and leather conditioning: protect dried leather during the dry winter indoor environment',
     'Paint correction for vehicles stored indoors: collectors and enthusiasts want their stored vehicles corrected and coated before spring return to service',
     'Gift certificates: holiday season gift certificate sales to automotive enthusiasts; market to partners and spouses',
-    'Training and process improvement: slower winter season is the time to train staff, refine procedures, and update the service menu for the coming year',
+    'Process improvement and competency development: slower winter season is the time to refine procedures, update the service menu, and complete manufacturer certifications for the coming year',
     'Pre-season ceramic coating specials: book spring coating appointments in winter at a modest discount to smooth revenue flow',
   ]);
 
@@ -3928,7 +3928,7 @@ function ccChChemistryDeep() {
 
 function ccChCompleteWorkflow() {
   let c = '';
-  c += p('This chapter consolidates the complete vehicle workflow from customer drop-off through coating delivery into a single reference document. It is designed for use as an operational standard operating procedure and as a training guide for new coating technicians. Every step is sequenced precisely; no step may be skipped; each step has a defined completion criterion before the next begins.');
+  c += p('This chapter consolidates the complete vehicle workflow from customer drop-off through coating delivery into a single reference document. It is the operational standard operating procedure for coating technicians. Every step is sequenced precisely; no step may be skipped; each step has a defined completion criterion before the next begins.');
 
   c += h2('Phase 1 — Vehicle Intake (15–20 minutes)');
   c += procedure('Vehicle Intake Sequence', [
@@ -4134,7 +4134,7 @@ function dtChLeatherCare() {
   ]);
 
   c += h2('Leather Repair and Color Restoration');
-  c += p('Professional leather repair and color restoration extends the life of damaged leather and adds significant value to a detailing service offering. These are advanced services requiring dedicated training and practice, but the basics should be understood by all professional detailers.');
+  c += p('Professional leather repair and color restoration extends the life of damaged leather and adds significant value to a detailing service offering. These are advanced services requiring dedicated competency authorization and practice, but the basics should be understood by all professional detailers.');
 
   c += table(
     ['Condition', 'Assessment', 'Service Level', 'Approximate Investment'],

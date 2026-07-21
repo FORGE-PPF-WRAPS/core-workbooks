@@ -6,12 +6,12 @@
 Liner peel timing, anchor strategy, squeegee angles, slip management, partner roles, and wet path discipline.
 
 
-## Core Standards
+## Operational Standards
 
 
 <div class="procedure">
 
-### Wet Install Method — Core Technique — Shop Standard Sequence
+### Wet Install Method — Core Technique — Shop SOP Sequence
 
 1. Review work order and confirm vehicle/package match
 2. Verify environmental conditions (temperature, humidity, cleanliness)
@@ -23,38 +23,38 @@ Liner peel timing, anchor strategy, squeegee angles, slip management, partner ro
 </div>
 
 
-## Reference Table — Key Decision Points
+## Decision Matrix
 
 
 | Situation | Action | Escalate If |
 | --- | --- | --- |
-| Substrate questionable | Stop; test spot; disclose | Adhesion test fails |
-| Customer adds panel mid-job | Change order signed before work | Refusal to sign |
+| Substrate questionable | Stop; test spot; disclose to customer | Adhesion test fails |
+| Customer adds scope mid-job | Change order signed before work continues | Customer refuses |
 | Contamination found mid-install | Stop; assess redo scope | Larger than dime zone |
 | Pattern does not fit | Verify VIN/year; re-plot | Software confirms mismatch |
 | Edge lift at QC | Re-tuck or section redo | Repeat on same panel type |
 
 
-## Training Checklist
+## Lead Installer Verification
 
 
 <ul class="checklist">
-<li>Trainee can explain this chapter without reading notes</li>
-<li>Trainee demonstrates procedure on practice panel</li>
-<li>Lead installer observes full execution once</li>
-<li>Comeback rate on this topic tracked monthly</li>
-<li>SOP updated when procedure changes</li>
+<li>Technician can execute this domain per SOP without reference</li>
+<li>QC audit passed on last three jobs in this domain</li>
+<li>Comeback rate for this domain within shop threshold</li>
+<li>SOP revision logged if procedure changed</li>
+<li>All documentation fields complete on job card</li>
 </ul>
 
 
 <div class="callout tip">
 
-**Shop tip:** Build a one-page cheat sheet from this chapter for bay posting. Installers reference cards beat re-reading the full manual during production.
+**Shop standard:** Post a one-page Wet Install Method — Core Technique quick-reference at the bay. Field crews reference SOPs during production — not after comebacks.
 
 </div>
 
 
-## Common Mistakes
+## Common Failures
 
 
 ### Troubleshooting Reference

@@ -2,7 +2,7 @@
 
 # Chapter 24 — Vehicle Application Matrix
 
-This chapter provides vehicle-specific guidance for Window Tint Installation operations. Use it during estimating, scheduling, and installer briefing.
+Vehicle-specific operational guidance for Window Tint Installation. Reference during estimating, scheduling, and pre-job briefing.
 
 ## Vehicle Type Reference Matrix
 
@@ -38,10 +38,10 @@ Short wheelbase, tight door gaps, smaller hood radius. Focus on clean edge tucks
 ### Sedan — Compact — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -50,7 +50,7 @@ Short wheelbase, tight door gaps, smaller hood radius. Focus on clean edge tucks
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Sedan — Mid-Size — Field Notes
@@ -62,10 +62,10 @@ Standard partial-front template. Watch mirror cap compound curves.
 ### Sedan — Mid-Size — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -74,7 +74,7 @@ Standard partial-front template. Watch mirror cap compound curves.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Sedan — Full-Size — Field Notes
@@ -86,10 +86,10 @@ Long hood panels require two-installer coordination on full hood PPF.
 ### Sedan — Full-Size — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -98,7 +98,7 @@ Long hood panels require two-installer coordination on full hood PPF.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Coupe / Sports Car — Field Notes
@@ -110,10 +110,10 @@ Low front clearance; use low-profile lift pads. Aggressive bumper geometry.
 ### Coupe / Sports Car — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -122,7 +122,7 @@ Low front clearance; use low-profile lift pads. Aggressive bumper geometry.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Convertible — Field Notes
@@ -134,10 +134,10 @@ Mind soft-top mechanisms; mask extensively. A-pillar wraps are high-visibility.
 ### Convertible — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -146,7 +146,7 @@ Mind soft-top mechanisms; mask extensively. A-pillar wraps are high-visibility.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Hatchback — Field Notes
@@ -158,10 +158,10 @@ Large rear hatch — popular add-on for loading zone protection.
 ### Hatchback — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -170,7 +170,7 @@ Large rear hatch — popular add-on for loading zone protection.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Wagon — Field Notes
@@ -182,10 +182,10 @@ Extended roof line; consider roof leading edge strips for highway commuters.
 ### Wagon — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -194,7 +194,7 @@ Extended roof line; consider roof leading edge strips for highway commuters.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Crossover SUV — Field Notes
@@ -206,10 +206,10 @@ Higher ride height; ergonomic ladder or lift required. Large hood and bumper.
 ### Crossover SUV — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -218,7 +218,7 @@ Higher ride height; ergonomic ladder or lift required. Large hood and bumper.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Body-on-Frame SUV — Field Notes
@@ -230,10 +230,10 @@ Removable bumpers common; plan bumper-off workflow.
 ### Body-on-Frame SUV — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -242,7 +242,7 @@ Removable bumpers common; plan bumper-off workflow.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Pickup Truck — Field Notes
@@ -254,10 +254,10 @@ Flat hood, large fenders, grille-heavy front. Bed rail protection upsell.
 ### Pickup Truck — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -266,7 +266,7 @@ Flat hood, large fenders, grille-heavy front. Bed rail protection upsell.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Heavy-Duty Truck — Field Notes
@@ -278,10 +278,10 @@ Larger panels, thicker paint on some fleets. Extended install times.
 ### Heavy-Duty Truck — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -290,7 +290,7 @@ Larger panels, thicker paint on some fleets. Extended install times.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Van / Minivan — Field Notes
@@ -302,10 +302,10 @@ Large flat sides for wrap/PPF fleet. Sliding door edges high chip zone.
 ### Van / Minivan — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -314,7 +314,7 @@ Large flat sides for wrap/PPF fleet. Sliding door edges high chip zone.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Commercial Fleet — Field Notes
@@ -326,10 +326,10 @@ Volume QC standards; document every unit identically.
 ### Commercial Fleet — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -338,7 +338,7 @@ Volume QC standards; document every unit identically.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Exotic / Supercar — Field Notes
@@ -350,10 +350,10 @@ Paint sensitivity extreme; soft tools only. Multi-stage correction common.
 ### Exotic / Supercar — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -362,7 +362,7 @@ Paint sensitivity extreme; soft tools only. Multi-stage correction common.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Classic / Vintage — Field Notes
@@ -374,10 +374,10 @@ Single-stage paint risk; adhesion test mandatory. Customer disclosure required.
 ### Classic / Vintage — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -386,7 +386,7 @@ Single-stage paint risk; adhesion test mandatory. Customer disclosure required.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### EV — Front Trunk — Field Notes
@@ -398,10 +398,10 @@ Frunk lid geometry unique; sensor zones on bumpers.
 ### EV — Front Trunk — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -410,7 +410,7 @@ Frunk lid geometry unique; sensor zones on bumpers.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### EV — Battery Floor — Field Notes
@@ -422,10 +422,10 @@ Underbody shields — do not drill or adhere without OEM guidance.
 ### EV — Battery Floor — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -434,7 +434,7 @@ Underbody shields — do not drill or adhere without OEM guidance.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Luxury Sedan — Field Notes
@@ -446,10 +446,10 @@ High customer expectation; white-glove intake and delivery.
 ### Luxury Sedan — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -458,7 +458,7 @@ High customer expectation; white-glove intake and delivery.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Off-Road / Overland — Field Notes
@@ -470,10 +470,10 @@ Heavy rock chip exposure; recommend track packages.
 ### Off-Road / Overland — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -482,7 +482,7 @@ Heavy rock chip exposure; recommend track packages.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>
 
 ### Police / Emergency — Field Notes
@@ -494,10 +494,10 @@ Fleet scheduling; downtime windows; reflective strip coordination.
 ### Police / Emergency — Pre-Job Brief
 
 1. Confirm vehicle type on work order matches physical vehicle
-2. Walk vehicle with customer using intake checklist for this body style
-3. Identify trim removal requirements before promising delivery time
+2. Walk vehicle using intake checklist for this body style
+3. Identify trim removal requirements before committing delivery date
 4. Stage patterns or materials sized for this platform
-5. Assign installer skill level appropriate to complexity
+5. Assign technician tier appropriate to complexity
 6. Document any body-specific pre-existing damage
 
 </div>
@@ -506,5 +506,5 @@ Fleet scheduling; downtime windows; reflective strip coordination.
 <li>Lift capacity verified for vehicle weight</li>
 <li>Pattern library includes this year/make/model</li>
 <li>Customer package matches realistic coverage for platform</li>
-<li>Delivery time includes complexity buffer</li>
+<li>Delivery timeline includes complexity buffer</li>
 </ul>

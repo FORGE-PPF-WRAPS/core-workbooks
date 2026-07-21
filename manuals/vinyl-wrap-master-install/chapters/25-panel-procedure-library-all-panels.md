@@ -2,7 +2,7 @@
 
 # Chapter 25 — Panel Procedure Library — All Panels
 
-The following panel procedure cards provide a master installation reference for each major vehicle panel type. They should be used during training, as a pre-job reference for new installers, and as a QC standard during post-installation inspection.
+The following panel procedure cards provide the master installation reference for each major vehicle panel type. Use them as mandatory SOP during live installs, pre-job briefing, and post-installation QC inspection.
 
 
 ### Hood — Full — Master Procedure

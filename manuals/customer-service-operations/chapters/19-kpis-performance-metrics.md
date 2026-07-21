@@ -53,7 +53,7 @@ Key Performance Indicators give the service team objective visibility into how w
 | KPI Below Target | First Investigation Step | Common Root Cause | Corrective Action |
 | --- | --- | --- | --- |
 | Lead Response Time > 10 min | Review CRM lead arrival logs vs. first contact logs | Staff not notified of new leads in real time | Fix CRM alert settings; assign lead monitoring duty |
-| Consultation Booking Rate < 60% | Review recordings or notes from declined calls | Price shared too early; value not established | Refresh phone script training; mystery shop exercise |
+| Consultation Booking Rate < 60% | Review recordings or notes from declined calls | Price shared too early; value not established | Refresh phone script SOP; conduct mystery shop audit |
 | Estimate Close Rate < 40% | Review estimates that went cold — what was the last communication? | Insufficient follow-up; competitor pricing | Increase follow-up cadence; review pricing strategy |
 | Review Conversion < 25% | Check delivery records — are review requests consistently sent? | Inconsistent ask; poor timing of text | Build review request into delivery checklist; test text timing |
 | Complaint Rate > 5% | Categorize complaint types and identify patterns | Systemic install quality issue or expectation gap | Root cause analysis with lead installer; update expectation scripts |

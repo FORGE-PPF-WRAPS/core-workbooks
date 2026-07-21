@@ -19,8 +19,8 @@ const MANUALS = [
   {
     id: 'ppf-master-install',
     title: 'PPF Master Install Manual',
-    subtitle: 'Complete Paint Protection Film Installation Reference',
-    type: 'Installation Manual',
+    subtitle: 'Complete Core Reference — Every Aspect of Professional Paint Protection Film Operations',
+    type: 'Core Operations Manual',
     version: '1.0',
     generator: generatePpfManual,
     expand: { title: 'PPF Installation', panels: PPF_PANELS, troubleshooting: [] },
@@ -28,8 +28,8 @@ const MANUALS = [
   {
     id: 'window-tint-master-install',
     title: 'Window Tint Master Install Manual',
-    subtitle: 'Complete Automotive Window Film Installation Reference',
-    type: 'Installation Manual',
+    subtitle: 'Complete Core Reference — Every Aspect of Professional Window Film Operations',
+    type: 'Core Operations Manual',
     version: '1.0',
     generator: generateTintManual,
     expand: { title: 'Window Tint Installation' },
@@ -37,8 +37,8 @@ const MANUALS = [
   {
     id: 'customer-service-operations',
     title: 'Customer Service Operations Manual',
-    subtitle: 'Front-of-House, Sales, and Client Experience Standards',
-    type: 'Operations Manual',
+    subtitle: 'Complete Core Reference — Front-of-House, Sales & Client Experience Operations',
+    type: 'Core Operations Manual',
     version: '1.0',
     generator: generateCustomerServiceManual,
     expand: {
@@ -55,8 +55,8 @@ const MANUALS = [
   {
     id: 'vinyl-wrap-master-install',
     title: 'Vinyl Wrap Master Install Manual',
-    subtitle: 'Complete Vehicle Wrap Installation Reference',
-    type: 'Installation Manual',
+    subtitle: 'Complete Core Reference — Every Aspect of Professional Vehicle Wrap Operations',
+    type: 'Core Operations Manual',
     version: '1.0',
     generator: generateVinylWrapManual,
     expand: { title: 'Vinyl Wrap Installation', panels: WRAP_PANELS },
@@ -64,8 +64,8 @@ const MANUALS = [
   {
     id: 'ceramic-coating-application',
     title: 'Ceramic Coating Application Manual',
-    subtitle: 'Surface Prep, Application, Cure, and Warranty Standards',
-    type: 'Application Manual',
+    subtitle: 'Complete Core Reference — Every Aspect of Professional Coating Operations',
+    type: 'Core Operations Manual',
     version: '1.0',
     generator: generateCeramicManual,
     expand: { title: 'Ceramic Coating Application', panels: SURFACE_PANELS },
@@ -73,8 +73,8 @@ const MANUALS = [
   {
     id: 'paint-correction-detailing',
     title: 'Paint Correction & Detailing Manual',
-    subtitle: 'Correction, Protection, and Detailing Operations Reference',
-    type: 'Operations Manual',
+    subtitle: 'Complete Core Reference — Every Aspect of Correction & Detailing Operations',
+    type: 'Core Operations Manual',
     version: '1.0',
     generator: generateDetailingManual,
     expand: { title: 'Paint Correction & Detailing' },

@@ -13,6 +13,26 @@ Training workbooks for **Velox Wrap Co** Skill Forge — core automotive restyli
 | **Window Tint** | **Ready** | `workbooks/core/window-tint/workbook.md` | `workbooks/output/window-tint-workbook.pdf` |
 | **PPF** | **Ready** | `workbooks/core/ppf/workbook.md` | `workbooks/output/ppf-workbook.pdf` |
 
+## Master Core Operations Manuals (150–200 pages each)
+
+Complete shop reference manuals covering every aspect of each service — not 3-day class outlines.
+
+| Manual | Output |
+|--------|--------|
+| PPF Master Install | `manuals/output/ppf-master-install.pdf` |
+| Window Tint Master Install | `manuals/output/window-tint-master-install.pdf` |
+| Customer Service Operations | `manuals/output/customer-service-operations.pdf` |
+| Vinyl Wrap Master Install | `manuals/output/vinyl-wrap-master-install.pdf` |
+| Ceramic Coating Application | `manuals/output/ceramic-coating-application.pdf` |
+| Paint Correction & Detailing | `manuals/output/paint-correction-detailing.pdf` |
+
+```bash
+npm run generate:manuals    # regenerate chapter content
+npm run build:manuals:pdf   # build all manual PDFs
+```
+
+See `manuals/README.md` for the distinction between core manuals and student workbooks.
+
 ## Build & Print
 
 ### Prerequisites

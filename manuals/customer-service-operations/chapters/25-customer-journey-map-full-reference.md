@@ -2,7 +2,7 @@
 
 # Chapter 25 — Customer Journey Map — Full Reference
 
-The customer journey is the complete sequence of experiences a customer has with the shop — from first awareness through long-term loyalty. Mapping this journey systematically reveals the touchpoints where the experience is strongest, where gaps exist, and where competitors have an opportunity to intercept a prospective client. This chapter provides the complete CORE Workbooks customer journey map with associated customer expectations, shop responsibilities, and quality standards at each stage.
+The customer journey is the complete sequence of experiences a customer has with the shop — from first awareness through long-term loyalty. Mapping this journey systematically reveals the touchpoints where the experience is strongest, where gaps exist, and where competitors have an opportunity to intercept a prospective client. This chapter provides the complete customer journey reference map with associated customer expectations, shop responsibilities, and quality standards at each stage.
 
 ## Journey Map Overview
 

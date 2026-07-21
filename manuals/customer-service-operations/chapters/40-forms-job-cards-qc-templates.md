@@ -13,8 +13,8 @@
 | Vehicle Y/M/M |  |
 | VIN |  |
 | Service | Customer Service |
-| Package |  |
-| Technician |  |
+| Package / Scope |  |
+| Lead Technician |  |
 | QC Sign-off |  |
 | Customer Sign-off |  |
 
@@ -25,15 +25,15 @@
 Diagram each panel. Mark chips, scratches, dents, prior repairs. Customer initials: _______________
 
 
-## Daily Bay QC Log
+## Daily Bay Operations Log
 
 
 <ul class="checklist">
 <li>Bay cleaned and debris removed</li>
 <li>Tools staged and blades fresh</li>
-<li>Slip solution fresh batch mixed</li>
-<li>Lighting operational</li>
-<li>Climate logged (temp/humidity)</li>
+<li>Chemicals within date and mix standards</li>
+<li>Lighting and inspection equipment operational</li>
+<li>Climate logged (temperature / humidity)</li>
 <li>First job intake photos complete</li>
 </ul>
 
@@ -44,8 +44,8 @@ Diagram each panel. Mark chips, scratches, dents, prior repairs. Customer initia
 | Field | Entry |
 | --- | --- |
 | Original job date |  |
-| Comeback date |  |
+| Report date |  |
 | Reported issue |  |
 | Root cause category |  |
 | Corrective action |  |
-| Preventive SOP update | Yes / No |
+| SOP revision required | Yes / No |

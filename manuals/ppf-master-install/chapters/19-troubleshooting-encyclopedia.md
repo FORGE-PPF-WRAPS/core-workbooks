@@ -3,7 +3,7 @@
 # Chapter 19 — Troubleshooting Encyclopedia
 
 
-Comprehensive defect reference for lead installers and QC. Use during comebacks, training reviews, and warranty evaluations.
+Comprehensive defect reference for lead installers, QC, and warranty evaluation. Cross-reference with Extended Troubleshooting Reference and relevant Technical Bulletins.
 
 
 ### Troubleshooting Reference

@@ -48,7 +48,7 @@ Conditioning restores flexibility, surface sheen, and UV resistance to automotiv
 
 ## Leather Repair and Color Restoration
 
-Professional leather repair and color restoration extends the life of damaged leather and adds significant value to a detailing service offering. These are advanced services requiring dedicated training and practice, but the basics should be understood by all professional detailers.
+Professional leather repair and color restoration extends the life of damaged leather and adds significant value to a detailing service offering. These are advanced services requiring dedicated competency authorization and practice, but the basics should be understood by all professional detailers.
 
 | Condition | Assessment | Service Level | Approximate Investment |
 | --- | --- | --- | --- |

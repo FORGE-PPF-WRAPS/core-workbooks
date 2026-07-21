@@ -1130,7 +1130,7 @@ function chKPIs() {
     ['KPI Below Target', 'First Investigation Step', 'Common Root Cause', 'Corrective Action'],
     [
       ['Lead Response Time > 10 min', 'Review CRM lead arrival logs vs. first contact logs', 'Staff not notified of new leads in real time', 'Fix CRM alert settings; assign lead monitoring duty'],
-      ['Consultation Booking Rate < 60%', 'Review recordings or notes from declined calls', 'Price shared too early; value not established', 'Refresh phone script training; mystery shop exercise'],
+      ['Consultation Booking Rate < 60%', 'Review recordings or notes from declined calls', 'Price shared too early; value not established', 'Refresh phone script SOP; conduct mystery shop audit'],
       ['Estimate Close Rate < 40%', 'Review estimates that went cold — what was the last communication?', 'Insufficient follow-up; competitor pricing', 'Increase follow-up cadence; review pricing strategy'],
       ['Review Conversion < 25%', 'Check delivery records — are review requests consistently sent?', 'Inconsistent ask; poor timing of text', 'Build review request into delivery checklist; test text timing'],
       ['Complaint Rate > 5%', 'Categorize complaint types and identify patterns', 'Systemic install quality issue or expectation gap', 'Root cause analysis with lead installer; update expectation scripts'],
@@ -1150,9 +1150,9 @@ function chKPIs() {
   return c;
 }
 
-function chTrainingNewStaff() {
+function chStaffCompetencyOnboarding() {
   let c = '';
-  c += p('New customer service staff require a structured onboarding program that goes beyond "shadow for a week." This chapter provides a 30-day training framework covering all competencies a new team member must demonstrate before handling customers independently.');
+  c += p('New customer service staff require a documented onboarding and competency verification program — not informal shadowing. This chapter is the shop SOP for the 30-day authorization sequence: every competency a team member must demonstrate before handling customers independently.');
 
   c += h2('Onboarding Phases Overview');
   c += table(
@@ -1166,7 +1166,7 @@ function chTrainingNewStaff() {
     ]
   );
 
-  c += h2('Phase 2: Product Knowledge Training — Required Topics');
+  c += h2('Phase 2: Product Knowledge — Required Competencies');
   c += checklist([
     'Paint protection film: film construction, adhesive types, self-healing, top coat, warranty tiers',
     'Ceramic coatings: chemistry basics, application method, curing, hydrophobic property, layering',
@@ -1192,9 +1192,9 @@ function chTrainingNewStaff() {
     ]
   );
 
-  c += h2('Role-Play Scenarios for Training');
+  c += h2('Competency Verification Scenarios');
   c += table(
-    ['Scenario', 'Training Objective'],
+    ['Scenario', 'Verification Objective'],
     [
       ['Caller opens with: "How much for a full wrap?"', 'Discovery before pricing; not leading with numbers'],
       ['Customer who got a cheaper competitive quote', 'Value differentiation without disparaging competitors'],
@@ -1526,7 +1526,7 @@ function chInboundMarketingCS() {
 
 function chCustomerJourneyMap() {
   let c = '';
-  c += p('The customer journey is the complete sequence of experiences a customer has with the shop — from first awareness through long-term loyalty. Mapping this journey systematically reveals the touchpoints where the experience is strongest, where gaps exist, and where competitors have an opportunity to intercept a prospective client. This chapter provides the complete CORE Workbooks customer journey map with associated customer expectations, shop responsibilities, and quality standards at each stage.');
+  c += p('The customer journey is the complete sequence of experiences a customer has with the shop — from first awareness through long-term loyalty. Mapping this journey systematically reveals the touchpoints where the experience is strongest, where gaps exist, and where competitors have an opportunity to intercept a prospective client. This chapter provides the complete customer journey reference map with associated customer expectations, shop responsibilities, and quality standards at each stage.');
 
   c += h2('Journey Map Overview');
   c += table(
@@ -1725,7 +1725,7 @@ function chFleetCommercial() {
     'Agree on service packaging: two or three tiers that work for the F&I menu; keep it simple for the F&I team to present',
     'Agree on turnaround commitment: dealers need vehicles returned within 24–48 hours on average',
     'Establish a dispatch protocol: dealer calls or emails when a vehicle is sold; shop schedules intake within 24 hours',
-    'Provide the F&I team with training and leave-behind materials they can use during the sales presentation',
+    'Provide the F&I team with approved leave-behind materials and talking points they can use during the sales presentation',
     'Track monthly volume per dealer in CRM; provide a monthly performance summary to the dealer GM',
   ]);
 
@@ -2079,10 +2079,10 @@ function chInternalCulture() {
 
   c += procedure('New Staff Culture Onboarding Sequence', [
     'Day 1: owner or manager personally introduces the shop\'s brand story and values — not an HR document; a face-to-face conversation',
-    'Day 1–3: shadow-only period; new hire observes every customer interaction, every phone call, every delivery without participating — they are learning the standard',
-    'Week 1: read the Customer Service Manual; complete the 10-question comprehension quiz covering brand voice, phone scripts, and escalation protocol',
-    'Week 2: role-play key scenarios with their manager or buddy: phone intake, complaint handling, delivery walkthrough — scored against the standard',
-    'Week 2–4: take first customer interactions with the buddy present; buddy provides real-time feedback privately after each interaction',
+    'Days 1–3: observation-only period; new hire observes every customer interaction, every phone call, every delivery without participating — they are absorbing the operational standard',
+    'Week 1: read the Customer Service Manual; complete the 10-question comprehension assessment covering brand voice, phone scripts, and escalation protocol',
+    'Week 2: competency verification for key scenarios with their manager or buddy: phone intake, complaint handling, delivery walkthrough — scored against the standard',
+    'Weeks 2–4: first customer interactions with the buddy present; buddy provides real-time feedback privately after each interaction',
     'Week 4: manager reviews customer feedback received during the new hire\'s first interactions; provides a written summary of strengths and development areas',
     '30-day check-in: formal one-on-one; new hire rates their own confidence across all responsibilities; manager rates the same independently; compare and discuss gaps',
   ]);
@@ -2122,7 +2122,7 @@ function generateCustomerServiceManual() {
     { title: 'CRM Workflow & Data Management',               content: chCRMWorkflow() },
     { title: 'Escalation Procedures',                        content: chEscalation() },
     { title: 'KPIs & Performance Metrics',                   content: chKPIs() },
-    { title: 'Training New Customer Service Staff',          content: chTrainingNewStaff() },
+    { title: 'Staff Competency & Onboarding Standards',      content: chStaffCompetencyOnboarding() },
     { title: 'Pricing Presentation Psychology',               content: chPricingPresentationPsychology() },
     { title: 'Advanced Service Recovery',                    content: chServiceRecoveryAdvanced() },
     { title: 'Consumer Psychology in Automotive Services',   content: chConsumerPsychology() },

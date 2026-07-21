@@ -1172,7 +1172,7 @@ function chTroubleshooting() {
 
 function chWrapPanelsContent() {
   let c = '';
-  c += p('The following panel procedure cards provide a master installation reference for each major vehicle panel type. They should be used during training, as a pre-job reference for new installers, and as a QC standard during post-installation inspection.');
+  c += p('The following panel procedure cards provide the master installation reference for each major vehicle panel type. Use them as mandatory SOP during live installs, pre-job briefing, and post-installation QC inspection.');
 
   for (const panel of WRAP_PANELS) {
     c += panelProcedure('Vinyl Wrap', panel);
@@ -1348,7 +1348,7 @@ function chFilmBrandKnowledge() {
 
 function chAdvancedInstallerReference() {
   let c = '';
-  c += p('This chapter consolidates the advanced technique references that experienced installers use to diagnose problems, adapt to unusual situations, and consistently achieve results beyond the industry baseline. It serves as both a training reference for developing installers and a field guide for experienced professionals encountering challenging scenarios.');
+  c += p('This chapter consolidates advanced technique references that lead installers use to diagnose problems, adapt to unusual situations, and maintain results beyond industry baseline. It is the governing field reference for complex scenarios — not a course supplement.');
 
   c += h2('Temperature Management — Full Reference');
   c += p('Temperature management is the single most impactful variable within the installer\'s control on any given job day. This section provides a complete reference for temperature effects across all major installation parameters.');
@@ -1693,7 +1693,7 @@ function chMaterialWaste() {
     ['Waste Source', 'Typical % of Material Waste', 'Reduction Strategy'],
     [
       ['Panel overage (standard)', '10–15%', 'Optimize measurement; use remnant pieces for smaller panels (mirrors, pillars) before ordering'],
-      ['Re-dos (defect or error)', '5–20% depending on skill level', 'Reduce through proper prep and training; track by installer for coaching'],
+      ['Re-dos (defect or error)', '5–20% depending on skill level', 'Reduce through proper prep and SOP adherence; track by installer for coaching'],
       ['Pattern matching waste (directional film)', '5–15%', 'Plan panel nesting efficiently; order in longer rolls to reduce end-cut waste'],
       ['Liner material', '100% of all installed film', 'Recycle through a film liner recycling program; do not add to general waste stream'],
       ['Blade snaps and sharps', 'High volume', 'Use sharps container; full container is collected by a sharps disposal service'],
@@ -1843,11 +1843,11 @@ function chColorTheoryForWrappers() {
   return c;
 }
 
-function chInstallerCertificationPathway() {
+function chInstallerCompetencyAuthorization() {
   let c = '';
-  c += p('A structured installer development pathway transforms an entry-level hire into a confident, efficient technician while protecting the shop\'s quality standards. This chapter establishes the competency levels, training milestones, and certification gates that every installer moves through from first day to lead installer status.');
+  c += p('A structured installer competency authorization system protects shop quality while developing technicians from entry level to lead installer. This chapter establishes the authorization levels, competency requirements, and verification gates every installer must pass before independent work is permitted.');
 
-  c += h2('Installer Skill Levels');
+  c += h2('Installer Authorization Levels');
   c += table(
     ['Level', 'Title', 'Authorized Work', 'Supervision Required', 'Typical Timeline'],
     [
@@ -1859,8 +1859,8 @@ function chInstallerCertificationPathway() {
     ]
   );
 
-  c += h2('Training Curriculum by Level');
-  c += h3('Level 1 — Trainee Curriculum');
+  c += h2('Competency Requirements by Authorization Level');
+  c += h3('Level 1 — Trainee Requirements');
   c += checklist([
     'Film care and handling: unrolling, storage, why not to fold film',
     'Panel prep chemistry: what IPA does, why contamination causes fish-eyes, temperature effects',
@@ -1871,7 +1871,7 @@ function chInstallerCertificationPathway() {
     'Squeegee technique on flat panels: proper angle, pressure, and stroke pattern',
   ]);
 
-  c += h3('Level 2 — Junior Installer Curriculum');
+  c += h3('Level 2 — Junior Installer Requirements');
   c += checklist([
     'Complete L1 curriculum plus pass the panel prep proficiency test (assessed by L4+)',
     'Perform full hood wrap under supervision: submit QC photos reviewed by lead',
@@ -1883,9 +1883,9 @@ function chInstallerCertificationPathway() {
     'Complete 20 supervised panels before advancing; all panels must pass L4 QC review',
   ]);
 
-  c += h2('Certification Gates');
+  c += h2('Authorization Gates');
   c += procedure('Level Advancement Assessment', [
-    'Installer requests assessment when they believe they meet all curriculum requirements',
+    'Installer requests assessment when they believe they meet all competency requirements',
     'Lead installer or shop manager schedules a timed practical assessment on a designated test vehicle or practice substrate',
     'Assessment criteria: prep quality (pass/fail), installation technique (pass/fail), edge quality (pass/fail), post-heat coverage (pass/fail), time within benchmark (pass/fail)',
     'All five criteria must pass — partial pass is not accepted; assessment may be retaken after 2-week remediation period',
@@ -1895,15 +1895,15 @@ function chInstallerCertificationPathway() {
   ]);
 
   c += h2('Ongoing Professional Development');
-  c += p('Certification is not a one-time event. The film industry evolves rapidly — new adhesive technologies, new film categories, and new application techniques emerge regularly. Continuing development is expected of all installers at every level.');
+  c += p('Authorization is not a one-time event. The film industry evolves rapidly — new adhesive technologies, new film categories, and new application techniques emerge regularly. Continuing development is expected of all installers at every level.');
 
   c += checklist([
-    'All installers complete at least one manufacturer-sponsored training (online or in-person) per year',
+    'All installers complete at least one manufacturer-sponsored technical certification (online or in-person) per year',
     'New film products are introduced in a monthly 30-minute product review session — lead installer leads; all staff attend',
     'Competition wraps and show vehicles are used as development opportunities — assign L2/L3 installers to work alongside the lead on high-profile builds',
     'Installer performance metrics (QC re-do rate, time efficiency, customer satisfaction) are reviewed quarterly and shared confidentially with each installer',
     'Installer portfolio: each installer maintains a photo portfolio of completed work — used for performance review and in shop marketing with permission',
-    'Cross-training with PPF installation is encouraged for L4+ installers — dual certification increases installer versatility and value',
+    'Cross-certification with PPF installation is encouraged for L4+ installers — dual authorization increases installer versatility and value',
   ]);
 
   c += h2('Installer Tools & Equipment Responsibility');
@@ -1956,7 +1956,7 @@ function generateVinylWrapManual() {
     { title: 'Material Waste Management',                      content: chMaterialWaste() },
     { title: 'Panel Procedure Library — All Panels',           content: chWrapPanelsContent() },
     { title: 'Color Theory & Film Selection Consultation',     content: chColorTheoryForWrappers() },
-    { title: 'Installer Certification & Development Pathway', content: chInstallerCertificationPathway() },
+    { title: 'Installer Competency & Authorization Standards', content: chInstallerCompetencyAuthorization() },
     { title: 'Wrap Pricing, Quoting & Business Standards',    content: chWrapPricingBusiness() },
     { title: 'Appendices',                                     content: chAppendicesWrap() },
   ];

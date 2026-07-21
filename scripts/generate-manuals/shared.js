@@ -89,6 +89,11 @@ function writeChapters(baseDir, chapters) {
   const fs = require('fs');
   const path = require('path');
   fs.mkdirSync(baseDir, { recursive: true });
+  for (const entry of fs.readdirSync(baseDir)) {
+    if (entry.endsWith('.md')) {
+      fs.unlinkSync(path.join(baseDir, entry));
+    }
+  }
   chapters.forEach((ch, idx) => {
     const num = String(idx + 1).padStart(2, '0');
     const slug = ch.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');

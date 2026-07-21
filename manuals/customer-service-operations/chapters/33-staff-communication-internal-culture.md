@@ -77,10 +77,10 @@ Culture transmission to new hires is not automatic. It requires deliberate, stru
 ### New Staff Culture Onboarding Sequence
 
 1. Day 1: owner or manager personally introduces the shop's brand story and values — not an HR document; a face-to-face conversation
-2. Day 1–3: shadow-only period; new hire observes every customer interaction, every phone call, every delivery without participating — they are learning the standard
-3. Week 1: read the Customer Service Manual; complete the 10-question comprehension quiz covering brand voice, phone scripts, and escalation protocol
-4. Week 2: role-play key scenarios with their manager or buddy: phone intake, complaint handling, delivery walkthrough — scored against the standard
-5. Week 2–4: take first customer interactions with the buddy present; buddy provides real-time feedback privately after each interaction
+2. Days 1–3: observation-only period; new hire observes every customer interaction, every phone call, every delivery without participating — they are absorbing the operational standard
+3. Week 1: read the Customer Service Manual; complete the 10-question comprehension assessment covering brand voice, phone scripts, and escalation protocol
+4. Week 2: competency verification for key scenarios with their manager or buddy: phone intake, complaint handling, delivery walkthrough — scored against the standard
+5. Weeks 2–4: first customer interactions with the buddy present; buddy provides real-time feedback privately after each interaction
 6. Week 4: manager reviews customer feedback received during the new hire's first interactions; provides a written summary of strengths and development areas
 7. 30-day check-in: formal one-on-one; new hire rates their own confidence across all responsibilities; manager rates the same independently; compare and discuss gaps
 
