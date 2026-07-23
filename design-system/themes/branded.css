@@ -1,79 +1,420 @@
-/* Branded theme — Skill Forge / Forge PPF (official brand kit) */
+/* ============================================================
+   FORGE PPF / SKILL FORGE
+   DESIGN SYSTEM v2.0
+   Complete Replacement
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   FONT
+   ------------------------------------------------------------ */
 
 @font-face {
   font-family: "Skill Forge Display";
-  src: url("../../workbooks/assets/brand/fonts/skill-forge-display.woff2") format("woff2"),
-       url("../../workbooks/assets/brand/fonts/skill-forge-display.woff") format("woff"),
-       url("../../workbooks/assets/brand/fonts/skill-forge-display.otf") format("opentype");
-  font-weight: normal;
-  font-style: italic;
+  src:
+    url("../../workbooks/assets/brand/fonts/skill-forge-display.woff2") format("woff2"),
+    url("../../workbooks/assets/brand/fonts/skill-forge-display.woff") format("woff"),
+    url("../../workbooks/assets/brand/fonts/skill-forge-display.otf") format("opentype");
   font-display: swap;
 }
 
-:root {
-  /* Brand palette — see workbooks/assets/brand/brand-tokens.json */
-  --brand-magenta: #FF2DAA;
-  --brand-purple: #7A3FFF;
-  --brand-cyan: #15D8FF;
-  --brand-gold: #D4AF37;
-  --brand-black: #0A0A0F;
-  --brand-silver: #B8BDC9;
-  --brand-white: #FFFFFF;
+/* ------------------------------------------------------------
+   ROOT
+   ------------------------------------------------------------ */
 
-  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --font-heading: "Skill Forge Display", "Arial Black", Impact, sans-serif;
-  --font-display: "Skill Forge Display", "Arial Black", Impact, sans-serif;
+:root {
+  /* ============================================================
+     BRAND COLORS
+     ============================================================ */
+
+  --forge-pink: #ff0f7b;
+  --forge-magenta: #ff2ba6;
+  --forge-purple: #7d3cff;
+  --forge-violet: #5d2bff;
+  --forge-blue: #00aaff;
+  --forge-cyan: #00d5ff;
+  --forge-gold: #d9b44a;
+  --forge-black: #080808;
+  --forge-charcoal: #121212;
+  --forge-carbon: #1d1d1d;
+  --forge-gray: #4d4d4d;
+  --forge-light: #e8edf5;
+  --forge-white: #ffffff;
+
+  /* ============================================================
+     SEMANTIC COLORS
+     ============================================================ */
+
+  --primary: var(--forge-pink);
+  --secondary: var(--forge-purple);
+  --accent: var(--forge-cyan);
+
+  --success: #16c784;
+  --warning: #f5b700;
+  --danger: #ff4d6d;
+  --info: #00d5ff;
+
+  /* ============================================================
+     TEXT
+     ============================================================ */
+
+  --text-main: #ffffff;
+  --text-secondary: #cfd5e0;
+  --text-muted: #9ca5b5;
+  --text-dark: #111111;
+
+  /* ============================================================
+     BACKGROUNDS
+     ============================================================ */
+
+  --background: #080808;
+  --surface: #121212;
+  --surface-light: #1b1b1b;
+  --panel: #1d1d1d;
+
+  /* ============================================================
+     BORDERS
+     ============================================================ */
+
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+
+  /* ============================================================
+     TYPOGRAPHY
+     ============================================================ */
+
+  --font-display: "Skill Forge Display", sans-serif;
+  --font-heading: "Skill Forge Display", sans-serif;
+  --font-body: "Inter", "Segoe UI", Arial, sans-serif;
   --font-label: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 
-  --color-text: #1a1a1a;
-  --color-heading: var(--brand-black);
-  --color-accent: var(--brand-purple);
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.4rem;
+  --font-2xl: 1.8rem;
+  --font-3xl: 2.4rem;
+  --font-4xl: 3rem;
+  --font-5xl: 4rem;
+
+  /* ============================================================
+     SPACING
+     ============================================================ */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* ============================================================
+     RADIUS
+     ============================================================ */
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+  --radius-round: 999px;
+
+  /* ============================================================
+     SHADOWS
+     ============================================================ */
+
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 25px 60px rgba(0, 0, 0, 0.45);
+
+  --glow-pink: 0 0 18px rgba(255, 15, 123, 0.45);
+  --glow-blue: 0 0 18px rgba(0, 170, 255, 0.45);
+  --glow-purple: 0 0 20px rgba(125, 60, 255, 0.45);
+
+  /* ============================================================
+     GRADIENTS
+     ============================================================ */
+
+  --gradient-primary: linear-gradient(135deg, var(--forge-pink), var(--forge-purple), var(--forge-blue));
+  --gradient-dark: linear-gradient(180deg, #080808, #101010);
+  --gradient-cover: linear-gradient(145deg, #050505, #141414);
+  --gradient-gold: linear-gradient(90deg, #8c6d1f, #d9b44a, #f7e08f);
+  --gradient-callout: linear-gradient(90deg, rgba(255, 15, 123, 0.18), rgba(0, 170, 255, 0.15));
+  --gradient-carbon: linear-gradient(135deg, #0d0d0d, #181818);
+
+  /* ============================================================
+     LOGO
+     ============================================================ */
+
+  --logo-width: 220px;
+  --logo-height: auto;
+
+  /* ============================================================
+     PAGE
+     ============================================================ */
+
+  --page-width: 8.5in;
+  --page-height: 11in;
+
+  --page-margin-top: 0.75in;
+  --page-margin-bottom: 0.75in;
+  --page-margin-left: 0.75in;
+  --page-margin-right: 0.75in;
+
+  /* ============================================================
+     CHAPTER COLORS
+     ============================================================ */
+
+  --chapter-intro: var(--forge-pink);
+  --chapter-tools: var(--forge-purple);
+  --chapter-install: var(--forge-blue);
+  --chapter-finishing: var(--forge-cyan);
+  --chapter-business: var(--forge-gold);
+
+  /* ============================================================
+     TABLES
+     ============================================================ */
+
+  --table-header: var(--gradient-primary);
+  --table-border: rgba(255, 255, 255, 0.12);
+
+  /* ============================================================
+     CALLOUTS
+     ============================================================ */
+
+  --tip: #00d5ff;
+  --warning-box: #ffb300;
+  --danger-box: #ff4d6d;
+  --success-box: #2ecc71;
+
+  /* ============================================================
+     LEGACY ALIASES — design-system build pipeline
+     ============================================================ */
+
+  --brand-magenta: var(--forge-magenta);
+  --brand-purple: var(--forge-purple);
+  --brand-cyan: var(--forge-cyan);
+  --brand-gold: var(--forge-gold);
+  --brand-black: var(--forge-black);
+  --brand-silver: var(--text-secondary);
+  --brand-white: var(--forge-white);
+
+  --color-text: var(--text-dark);
+  --color-heading: var(--forge-black);
+  --color-accent: var(--forge-purple);
   --color-border: #cccccc;
   --color-border-light: #d8dce6;
   --color-muted: #5c6370;
-  --color-field-line: var(--brand-silver);
+  --color-field-line: var(--text-secondary);
   --color-table-header: #f3f0fa;
   --color-revision-bg: #f8f6fc;
   --color-notes-line: #e0e0e0;
 
-  --callout-bg: #f8f6fc;
-  --callout-border: var(--brand-purple);
+  --callout-bg: rgba(255, 15, 123, 0.08);
+  --callout-border: var(--forge-purple);
   --callout-warning-bg: #fff8e6;
-  --callout-warning-border: var(--brand-gold);
-  --callout-tip-bg: #eef9fc;
-  --callout-tip-border: #0d7a8c;
+  --callout-warning-border: var(--forge-gold);
+  --callout-tip-bg: rgba(0, 213, 255, 0.08);
+  --callout-tip-border: var(--forge-cyan);
 
-  --cover-gradient: linear-gradient(135deg, #FF2DAA 0%, #7A3FFF 50%, #15D8FF 100%);
-  --cover-text: var(--brand-white);
-  --cover-brand-text: var(--brand-silver);
-  --cover-title: var(--brand-white);
+  --cover-gradient: var(--gradient-primary);
+  --cover-text: var(--forge-white);
+  --cover-brand-text: var(--text-secondary);
+  --cover-title: var(--forge-white);
   --cover-subtitle: rgba(255, 255, 255, 0.92);
   --cover-meta: rgba(255, 255, 255, 0.8);
 
-  --surface-lesson-border: var(--brand-purple);
+  --surface-lesson-border: var(--forge-purple);
   --surface-quiz-bg: #f8f6fc;
   --surface-quiz-border: #d8cce8;
-  --surface-certificate-border: var(--brand-gold);
+  --surface-certificate-border: var(--forge-gold);
+}
+
+/* ============================================================
+   BODY
+   ============================================================ */
+
+body.theme-branded {
+  font-family: var(--font-body);
+  background: var(--background);
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: var(--font-md);
+}
+
+/* ============================================================
+   HEADINGS
+   ============================================================ */
+
+body.theme-branded h1,
+body.theme-branded h2,
+body.theme-branded h3,
+body.theme-branded h4,
+body.theme-branded h5 {
+  font-family: var(--font-display);
+  margin-top: 1.6rem;
+  letter-spacing: 0.02em;
 }
 
 body.theme-branded h1 {
-  border-bottom-color: var(--brand-purple);
+  font-size: var(--font-4xl);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom-color: var(--forge-purple);
 }
 
 body.theme-branded h2 {
-  border-bottom-color: var(--brand-cyan);
+  font-size: var(--font-3xl);
+  color: var(--forge-white);
+  border-bottom-color: var(--forge-cyan);
 }
 
+body.theme-branded h3 {
+  font-size: var(--font-2xl);
+  color: var(--forge-cyan);
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
+body.theme-branded a {
+  color: var(--forge-cyan);
+  text-decoration: none;
+}
+
+body.theme-branded a:hover {
+  color: var(--forge-pink);
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+body.theme-branded .button {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: var(--radius-round);
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+  transition: 0.25s;
+}
+
+body.theme-branded .button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-pink);
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+body.theme-branded .card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+
+body.theme-branded table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+body.theme-branded thead {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+body.theme-branded th,
+body.theme-branded td {
+  padding: 12px;
+  border: 1px solid var(--table-border);
+}
+
+/* ============================================================
+   CALLOUTS
+   ============================================================ */
+
+body.theme-branded .callout {
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 6px solid var(--forge-pink);
+  background: var(--gradient-callout);
+  border-radius: var(--radius-md);
+}
+
+body.theme-branded .callout.tip,
+body.theme-branded .tip {
+  border-left-color: var(--tip);
+}
+
+body.theme-branded .callout.warning,
+body.theme-branded .warning {
+  border-left-color: var(--warning-box);
+}
+
+body.theme-branded .callout.danger,
+body.theme-branded .danger {
+  border-left-color: var(--danger-box);
+}
+
+body.theme-branded .callout.success,
+body.theme-branded .success {
+  border-left-color: var(--success-box);
+}
+
+/* ============================================================
+   COVER
+   ============================================================ */
+
+body.theme-branded .workbook-cover,
 body.theme-branded .cover.has-brand-gradient,
 body.theme-branded .layout-cover.has-brand-gradient {
-  background-color: var(--brand-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background: var(--gradient-cover);
+  background-color: var(--forge-black);
+  color: white;
+  padding: 4rem;
+  isolation: isolate;
 }
 
+body.theme-branded .workbook-cover h1,
 body.theme-branded .cover.has-brand-gradient h1,
+body.theme-branded .layout-cover.has-brand-gradient h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  -webkit-text-fill-color: var(--forge-white);
+  color: var(--cover-title);
+}
+
+body.theme-branded .workbook-cover .subtitle,
 body.theme-branded .cover.has-brand-gradient h2,
+body.theme-branded .layout-cover.has-brand-gradient h2 {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
 body.theme-branded .cover.has-brand-gradient h3,
-body.theme-branded .layout-cover.has-brand-gradient h1,
-body.theme-branded .layout-cover.has-brand-gradient h2,
 body.theme-branded .layout-cover.has-brand-gradient h3 {
   color: var(--cover-title);
   border-color: rgba(255, 255, 255, 0.35);
@@ -94,14 +435,22 @@ body.theme-branded .layout-cover .brand-tagline {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--brand-silver);
+  color: var(--text-secondary);
   margin: 0.15in 0 0.35in;
 }
 
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+body.theme-branded .logo,
 body.theme-branded .cover .brand-logo,
 body.theme-branded .layout-cover .brand-logo {
+  width: var(--logo-width);
+  height: var(--logo-height);
   max-height: 1.4in;
   max-width: 5in;
+  margin-bottom: 2rem;
 }
 
 body.theme-branded .cover .brand-logo--monogram,
@@ -114,13 +463,54 @@ body.theme-branded .running-header .header-logo {
   max-height: 0.4in;
 }
 
-body.theme-branded.workbook .cover,
-body.theme-branded.workbook .layout-cover {
-  isolation: isolate;
-}
-
 body.theme-branded.workbook .cover-title-block h1,
 body.theme-branded.workbook .layout-cover .cover-title-block h1 {
   position: relative;
   z-index: 2;
+}
+
+/* ============================================================
+   PRINT
+   ============================================================ */
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body.theme-branded {
+    background: white;
+    color: black;
+
+    --color-text: #1a1a1a;
+    --color-heading: #111111;
+    --color-accent: var(--forge-purple);
+    --color-muted: #5c6370;
+    --color-border: #cccccc;
+    --color-border-light: #d8dce6;
+    --text-main: #111111;
+  }
+
+  body.theme-branded h1 {
+    -webkit-text-fill-color: initial;
+    background: none;
+    color: var(--forge-purple);
+  }
+
+  body.theme-branded h2 {
+    color: var(--forge-black);
+  }
+
+  body.theme-branded h3 {
+    color: var(--forge-purple);
+  }
+
+  body.theme-branded a {
+    color: black;
+  }
+
+  body.theme-branded .page-break {
+    page-break-before: always;
+  }
 }
