@@ -3,7 +3,7 @@
 Training workbooks, SOPs, and operational documents for automotive restyling.
 
 **GitHub:** https://github.com/FORGE-PPF-WRAPS/core-workbooks  
-**GitLab:** `veloxwrapco/skill-forge-workbooks-v1.0` (legacy mirror)
+**Branch:** `cursor-design-system`
 
 ## Repository layout
 
@@ -54,7 +54,7 @@ npm run generate:manuals    # regenerate chapter content
 npm run build:manuals:pdf   # build all manual PDFs
 ```
 
-See `manuals/README.md` for the distinction between core manuals and student workbooks.
+See `manuals/README.md` for public download links and the distinction between core manuals and student workbooks.
 
 ## Build & Print
 

@@ -39,18 +39,20 @@ npm run build:manuals:pdf     # build all PDFs
 
 ## Public downloads
 
-Published via GitLab Pages on the `cursor-design-system` branch:
+Published via **GitHub Pages** on the `cursor-design-system` branch:
 
-**Index:** https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/
+**Index:** https://forge-ppf-wraps.github.io/core-workbooks/
 
 | Manual | PDF |
 |--------|-----|
-| PPF Master Install | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/ppf-master-install.pdf |
-| Window Tint Master Install | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/window-tint-master-install.pdf |
-| Customer Service Operations | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/customer-service-operations.pdf |
-| Vinyl Wrap Master Install | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/vinyl-wrap-master-install.pdf |
-| Ceramic Coating Application | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/ceramic-coating-application.pdf |
-| Paint Correction & Detailing | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/paint-correction-detailing.pdf |
+| PPF Master Install | https://forge-ppf-wraps.github.io/core-workbooks/manuals/ppf-master-install.pdf |
+| Window Tint Master Install | https://forge-ppf-wraps.github.io/core-workbooks/manuals/window-tint-master-install.pdf |
+| Customer Service Operations | https://forge-ppf-wraps.github.io/core-workbooks/manuals/customer-service-operations.pdf |
+| Vinyl Wrap Master Install | https://forge-ppf-wraps.github.io/core-workbooks/manuals/vinyl-wrap-master-install.pdf |
+| Ceramic Coating Application | https://forge-ppf-wraps.github.io/core-workbooks/manuals/ceramic-coating-application.pdf |
+| Paint Correction & Detailing | https://forge-ppf-wraps.github.io/core-workbooks/manuals/paint-correction-detailing.pdf |
+
+After pushing, enable Pages under **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
 ## Relationship to student workbooks
 
