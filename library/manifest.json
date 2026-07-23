@@ -1,0 +1,433 @@
+{
+  "version": "1.0",
+  "generated": "2026-07-23T22:49:11.730Z",
+  "theme": "branded",
+  "totalItems": 51,
+  "copied": 51,
+  "categories": {
+    "turnkey": "Turnkey System",
+    "branding": "Branding",
+    "website": "Website & Digital",
+    "marketing": "Marketing",
+    "pricing": "Pricing Guides",
+    "sops": "Standard Operating Procedures",
+    "checklists": "Checklists",
+    "customer": "Customer Documents",
+    "operations": "Operations",
+    "warranty": "Warranties",
+    "legal": "Legal & Agreements",
+    "training": "Training",
+    "manuals": "Operations Manuals",
+    "workbooks": "Training Workbooks"
+  },
+  "items": [
+    {
+      "id": "turnkey-business-system-overview",
+      "title": "Turnkey Business System — Complete Deliverables Guide",
+      "subtitle": "Master index for branding, website, manuals, training, SOPs, pricing, warranties, and marketing",
+      "type": "Guide",
+      "category": "turnkey",
+      "path": "branded/turnkey/turnkey-business-system-overview.pdf"
+    },
+    {
+      "id": "brand-identity-guidelines",
+      "title": "Brand Identity Guidelines",
+      "subtitle": "Skill Forge / Forge PPF Design System v2.0",
+      "type": "Guide",
+      "category": "branding",
+      "path": "branded/branding/brand-identity-guidelines.pdf"
+    },
+    {
+      "id": "website-digital-presence-playbook",
+      "title": "Website & Digital Presence Playbook",
+      "subtitle": "Launch and operate your shop online presence",
+      "type": "Guide",
+      "category": "website",
+      "path": "branded/website/website-digital-presence-playbook.pdf"
+    },
+    {
+      "id": "marketing-resources-kit",
+      "title": "Marketing Resources Kit",
+      "subtitle": "Social templates, campaigns, and growth resources",
+      "type": "Guide",
+      "category": "marketing",
+      "path": "branded/marketing/marketing-resources-kit.pdf"
+    },
+    {
+      "id": "ppf-pricing-guide",
+      "title": "PPF Package Pricing Guide",
+      "subtitle": "Editable front-desk pricing matrix",
+      "type": "Pricing Guide",
+      "category": "pricing",
+      "path": "branded/pricing/ppf-pricing-guide.pdf"
+    },
+    {
+      "id": "tint-pricing-guide",
+      "title": "Window Tint Pricing Guide",
+      "subtitle": "Film tiers and add-on pricing matrix",
+      "type": "Pricing Guide",
+      "category": "pricing",
+      "path": "branded/pricing/tint-pricing-guide.pdf"
+    },
+    {
+      "id": "wrap-pricing-guide",
+      "title": "Vinyl Wrap Pricing Guide",
+      "subtitle": "Color change and fleet wrap pricing",
+      "type": "Pricing Guide",
+      "category": "pricing",
+      "path": "branded/pricing/wrap-pricing-guide.pdf"
+    },
+    {
+      "id": "coating-pricing-guide",
+      "title": "Ceramic Coating Pricing Guide",
+      "subtitle": "Coating tiers and correction add-ons",
+      "type": "Pricing Guide",
+      "category": "pricing",
+      "path": "branded/pricing/coating-pricing-guide.pdf"
+    },
+    {
+      "id": "detailing-pricing-guide",
+      "title": "Detailing & Paint Correction Pricing Guide",
+      "subtitle": "Detailing menu and correction packages",
+      "type": "Pricing Guide",
+      "category": "pricing",
+      "path": "branded/pricing/detailing-pricing-guide.pdf"
+    },
+    {
+      "id": "vehicle-intake-sop",
+      "title": "Vehicle Intake SOP",
+      "subtitle": "Standard procedure for every vehicle entering the shop",
+      "type": "SOP",
+      "category": "sops",
+      "path": "branded/sops/vehicle-intake-sop.pdf"
+    },
+    {
+      "id": "glass-prep-sop",
+      "title": "Glass Preparation SOP",
+      "subtitle": "Window tint glass prep before film application",
+      "type": "SOP",
+      "category": "sops",
+      "path": "branded/sops/glass-prep-sop.pdf"
+    },
+    {
+      "id": "ppf-surface-prep-sop",
+      "title": "PPF Surface Preparation SOP",
+      "subtitle": "Decontamination sequence before PPF install",
+      "type": "SOP",
+      "category": "sops",
+      "path": "branded/sops/ppf-surface-prep-sop.pdf"
+    },
+    {
+      "id": "qc-inspection-sop",
+      "title": "Quality Control Inspection SOP",
+      "subtitle": "Final sign-off before vehicle delivery",
+      "type": "SOP",
+      "category": "sops",
+      "path": "branded/sops/qc-inspection-sop.pdf"
+    },
+    {
+      "id": "delivery-walkthrough-sop",
+      "title": "Delivery Walkthrough SOP",
+      "subtitle": "Customer pickup and aftercare education",
+      "type": "SOP",
+      "category": "sops",
+      "path": "branded/sops/delivery-walkthrough-sop.pdf"
+    },
+    {
+      "id": "comeback-handling-sop",
+      "title": "Comeback Handling SOP",
+      "subtitle": "Root cause analysis and service recovery",
+      "type": "SOP",
+      "category": "sops",
+      "path": "branded/sops/comeback-handling-sop.pdf"
+    },
+    {
+      "id": "bay-opening-closing-sop",
+      "title": "Daily Bay Opening & Closing SOP",
+      "subtitle": "Start and end of every production day",
+      "type": "SOP",
+      "category": "sops",
+      "path": "branded/sops/bay-opening-closing-sop.pdf"
+    },
+    {
+      "id": "contamination-control-sop",
+      "title": "Contamination Control SOP",
+      "subtitle": "Mandatory contamination prevention",
+      "type": "SOP",
+      "category": "sops",
+      "path": "branded/sops/contamination-control-sop.pdf"
+    },
+    {
+      "id": "daily-bay-reset-checklist",
+      "title": "Daily Bay Reset Checklist",
+      "subtitle": "Shop open and between jobs",
+      "type": "Checklist",
+      "category": "checklists",
+      "path": "branded/checklists/daily-bay-reset-checklist.pdf"
+    },
+    {
+      "id": "pre-install-qc-checklist",
+      "title": "Pre-Install QC Checklist",
+      "subtitle": "Before film touch or coating application",
+      "type": "Checklist",
+      "category": "checklists",
+      "path": "branded/checklists/pre-install-qc-checklist.pdf"
+    },
+    {
+      "id": "post-install-qc-checklist",
+      "title": "Post-Install QC Checklist",
+      "subtitle": "Before customer notification",
+      "type": "Checklist",
+      "category": "checklists",
+      "path": "branded/checklists/post-install-qc-checklist.pdf"
+    },
+    {
+      "id": "vehicle-delivery-checklist",
+      "title": "Vehicle Delivery Checklist",
+      "subtitle": "Customer pickup walkthrough",
+      "type": "Checklist",
+      "category": "checklists",
+      "path": "branded/checklists/vehicle-delivery-checklist.pdf"
+    },
+    {
+      "id": "vehicle-inspection-form",
+      "title": "Vehicle Inspection Form",
+      "subtitle": "Pre-service and delivery condition documentation",
+      "type": "Form",
+      "category": "customer",
+      "path": "branded/customer/vehicle-inspection-form.pdf"
+    },
+    {
+      "id": "service-estimate-quote",
+      "title": "Service Estimate / Quote",
+      "subtitle": "Professional written estimate",
+      "type": "Form",
+      "category": "customer",
+      "path": "branded/customer/service-estimate-quote.pdf"
+    },
+    {
+      "id": "work-order-job-card",
+      "title": "Work Order / Job Card",
+      "subtitle": "Internal production tracking",
+      "type": "Form",
+      "category": "operations",
+      "path": "branded/operations/work-order-job-card.pdf"
+    },
+    {
+      "id": "change-order-form",
+      "title": "Change Order Form",
+      "subtitle": "Authorized modification to original work order",
+      "type": "Form",
+      "category": "customer",
+      "path": "branded/customer/change-order-form.pdf"
+    },
+    {
+      "id": "customer-aftercare-card",
+      "title": "Customer Aftercare Card",
+      "subtitle": "Post-service care instructions",
+      "type": "Form",
+      "category": "customer",
+      "path": "branded/customer/customer-aftercare-card.pdf"
+    },
+    {
+      "id": "photo-release-consent",
+      "title": "Photo & Marketing Release Consent",
+      "subtitle": "Authorization for marketing use of vehicle images",
+      "type": "Form",
+      "category": "customer",
+      "path": "branded/customer/photo-release-consent.pdf"
+    },
+    {
+      "id": "deposit-payment-receipt",
+      "title": "Deposit & Payment Receipt",
+      "subtitle": "Payment documentation",
+      "type": "Form",
+      "category": "customer",
+      "path": "branded/customer/deposit-payment-receipt.pdf"
+    },
+    {
+      "id": "warranty-certificate",
+      "title": "Warranty Certificate",
+      "subtitle": "Workmanship and materials warranty documentation",
+      "type": "Certificate",
+      "category": "warranty",
+      "path": "branded/warranty/warranty-certificate.pdf"
+    },
+    {
+      "id": "warranty-claim-form",
+      "title": "Warranty Claim Intake Form",
+      "subtitle": "Customer warranty claim documentation",
+      "type": "Form",
+      "category": "warranty",
+      "path": "branded/warranty/warranty-claim-form.pdf"
+    },
+    {
+      "id": "independent-contractor-agreement",
+      "title": "Independent Contractor Agreement",
+      "subtitle": "Services agreement between shop and contractor",
+      "type": "Agreement",
+      "category": "legal",
+      "path": "branded/legal/independent-contractor-agreement.pdf"
+    },
+    {
+      "id": "referral-partner-agreement",
+      "title": "Referral Partner Agreement",
+      "subtitle": "Referral fee program terms",
+      "type": "Agreement",
+      "category": "legal",
+      "path": "branded/legal/referral-partner-agreement.pdf"
+    },
+    {
+      "id": "training-student-agreement",
+      "title": "Training Student Agreement",
+      "subtitle": "Enrollment terms for hands-on training programs",
+      "type": "Agreement",
+      "category": "training",
+      "path": "branded/training/training-student-agreement.pdf"
+    },
+    {
+      "id": "forge-license-agreement",
+      "title": "Forge License Agreement",
+      "subtitle": "License to use training systems and operational frameworks",
+      "type": "Agreement",
+      "category": "legal",
+      "path": "branded/legal/forge-license-agreement.pdf"
+    },
+    {
+      "id": "white-label-agreement",
+      "title": "White-Label Agreement",
+      "subtitle": "Authorization to rebrand licensed materials",
+      "type": "Agreement",
+      "category": "legal",
+      "path": "branded/legal/white-label-agreement.pdf"
+    },
+    {
+      "id": "service-agreement",
+      "title": "Service Agreement",
+      "subtitle": "Automotive restyling services contract",
+      "type": "Agreement",
+      "category": "customer",
+      "path": "branded/customer/service-agreement.pdf"
+    },
+    {
+      "id": "asset-ownership-agreement",
+      "title": "Asset Ownership Agreement",
+      "subtitle": "Ownership and use of tools, equipment, and materials",
+      "type": "Agreement",
+      "category": "legal",
+      "path": "branded/legal/asset-ownership-agreement.pdf"
+    },
+    {
+      "id": "ip-assignment-agreement",
+      "title": "IP Assignment Agreement",
+      "subtitle": "Assignment of intellectual property rights",
+      "type": "Agreement",
+      "category": "legal",
+      "path": "branded/legal/ip-assignment-agreement.pdf"
+    },
+    {
+      "id": "terms-of-service",
+      "title": "Terms of Service",
+      "subtitle": "Website and service terms",
+      "type": "Policy",
+      "category": "website",
+      "path": "branded/website/terms-of-service.pdf"
+    },
+    {
+      "id": "privacy-policy",
+      "title": "Privacy Policy",
+      "subtitle": "How we collect, use, and protect information",
+      "type": "Policy",
+      "category": "website",
+      "path": "branded/website/privacy-policy.pdf"
+    },
+    {
+      "id": "trademark-usage-policy",
+      "title": "Trademark Usage Policy",
+      "subtitle": "Guidelines for authorized use of company marks",
+      "type": "Policy",
+      "category": "branding",
+      "path": "branded/branding/trademark-usage-policy.pdf"
+    },
+    {
+      "id": "warranty-policy",
+      "title": "Shop Warranty Policy",
+      "subtitle": "Workmanship and materials warranty terms",
+      "type": "Policy",
+      "category": "warranty",
+      "path": "branded/warranty/warranty-policy.pdf"
+    },
+    {
+      "id": "refund-cancellation-policy",
+      "title": "Refund & Cancellation Policy",
+      "subtitle": "Deposits, cancellations, and refunds",
+      "type": "Policy",
+      "category": "customer",
+      "path": "branded/customer/refund-cancellation-policy.pdf"
+    },
+    {
+      "id": "window-tint-workbook",
+      "title": "Window Tint Installation",
+      "subtitle": "Core Course — 3-Day Beginner Program",
+      "type": "Student Workbook",
+      "category": "workbooks",
+      "path": "branded/workbooks/window-tint-workbook.pdf"
+    },
+    {
+      "id": "ppf-workbook",
+      "title": "Paint Protection Film (PPF)",
+      "subtitle": "Core Course — 3-Day Beginner Program",
+      "type": "Student Workbook",
+      "category": "workbooks",
+      "path": "branded/workbooks/ppf-workbook.pdf"
+    },
+    {
+      "id": "ppf-master-install",
+      "title": "PPF Master Install Manual",
+      "subtitle": "Complete Core Reference — Every Aspect of Professional Paint Protection Film Operations",
+      "type": "Core Operations Manual",
+      "category": "manuals",
+      "path": "branded/manuals/ppf-master-install.pdf"
+    },
+    {
+      "id": "window-tint-master-install",
+      "title": "Window Tint Master Install Manual",
+      "subtitle": "Complete Core Reference — Every Aspect of Professional Window Film Operations",
+      "type": "Core Operations Manual",
+      "category": "manuals",
+      "path": "branded/manuals/window-tint-master-install.pdf"
+    },
+    {
+      "id": "customer-service-operations",
+      "title": "Customer Service Operations Manual",
+      "subtitle": "Complete Core Reference — Front-of-House, Sales & Client Experience Operations",
+      "type": "Core Operations Manual",
+      "category": "manuals",
+      "path": "branded/manuals/customer-service-operations.pdf"
+    },
+    {
+      "id": "vinyl-wrap-master-install",
+      "title": "Vinyl Wrap Master Install Manual",
+      "subtitle": "Complete Core Reference — Every Aspect of Professional Vehicle Wrap Operations",
+      "type": "Core Operations Manual",
+      "category": "manuals",
+      "path": "branded/manuals/vinyl-wrap-master-install.pdf"
+    },
+    {
+      "id": "ceramic-coating-application",
+      "title": "Ceramic Coating Application Manual",
+      "subtitle": "Complete Core Reference — Every Aspect of Professional Coating Operations",
+      "type": "Core Operations Manual",
+      "category": "manuals",
+      "path": "branded/manuals/ceramic-coating-application.pdf"
+    },
+    {
+      "id": "paint-correction-detailing",
+      "title": "Paint Correction & Detailing Manual",
+      "subtitle": "Complete Core Reference — Every Aspect of Correction & Detailing Operations",
+      "type": "Core Operations Manual",
+      "category": "manuals",
+      "path": "branded/manuals/paint-correction-detailing.pdf"
+    }
+  ]
+}

@@ -2,20 +2,15 @@
 
 const fs = require('fs');
 const path = require('path');
-const { marked } = require('marked');
+const { ROOT, parseThemeArgs } = require('./lib/theme');
+const { wrapDocument, markdownToHtml } = require('./lib/html');
+const { buildManualCover, buildManualFooter } = require('./lib/covers');
+const { loadDesignSystemCss } = require('./lib/theme');
 
-const ROOT = path.join(__dirname, '..');
 const MANUALS_ROOT = path.join(ROOT, 'manuals');
 const MANIFEST = path.join(MANUALS_ROOT, 'manifest.json');
 const OUTPUT = path.join(MANUALS_ROOT, 'output');
-const WORKBOOK_CSS = path.join(ROOT, 'workbooks', 'assets', 'print.css');
 const MANUAL_CSS = path.join(MANUALS_ROOT, 'assets', 'manual.css');
-
-function loadCss() {
-  const base = fs.readFileSync(WORKBOOK_CSS, 'utf8');
-  const extra = fs.existsSync(MANUAL_CSS) ? fs.readFileSync(MANUAL_CSS, 'utf8') : '';
-  return `${base}\n${extra}`;
-}
 
 function loadChapters(chaptersDir) {
   const abs = path.join(ROOT, chaptersDir);
@@ -47,46 +42,27 @@ function buildToc(chaptersDir) {
 </div>`;
 }
 
-function buildCover(manual) {
-  return `
-  <div class="cover manual-cover">
-    <div class="brand">Skill Forge · Core Operations Manual</div>
-    <h1>${manual.title}</h1>
-    <p class="subtitle">${manual.subtitle}</p>
-    <p class="meta">${manual.type} · Version ${manual.version} · Complete Reference</p>
-    <div class="doc-fields">
-      <p>Organization: _________________________________</p>
-      <p>Document ID: ${manual.id}</p>
-      <p>Revision Date: _______________________________</p>
-      <p>Authorized By: ________________________________</p>
-    </div>
-  </div>`;
-}
-
-function buildHtml(manual, css) {
-  const body = loadChapters(manual.chaptersDir);
+function buildHtml(manual, theme) {
+  const bodyMd = loadChapters(manual.chaptersDir);
   const toc = buildToc(manual.chaptersDir);
-  const cover = buildCover(manual);
-  const parsed = marked.parse(body);
+  const cover = buildManualCover(manual, theme);
+  const footer = buildManualFooter(theme);
+  const body = markdownToHtml(bodyMd);
+  const manualCss = fs.existsSync(MANUAL_CSS) ? fs.readFileSync(MANUAL_CSS, 'utf8') : '';
+  const css = `${loadDesignSystemCss(theme, { forManual: true })}\n${manualCss}`;
 
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${manual.title}</title>
-  <style>${css}</style>
-</head>
-<body class="master-manual">
-  ${cover}
-  ${toc}
-  ${parsed}
-  <p class="footer-note">Confidential — Internal operations reference. Skill Forge Core Operations Manual. Reproduction prohibited without written authorization.</p>
-</body>
-</html>`;
+  return wrapDocument({
+    title: manual.title,
+    body: `${toc}\n${body}`,
+    cover,
+    footer,
+    theme,
+    css,
+    bodyClass: 'master-manual',
+  });
 }
 
-function buildPdf(htmlPath, pdfPath) {
+function buildPdfChrome(htmlPath, pdfPath) {
   const chrome = process.env.CHROME_BIN || 'google-chrome';
   const { spawn } = require('child_process');
   const os = require('os');
@@ -100,7 +76,7 @@ function buildPdf(htmlPath, pdfPath) {
     `file://${htmlPath}`,
   ], { stdio: 'ignore' });
 
-  const deadline = Date.now() + 120000;
+  const deadline = Date.now() + 300000;
   while (Date.now() < deadline) {
     if (fs.existsSync(pdfPath) && fs.statSync(pdfPath).size > 5000) {
       child.kill('SIGKILL');
@@ -115,12 +91,17 @@ function buildPdf(htmlPath, pdfPath) {
   throw new Error(`Timed out generating PDF: ${pdfPath}`);
 }
 
+async function buildPdf(htmlPath, pdfPath) {
+  buildPdfChrome(htmlPath, pdfPath);
+}
+
 function countPagesEstimate(html) {
   return Math.round(html.length / 3200);
 }
 
-function main() {
-  const pdf = process.argv.includes('--pdf');
+async function main() {
+  const { theme, pdf } = parseThemeArgs();
+
   if (!fs.existsSync(MANIFEST)) {
     console.error('Missing manuals/manifest.json — run: npm run generate:manuals');
     process.exit(1);
@@ -128,22 +109,22 @@ function main() {
 
   const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
   const manuals = manifest.manuals || [];
-  const css = loadCss();
-  fs.mkdirSync(OUTPUT, { recursive: true });
+  const outDir = path.join(OUTPUT, theme);
+  fs.mkdirSync(outDir, { recursive: true });
 
-  console.log(`Building ${manuals.length} master manual(s)...`);
+  console.log(`Building ${manuals.length} master manual(s) — theme: ${theme}`);
 
   for (const manual of manuals) {
     console.log(`  ${manual.id}...`);
-    const html = buildHtml(manual, css);
-    const htmlPath = path.join(OUTPUT, `${manual.id}.html`);
-    const pdfPath = path.join(OUTPUT, `${manual.id}.pdf`);
+    const html = buildHtml(manual, theme);
+    const htmlPath = path.join(outDir, `${manual.id}.html`);
+    const pdfPath = path.join(outDir, `${manual.id}.pdf`);
     fs.writeFileSync(htmlPath, html);
     const est = countPagesEstimate(html);
     console.log(`    → ${htmlPath} (~${est} pages est.)`);
 
     if (pdf) {
-      buildPdf(htmlPath, pdfPath);
+      await buildPdf(htmlPath, pdfPath);
       const size = fs.statSync(pdfPath).size;
       console.log(`    → ${pdfPath} (${(size / 1024).toFixed(0)} KB)`);
     }
@@ -152,4 +133,7 @@ function main() {
   console.log('Done.');
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

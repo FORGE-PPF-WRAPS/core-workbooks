@@ -83,9 +83,49 @@ function buildDocFooter(theme) {
   return '<p class="footer-note whitelabel-only">Confidential — Internal use only. Reproduction prohibited without written authorization.</p>';
 }
 
+function buildManualCover(manual, theme) {
+  const branded = theme === 'branded';
+  const logo = branded ? resolveBrandLogo() : null;
+  const monogram = branded ? resolveBrandMonogram() : null;
+  const logoHtml = logo
+    ? `<img class="brand-logo branded-only" src="${logo}" alt="Skill Forge" />`
+    : '';
+  const texture = branded
+    ? '<div class="cover-texture texture-carbon" aria-hidden="true"></div>'
+    : '';
+  const watermark = branded ? watermarkDiv(monogram) : '';
+
+  return `
+  <div class="cover layout-cover manual-cover${branded ? ' has-brand-gradient' : ''}">
+    ${texture}
+    ${watermark}
+    ${logoHtml}
+    <div class="brand-mark ${branded ? 'branded-only' : 'whitelabel-only'}">Skill Forge · Core Operations Manual</div>
+    <div class="brand-mark whitelabel-only">Core Operations Manual</div>
+    <h1>${manual.title}</h1>
+    ${manual.subtitle ? `<p class="subtitle">${manual.subtitle}</p>` : ''}
+    <p class="meta">${manual.type || 'Core Operations Manual'} · Version ${manual.version || '1.0'}</p>
+    <div class="doc-fields">
+      <p>Organization: _________________________________</p>
+      <p>Document ID: ${manual.id}</p>
+      <p>Revision Date: _______________________________</p>
+      <p>Authorized By: ________________________________</p>
+    </div>
+  </div>`;
+}
+
+function buildManualFooter(theme) {
+  if (theme === 'branded') {
+    return '<p class="footer-note branded-only">Confidential — Skill Forge Core Operations Manual. Reproduction prohibited without written authorization.</p>';
+  }
+  return '<p class="footer-note whitelabel-only">Confidential — Internal operations reference. Reproduction prohibited without written authorization.</p>';
+}
+
 module.exports = {
   buildWorkbookCover,
   buildDocCover,
+  buildManualCover,
   buildWorkbookFooter,
   buildDocFooter,
+  buildManualFooter,
 };

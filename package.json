@@ -15,6 +15,11 @@
     "generate:manuals": "node scripts/generate-manuals/index.js",
     "build:manuals": "node scripts/build-manuals.js",
     "build:manuals:pdf": "node scripts/build-manuals.js --pdf",
+    "build:manuals:branded": "node scripts/build-manuals.js --branded",
+    "build:manuals:branded:pdf": "node scripts/build-manuals.js --branded --pdf",
+    "build:library": "node scripts/build-library.js",
+    "build:library:copy": "node scripts/build-library.js --copy-only",
+    "build:all:branded:pdf": "npm run build:branded:pdf && npm run build:docs:branded:pdf && npm run build:manuals:branded:pdf",
     "build:all": "npm run build && npm run build:docs",
     "build:all:pdf": "npm run build:pdf && npm run build:docs:pdf && npm run build:manuals:pdf"
   },
