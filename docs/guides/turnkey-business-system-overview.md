@@ -12,6 +12,26 @@ Use it during onboarding, licensing, and white-label deployment to verify every 
 
 ---
 
+## Document hierarchy
+
+Forge is built like an operating system for installers. **The SOP Manual is the foundation** — everything else points back to it.
+
+| Layer | Document | Purpose |
+|-------|----------|---------|
+| **1** | **SOP Manual** | How the business runs — daily operations |
+| **2** | Master Installer Manual | How to perform the work — technical depth |
+| **3** | Technical Bulletins | Updates, refinements, and improvements |
+| **4** | Training Workbooks | Hands-on learning for new installers |
+| **5** | Quality Standards Manual | Inspection criteria and pass/fail definitions |
+| **6** | Operations Forms & Checklists | Documents used at the point of work |
+| **7** | Brand Standards Manual | Logos, colors, fonts, and voice |
+
+New team members start with the SOP Manual. Master Installer Manuals teach execution. Technical bulletins handle continuous improvement.
+
+**Master index:** `forge-sop-manual` — `docs/sops/forge-sop-manual.md`
+
+---
+
 ## 1. Branding & Identity
 
 | Deliverable | Document ID | Location |
@@ -58,7 +78,28 @@ Use it during onboarding, licensing, and white-label deployment to verify every 
 
 ---
 
-## 3. Operations Manuals (150–200 pages each)
+## 3. SOP Manual — Foundation (37 procedures)
+
+**Forge Standard Operating Procedures v1.0** — `forge-sop-manual`
+
+| Section | Procedures |
+|---------|------------|
+| 1. Company Operations | SOP-001 – SOP-004 |
+| 2. Customer Experience | SOP-100 – SOP-107 |
+| 3. Installation Operations | SOP-200 – SOP-206 |
+| 4. Window Tint | SOP-300 |
+| 5. Paint Protection Film | SOP-400 |
+| 6. Vinyl Wrap | SOP-500 |
+| 7. Colored TPU | SOP-600 |
+| 8. Business Operations | SOP-700 – SOP-705 |
+| 9. Marketing | SOP-800 – SOP-803 |
+| 10. Emergency Procedures | SOP-900 – SOP-903 |
+
+Each SOP is a standalone printable document in `docs/sops/` (e.g. `sop-103-vehicle-check-in`). Post bay-relevant SOPs at workstations; train CS on Section 2 before phone duty.
+
+---
+
+## 4. Master Installer Manuals (150–200 pages each)
 
 Complete shop reference — every operational domain, not training course outlines.
 
@@ -73,9 +114,17 @@ Complete shop reference — every operational domain, not training course outlin
 
 Each manual includes: material science, tools, safety, prep, application, QC, pricing, warranty, 50 core operational domains, vehicle matrix, troubleshooting encyclopedia, competency standards, and 80+ technical bulletins.
 
+**Relationship to SOPs:** SOPs define *what* to do and *when*. Master Installer Manuals define *how* to do it with technical depth. Service workflow SOPs (300, 400, 500, 600) reference the corresponding manual.
+
 ---
 
-## 4. Installation Manuals & Panel Procedures
+## 5. Technical Bulletins
+
+80+ bulletins per manual — mandatory shop updates published as manual chapters. When a bulletin changes a procedure, update the corresponding SOP in the next SOP Manual revision.
+
+---
+
+## 6. Installation Manuals & Panel Procedures
 
 Installation coverage is integrated into each service operations manual above. Panel procedure libraries are included as dedicated chapters:
 
@@ -86,11 +135,11 @@ Installation coverage is integrated into each service operations manual above. P
 <li>Ceramic / detailing — surface procedure library</li>
 </ul>
 
-**Bay reference:** Print and laminate extracted SOPs from `docs/sops/` for daily use.
+**Bay reference:** Print individual SOPs from `docs/sops/sop-*.md` for daily use. Workflow SOPs (SOP-300 through SOP-600) are the bay-posted summaries; manuals hold panel-level detail.
 
 ---
 
-## 5. Training Workbooks (3-Day Core Programs)
+## 7. Training Workbooks (3-Day Core Programs)
 
 | Course | Status | ID |
 |--------|--------|-----|
@@ -107,24 +156,36 @@ Each workbook: Day 1 Foundations, Day 2 Technique, Day 3 Professional Practice �
 
 ---
 
-## 6. Standard Operating Procedures
+## 8. Quality Standards Manual
 
-Standalone printable SOPs for bay posting and daily operations:
-
-| SOP | ID |
-|-----|-----|
-| Vehicle Intake | `vehicle-intake-sop` |
-| Glass Preparation | `glass-prep-sop` |
-| PPF Surface Preparation | `ppf-surface-prep-sop` |
-| Quality Control Inspection | `qc-inspection-sop` |
-| Delivery Walkthrough | `delivery-walkthrough-sop` |
-| Comeback Handling | `comeback-handling-sop` |
-| Daily Bay Open/Close | `bay-opening-closing-sop` |
-| Contamination Control | `contamination-control-sop` |
+Inspection criteria embedded in SOP-205 (Quality Control Inspection), SOP-206 (Final Inspection), and Post-Install QC Checklist. Master Installer Manuals define film-specific pass/fail thresholds.
 
 ---
 
-## 7. Pricing Guides
+## 9. Operations Forms & Checklists
+
+| Type | Examples |
+|------|----------|
+| Checklists | Pre/post install QC, daily bay reset, vehicle delivery |
+| Customer forms | Inspection, estimate, work order, aftercare, photo release |
+| Internal | Change orders, deposit receipts |
+
+All forms reference the SOP that governs their use (e.g. Vehicle Inspection Form → SOP-103, SOP-200).
+
+---
+
+## 10. Brand Standards Manual
+
+| Deliverable | Document ID |
+|-------------|-------------|
+| Brand Identity Guidelines | `brand-identity-guidelines` |
+| Trademark Usage Policy | `trademark-usage-policy` |
+| Design tokens (v2.0) | `workbooks/assets/brand/brand-tokens.json` |
+| Branded theme CSS | `design-system/themes/branded.css` |
+
+---
+
+## 11. Pricing Guides
 
 Editable front-desk pricing matrices — extract from manuals for daily quoting:
 
@@ -138,7 +199,7 @@ Editable front-desk pricing matrices — extract from manuals for daily quoting:
 
 ---
 
-## 8. Warranties
+## 12. Warranties
 
 | Document | ID |
 |----------|------|
@@ -146,11 +207,11 @@ Editable front-desk pricing matrices — extract from manuals for daily quoting:
 | Warranty Certificate (customer) | `warranty-certificate` |
 | Warranty Claim Intake Form | `warranty-claim-form` |
 
-Warranty administration procedures are in each installation manual (pricing & warranty chapters).
+Warranty registration: **SOP-702**. Administration detail in each installation manual.
 
 ---
 
-## 9. Customer Documents
+## 13. Customer Documents
 
 | Document | ID |
 |----------|------|
@@ -165,18 +226,18 @@ Warranty administration procedures are in each installation manual (pricing & wa
 
 ---
 
-## 10. Marketing Resources
+## 14. Marketing Resources
 
 | Resource | ID |
 |----------|------|
 | Marketing Resources Kit | `marketing-resources-kit` |
 | Referral Partner Agreement | `referral-partner-agreement` |
 
-Customer Service Operations Manual includes: inbound marketing, vehicle photography standards, review generation, and social content planning (Chapters 24–26).
+Marketing SOPs: SOP-800 through SOP-803. Customer Service Operations Manual includes extended marketing chapters (24–26).
 
 ---
 
-## 11. Legal & HR Agreements
+## 15. Legal & HR Agreements
 
 | Agreement | ID |
 |-----------|------|
@@ -189,27 +250,27 @@ Customer Service Operations Manual includes: inbound marketing, vehicle photogra
 
 ---
 
-## 12. Implementation Roadmap
+## 16. Implementation Roadmap
 
-### Week 1 — Brand & digital
-1. Deploy brand assets and website pages
-2. Publish policies (terms, privacy, warranty)
-3. Configure CRM and quote templates
+### Week 1 — SOPs & brand
+1. Distribute Forge SOP Manual to all staff
+2. Post Section 3–7 SOPs at each bay
+3. Deploy brand assets and website pages
 
-### Week 2 — Operations
-1. Print SOPs and checklists for each bay
-2. Train staff on intake, QC, and delivery SOPs
+### Week 2 — Customer experience
+1. Train CS on Section 2 SOPs (phone, leads, check-in, delivery)
+2. Print forms and checklists linked to SOPs
 3. Load pricing guides at front desk
 
 ### Week 3 — Technical
-1. Assign installation manuals per service line
+1. Assign Master Installer Manuals per service line
 2. Begin workbook-based training program
 3. Complete competency authorization gates
 
 ### Week 4 — Go live
-1. Full customer document workflow live
-2. Marketing kit deployed (social, email, portfolio)
-3. Warranty registration process active
+1. Full customer document workflow live (SOP-700 through SOP-705)
+2. Marketing SOPs active (SOP-800 through SOP-803)
+3. Emergency procedures reviewed (Section 10)
 
 ---
 
@@ -223,4 +284,4 @@ All branded PDFs are assembled in **`library/branded/`** — see `library/manife
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0 | | Initial turnkey deliverables index |
+| 2.0 | 2026-07-23 | SOP Manual v1.0 — 37 procedures, documentation hierarchy |

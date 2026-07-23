@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "documents": [
     {
       "id": "turnkey-business-system-overview",
@@ -81,78 +81,6 @@
       "version": "1.0",
       "source": "docs/guides/detailing-pricing-guide.md",
       "category": "pricing"
-    },
-    {
-      "id": "vehicle-intake-sop",
-      "title": "Vehicle Intake SOP",
-      "subtitle": "Standard procedure for every vehicle entering the shop",
-      "type": "SOP",
-      "version": "1.0",
-      "source": "docs/sops/vehicle-intake-sop.md",
-      "category": "sops"
-    },
-    {
-      "id": "glass-prep-sop",
-      "title": "Glass Preparation SOP",
-      "subtitle": "Window tint glass prep before film application",
-      "type": "SOP",
-      "version": "1.0",
-      "source": "docs/sops/glass-prep-sop.md",
-      "category": "sops"
-    },
-    {
-      "id": "ppf-surface-prep-sop",
-      "title": "PPF Surface Preparation SOP",
-      "subtitle": "Decontamination sequence before PPF install",
-      "type": "SOP",
-      "version": "1.0",
-      "source": "docs/sops/ppf-surface-prep-sop.md",
-      "category": "sops"
-    },
-    {
-      "id": "qc-inspection-sop",
-      "title": "Quality Control Inspection SOP",
-      "subtitle": "Final sign-off before vehicle delivery",
-      "type": "SOP",
-      "version": "1.0",
-      "source": "docs/sops/qc-inspection-sop.md",
-      "category": "sops"
-    },
-    {
-      "id": "delivery-walkthrough-sop",
-      "title": "Delivery Walkthrough SOP",
-      "subtitle": "Customer pickup and aftercare education",
-      "type": "SOP",
-      "version": "1.0",
-      "source": "docs/sops/delivery-walkthrough-sop.md",
-      "category": "sops"
-    },
-    {
-      "id": "comeback-handling-sop",
-      "title": "Comeback Handling SOP",
-      "subtitle": "Root cause analysis and service recovery",
-      "type": "SOP",
-      "version": "1.0",
-      "source": "docs/sops/comeback-handling-sop.md",
-      "category": "sops"
-    },
-    {
-      "id": "bay-opening-closing-sop",
-      "title": "Daily Bay Opening & Closing SOP",
-      "subtitle": "Start and end of every production day",
-      "type": "SOP",
-      "version": "1.0",
-      "source": "docs/sops/bay-opening-closing-sop.md",
-      "category": "sops"
-    },
-    {
-      "id": "contamination-control-sop",
-      "title": "Contamination Control SOP",
-      "subtitle": "Mandatory contamination prevention",
-      "type": "SOP",
-      "version": "1.0",
-      "source": "docs/sops/contamination-control-sop.md",
-      "category": "sops"
     },
     {
       "id": "daily-bay-reset-checklist",
@@ -387,6 +315,422 @@
       "version": "1.0",
       "source": "docs/policies/refund-cancellation-policy.md",
       "category": "customer"
+    },
+    {
+      "id": "forge-sop-manual",
+      "title": "Forge Standard Operating Procedures",
+      "subtitle": "Version 1.0 — Foundation manual for how the business runs",
+      "type": "SOP Manual",
+      "version": "1.0",
+      "source": "docs/sops/forge-sop-manual.md",
+      "category": "sops"
+    },
+    {
+      "id": "sop-001-company-mission-core-values",
+      "title": "SOP-001 — Company Mission & Core Values",
+      "subtitle": "Section 1: Company Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-001-company-mission-core-values.md",
+      "category": "sops",
+      "sopCode": "SOP-001",
+      "sopSection": 1
+    },
+    {
+      "id": "sop-002-employee-code-of-conduct",
+      "title": "SOP-002 — Employee Code of Conduct",
+      "subtitle": "Section 1: Company Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-002-employee-code-of-conduct.md",
+      "category": "sops",
+      "sopCode": "SOP-002",
+      "sopSection": 1
+    },
+    {
+      "id": "sop-003-shop-opening-procedure",
+      "title": "SOP-003 — Shop Opening Procedure",
+      "subtitle": "Section 1: Company Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-003-shop-opening-procedure.md",
+      "category": "sops",
+      "sopCode": "SOP-003",
+      "sopSection": 1
+    },
+    {
+      "id": "sop-004-shop-closing-procedure",
+      "title": "SOP-004 — Shop Closing Procedure",
+      "subtitle": "Section 1: Company Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-004-shop-closing-procedure.md",
+      "category": "sops",
+      "sopCode": "SOP-004",
+      "sopSection": 1
+    },
+    {
+      "id": "sop-100-answering-the-phone",
+      "title": "SOP-100 — Answering the Phone",
+      "subtitle": "Section 2: Customer Experience",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-100-answering-the-phone.md",
+      "category": "sops",
+      "sopCode": "SOP-100",
+      "sopSection": 2
+    },
+    {
+      "id": "sop-101-responding-to-leads",
+      "title": "SOP-101 — Responding to Leads",
+      "subtitle": "Section 2: Customer Experience",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-101-responding-to-leads.md",
+      "category": "sops",
+      "sopCode": "SOP-101",
+      "sopSection": 2
+    },
+    {
+      "id": "sop-102-scheduling-appointments",
+      "title": "SOP-102 — Scheduling Appointments",
+      "subtitle": "Section 2: Customer Experience",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-102-scheduling-appointments.md",
+      "category": "sops",
+      "sopCode": "SOP-102",
+      "sopSection": 2
+    },
+    {
+      "id": "sop-103-vehicle-check-in",
+      "title": "SOP-103 — Vehicle Check-In",
+      "subtitle": "Section 2: Customer Experience",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-103-vehicle-check-in.md",
+      "category": "sops",
+      "sopCode": "SOP-103",
+      "sopSection": 2
+    },
+    {
+      "id": "sop-104-customer-walkaround",
+      "title": "SOP-104 — Customer Walkaround",
+      "subtitle": "Section 2: Customer Experience",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-104-customer-walkaround.md",
+      "category": "sops",
+      "sopCode": "SOP-104",
+      "sopSection": 2
+    },
+    {
+      "id": "sop-105-estimate-process",
+      "title": "SOP-105 — Estimate Process",
+      "subtitle": "Section 2: Customer Experience",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-105-estimate-process.md",
+      "category": "sops",
+      "sopCode": "SOP-105",
+      "sopSection": 2
+    },
+    {
+      "id": "sop-106-collecting-deposits",
+      "title": "SOP-106 — Collecting Deposits",
+      "subtitle": "Section 2: Customer Experience",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-106-collecting-deposits.md",
+      "category": "sops",
+      "sopCode": "SOP-106",
+      "sopSection": 2
+    },
+    {
+      "id": "sop-107-vehicle-delivery",
+      "title": "SOP-107 — Vehicle Delivery",
+      "subtitle": "Section 2: Customer Experience",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-107-vehicle-delivery.md",
+      "category": "sops",
+      "sopCode": "SOP-107",
+      "sopSection": 2
+    },
+    {
+      "id": "sop-200-vehicle-inspection",
+      "title": "SOP-200 — Vehicle Inspection",
+      "subtitle": "Section 3: Installation Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-200-vehicle-inspection.md",
+      "category": "sops",
+      "sopCode": "SOP-200",
+      "sopSection": 3
+    },
+    {
+      "id": "sop-201-vehicle-wash-procedure",
+      "title": "SOP-201 — Vehicle Wash Procedure",
+      "subtitle": "Section 3: Installation Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-201-vehicle-wash-procedure.md",
+      "category": "sops",
+      "sopCode": "SOP-201",
+      "sopSection": 3
+    },
+    {
+      "id": "sop-202-decontamination",
+      "title": "SOP-202 — Decontamination",
+      "subtitle": "Section 3: Installation Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-202-decontamination.md",
+      "category": "sops",
+      "sopCode": "SOP-202",
+      "sopSection": 3
+    },
+    {
+      "id": "sop-203-installation-bay-setup",
+      "title": "SOP-203 — Installation Bay Setup",
+      "subtitle": "Section 3: Installation Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-203-installation-bay-setup.md",
+      "category": "sops",
+      "sopCode": "SOP-203",
+      "sopSection": 3
+    },
+    {
+      "id": "sop-204-tool-preparation",
+      "title": "SOP-204 — Tool Preparation",
+      "subtitle": "Section 3: Installation Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-204-tool-preparation.md",
+      "category": "sops",
+      "sopCode": "SOP-204",
+      "sopSection": 3
+    },
+    {
+      "id": "sop-205-quality-control-inspection",
+      "title": "SOP-205 — Quality Control Inspection",
+      "subtitle": "Section 3: Installation Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-205-quality-control-inspection.md",
+      "category": "sops",
+      "sopCode": "SOP-205",
+      "sopSection": 3
+    },
+    {
+      "id": "sop-206-final-inspection",
+      "title": "SOP-206 — Final Inspection",
+      "subtitle": "Section 3: Installation Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-206-final-inspection.md",
+      "category": "sops",
+      "sopCode": "SOP-206",
+      "sopSection": 3
+    },
+    {
+      "id": "sop-300-complete-tint-installation-workflow",
+      "title": "SOP-300 — Complete Tint Installation Workflow",
+      "subtitle": "Section 4: Window Tint",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-300-complete-tint-installation-workflow.md",
+      "category": "sops",
+      "sopCode": "SOP-300",
+      "sopSection": 4
+    },
+    {
+      "id": "sop-400-complete-ppf-installation-workflow",
+      "title": "SOP-400 — Complete PPF Installation Workflow",
+      "subtitle": "Section 5: Paint Protection Film",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-400-complete-ppf-installation-workflow.md",
+      "category": "sops",
+      "sopCode": "SOP-400",
+      "sopSection": 5
+    },
+    {
+      "id": "sop-500-complete-vinyl-wrap-workflow",
+      "title": "SOP-500 — Complete Vinyl Wrap Workflow",
+      "subtitle": "Section 6: Vinyl Wrap",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-500-complete-vinyl-wrap-workflow.md",
+      "category": "sops",
+      "sopCode": "SOP-500",
+      "sopSection": 6
+    },
+    {
+      "id": "sop-600-complete-tpu-installation-workflow",
+      "title": "SOP-600 — Complete TPU Installation Workflow",
+      "subtitle": "Section 7: Colored TPU",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-600-complete-tpu-installation-workflow.md",
+      "category": "sops",
+      "sopCode": "SOP-600",
+      "sopSection": 7
+    },
+    {
+      "id": "sop-700-creating-invoices",
+      "title": "SOP-700 — Creating Invoices",
+      "subtitle": "Section 8: Business Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-700-creating-invoices.md",
+      "category": "sops",
+      "sopCode": "SOP-700",
+      "sopSection": 8
+    },
+    {
+      "id": "sop-701-collecting-payments",
+      "title": "SOP-701 — Collecting Payments",
+      "subtitle": "Section 8: Business Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-701-collecting-payments.md",
+      "category": "sops",
+      "sopCode": "SOP-701",
+      "sopSection": 8
+    },
+    {
+      "id": "sop-702-warranty-registration",
+      "title": "SOP-702 — Warranty Registration",
+      "subtitle": "Section 8: Business Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-702-warranty-registration.md",
+      "category": "sops",
+      "sopCode": "SOP-702",
+      "sopSection": 8
+    },
+    {
+      "id": "sop-703-crm-updates",
+      "title": "SOP-703 — CRM Updates",
+      "subtitle": "Section 8: Business Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-703-crm-updates.md",
+      "category": "sops",
+      "sopCode": "SOP-703",
+      "sopSection": 8
+    },
+    {
+      "id": "sop-704-customer-follow-up",
+      "title": "SOP-704 — Customer Follow-Up",
+      "subtitle": "Section 8: Business Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-704-customer-follow-up.md",
+      "category": "sops",
+      "sopCode": "SOP-704",
+      "sopSection": 8
+    },
+    {
+      "id": "sop-705-review-request-process",
+      "title": "SOP-705 — Review Request Process",
+      "subtitle": "Section 8: Business Operations",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-705-review-request-process.md",
+      "category": "sops",
+      "sopCode": "SOP-705",
+      "sopSection": 8
+    },
+    {
+      "id": "sop-800-before-and-after-photos",
+      "title": "SOP-800 — Before & After Photos",
+      "subtitle": "Section 9: Marketing",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-800-before-and-after-photos.md",
+      "category": "sops",
+      "sopCode": "SOP-800",
+      "sopSection": 9
+    },
+    {
+      "id": "sop-801-social-media-posting",
+      "title": "SOP-801 — Social Media Posting",
+      "subtitle": "Section 9: Marketing",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-801-social-media-posting.md",
+      "category": "sops",
+      "sopCode": "SOP-801",
+      "sopSection": 9
+    },
+    {
+      "id": "sop-802-video-content",
+      "title": "SOP-802 — Video Content",
+      "subtitle": "Section 9: Marketing",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-802-video-content.md",
+      "category": "sops",
+      "sopCode": "SOP-802",
+      "sopSection": 9
+    },
+    {
+      "id": "sop-803-google-review-process",
+      "title": "SOP-803 — Google Review Process",
+      "subtitle": "Section 9: Marketing",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-803-google-review-process.md",
+      "category": "sops",
+      "sopCode": "SOP-803",
+      "sopSection": 9
+    },
+    {
+      "id": "sop-900-installation-failure",
+      "title": "SOP-900 — Installation Failure",
+      "subtitle": "Section 10: Emergency Procedures",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-900-installation-failure.md",
+      "category": "sops",
+      "sopCode": "SOP-900",
+      "sopSection": 10
+    },
+    {
+      "id": "sop-901-film-damage",
+      "title": "SOP-901 — Film Damage",
+      "subtitle": "Section 10: Emergency Procedures",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-901-film-damage.md",
+      "category": "sops",
+      "sopCode": "SOP-901",
+      "sopSection": 10
+    },
+    {
+      "id": "sop-902-customer-complaint",
+      "title": "SOP-902 — Customer Complaint",
+      "subtitle": "Section 10: Emergency Procedures",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-902-customer-complaint.md",
+      "category": "sops",
+      "sopCode": "SOP-902",
+      "sopSection": 10
+    },
+    {
+      "id": "sop-903-accident-damage-claims",
+      "title": "SOP-903 — Accident/Damage Claims",
+      "subtitle": "Section 10: Emergency Procedures",
+      "type": "SOP",
+      "version": "1.0",
+      "source": "docs/sops/sop-903-accident-damage-claims.md",
+      "category": "sops",
+      "sopCode": "SOP-903",
+      "sopSection": 10
     }
   ]
 }
