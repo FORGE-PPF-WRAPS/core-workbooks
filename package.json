@@ -12,8 +12,11 @@
     "build:docs:pdf": "node scripts/build-docs.js --pdf",
     "build:docs:branded": "node scripts/build-docs.js --branded",
     "build:docs:branded:pdf": "node scripts/build-docs.js --branded --pdf",
+    "generate:manuals": "node scripts/generate-manuals/index.js",
+    "build:manuals": "node scripts/build-manuals.js",
+    "build:manuals:pdf": "node scripts/build-manuals.js --pdf",
     "build:all": "npm run build && npm run build:docs",
-    "build:all:pdf": "npm run build:pdf && npm run build:docs:pdf"
+    "build:all:pdf": "npm run build:pdf && npm run build:docs:pdf && npm run build:manuals:pdf"
   },
   "dependencies": {
     "marked": "^15.0.0",

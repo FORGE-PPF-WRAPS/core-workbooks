@@ -1,12 +1,13 @@
 node_modules/
-
 .DS_Store
 *.iml
 .idea/
 .vscode/
 
-# Generated build output
+# Generated build output (source copies live in public/manuals/ for Pages)
 workbooks/output/**
 !workbooks/output/.gitkeep
 docs/output/**
 !docs/output/.gitkeep
+manuals/output/**
+!manuals/output/.gitkeep

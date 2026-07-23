@@ -1,0 +1,91 @@
+/* Master Install Manual — extended print styles */
+
+.manual-cover {
+  page-break-after: always;
+}
+
+.manual-cover .doc-fields {
+  margin-top: 1.2in;
+  text-align: left;
+  max-width: 4.5in;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.manual-cover .doc-fields p {
+  border-bottom: 1px solid #999;
+  padding-bottom: 0.2em;
+  margin: 0.8em 0;
+}
+
+.manual-toc {
+  page-break-after: always;
+}
+
+.manual-toc h2 {
+  text-align: center;
+  border-bottom: 2px solid #1b4965;
+  padding-bottom: 0.3em;
+}
+
+.toc-list {
+  columns: 2;
+  column-gap: 0.5in;
+  font-size: 9.5pt;
+  line-height: 1.6;
+}
+
+.toc-list li {
+  margin: 0.15em 0;
+  break-inside: avoid;
+}
+
+body.master-manual h1 {
+  page-break-before: always;
+  margin-top: 0;
+  padding-top: 0.15in;
+}
+
+body.master-manual .cover h1,
+body.master-manual .manual-toc h1 {
+  page-break-before: auto;
+}
+
+.procedure {
+  border: 2px solid #1b4965;
+  border-radius: 4px;
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  page-break-inside: avoid;
+}
+
+.procedure h3 {
+  margin-top: 0;
+  color: #1b4965;
+}
+
+.revision-block {
+  background: #f0f7fa;
+  border: 1px solid #ccc;
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  font-size: 9.5pt;
+}
+
+.script-block {
+  background: #fafafa;
+  border-left: 4px solid #1b4965;
+  padding: 0.6em 0.8em;
+  margin: 0.8em 0;
+  font-size: 9.5pt;
+  font-style: italic;
+}
+
+@media print {
+  body.master-manual {
+    font-size: 10pt;
+  }
+  .toc-list {
+    columns: 2;
+  }
+}

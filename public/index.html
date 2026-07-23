@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Forge — Core Operations Manuals</title>
+  <style>
+    :root {
+      --bg: #0A0A0F;
+      --card: #14141C;
+      --text: #F5F5F7;
+      --muted: #9B9BA8;
+      --pink: #FF2DAA;
+      --purple: #7A3FFF;
+      --cyan: #15D8FF;
+      --gold: #D4AF37;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .hero {
+      padding: 3rem 1.5rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(122,63,255,.25), rgba(255,45,170,.15), rgba(21,216,255,.1));
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      margin-top: .75rem;
+      color: var(--muted);
+      max-width: 42rem;
+      margin-inline: auto;
+    }
+    .tagline {
+      margin-top: .5rem;
+      font-size: .8rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    main {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 640px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      transition: border-color .2s, transform .2s;
+    }
+    .card:hover {
+      border-color: rgba(122,63,255,.5);
+      transform: translateY(-2px);
+    }
+    .card h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: .35rem;
+    }
+    .card p {
+      font-size: .875rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .card a {
+      display: inline-block;
+      padding: .5rem 1rem;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--purple), var(--pink));
+      color: #fff;
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 600;
+    }
+    .card a:hover { opacity: .9; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: .8rem;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Skill Forge Core Operations Manuals</h1>
+    <p class="tagline">Where Students Become Teachers</p>
+    <p>Authoritative shop reference manuals — every aspect of professional operations. Not training course outlines.</p>
+  </header>
+  <main>
+    <div class="grid">
+      <article class="card">
+        <h2>PPF Master Install</h2>
+        <p>Complete paint protection film operations — material science through warranty administration.</p>
+        <a href="manuals/ppf-master-install.pdf">Download PDF</a>
+      </article>
+      <article class="card">
+        <h2>Window Tint Master Install</h2>
+        <p>Complete window film operations — legal compliance, every glass type, fleet programs.</p>
+        <a href="manuals/window-tint-master-install.pdf">Download PDF</a>
+      </article>
+      <article class="card">
+        <h2>Customer Service Operations</h2>
+        <p>Front-of-house, sales, client experience, CRM, and service recovery.</p>
+        <a href="manuals/customer-service-operations.pdf">Download PDF</a>
+      </article>
+      <article class="card">
+        <h2>Vinyl Wrap Master Install</h2>
+        <p>Complete vehicle wrap operations — film technology through fleet and business standards.</p>
+        <a href="manuals/vinyl-wrap-master-install.pdf">Download PDF</a>
+      </article>
+      <article class="card">
+        <h2>Ceramic Coating Application</h2>
+        <p>Complete coating operations — surface prep, application, curing, and warranty.</p>
+        <a href="manuals/ceramic-coating-application.pdf">Download PDF</a>
+      </article>
+      <article class="card">
+        <h2>Paint Correction &amp; Detailing</h2>
+        <p>Complete correction and detailing operations — compounds through delivery standards.</p>
+        <a href="manuals/paint-correction-detailing.pdf">Download PDF</a>
+      </article>
+    </div>
+  </main>
+  <footer>&copy; Velox Wrap Co. · Skill Forge</footer>
+</body>
+</html>

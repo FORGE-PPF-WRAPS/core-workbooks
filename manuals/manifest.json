@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "manuals": [
+    {
+      "id": "ppf-master-install",
+      "title": "PPF Master Install Manual",
+      "subtitle": "Complete Core Reference — Every Aspect of Professional Paint Protection Film Operations",
+      "type": "Core Operations Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/ppf-master-install/chapters"
+    },
+    {
+      "id": "window-tint-master-install",
+      "title": "Window Tint Master Install Manual",
+      "subtitle": "Complete Core Reference — Every Aspect of Professional Window Film Operations",
+      "type": "Core Operations Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/window-tint-master-install/chapters"
+    },
+    {
+      "id": "customer-service-operations",
+      "title": "Customer Service Operations Manual",
+      "subtitle": "Complete Core Reference — Front-of-House, Sales & Client Experience Operations",
+      "type": "Core Operations Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/customer-service-operations/chapters"
+    },
+    {
+      "id": "vinyl-wrap-master-install",
+      "title": "Vinyl Wrap Master Install Manual",
+      "subtitle": "Complete Core Reference — Every Aspect of Professional Vehicle Wrap Operations",
+      "type": "Core Operations Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/vinyl-wrap-master-install/chapters"
+    },
+    {
+      "id": "ceramic-coating-application",
+      "title": "Ceramic Coating Application Manual",
+      "subtitle": "Complete Core Reference — Every Aspect of Professional Coating Operations",
+      "type": "Core Operations Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/ceramic-coating-application/chapters"
+    },
+    {
+      "id": "paint-correction-detailing",
+      "title": "Paint Correction & Detailing Manual",
+      "subtitle": "Complete Core Reference — Every Aspect of Correction & Detailing Operations",
+      "type": "Core Operations Manual",
+      "version": "1.0",
+      "chaptersDir": "manuals/paint-correction-detailing/chapters"
+    }
+  ]
+}
