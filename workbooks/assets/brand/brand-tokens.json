@@ -33,9 +33,16 @@
     "label": "system-ui, Segoe UI, Helvetica Neue, Arial, sans-serif"
   },
   "logos": {
-    "monogram": "logos/skill-forge-monogram.svg",
-    "primary": "logos/skill-forge-logo.svg",
-    "horizontal": "logos/skill-forge-logo-horizontal.svg"
+    "primary": "logos/forge-ppf-logo.jpg",
+    "hero": "logos/forge-main-logo.png",
+    "service": "logos/forge-ppf-logo.jpg",
+    "monogram": "logos/forge-secondary-monogram-logo.jpg",
+    "horizontal": "logos/forge-ppf-logo.jpg",
+    "fallback": {
+      "primary": "logos/skill-forge-logo.svg",
+      "monogram": "logos/skill-forge-monogram.svg",
+      "horizontal": "logos/skill-forge-logo-horizontal.svg"
+    }
   },
   "resources": {
     "url": "https://forgeppf.com/skill-forge",

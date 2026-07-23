@@ -16,9 +16,16 @@
 
 ## Logo usage
 
-**Primary lockup:** `workbooks/assets/brand/logos/skill-forge-logo.svg`  
-**Horizontal:** `skill-forge-logo-horizontal.svg`  
-**Monogram / watermark:** `skill-forge-monogram.svg`
+Production artwork lives in `workbooks/assets/brand/logos/`:
+
+| Role | File | Use |
+|------|------|-----|
+| **Hero** | `forge-main-logo.png` | Workbook covers, marketing hero |
+| **Primary / service** | `forge-ppf-logo.jpg` | SOPs, manuals, forms, documents |
+| **Monogram** | `forge-secondary-monogram-logo.jpg` | Watermarks, small marks |
+| **Horizontal** | `forge-ppf-logo.jpg` | Inline headers |
+
+SVG files (`skill-forge-logo.svg`, etc.) are fallbacks only — the build pipeline uses production PNG/JPG assets from `brand-tokens.json`.
 
 <ul class="checklist">
 <li>Maintain clear space equal to the height of the monogram on all sides</li>

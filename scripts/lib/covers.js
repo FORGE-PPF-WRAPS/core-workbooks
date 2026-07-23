@@ -1,4 +1,4 @@
-const { resolveBrandLogo, resolveBrandMonogram } = require('./assets');
+const { resolveBrandLogo, resolveBrandHero, resolveBrandMonogram } = require('./assets');
 
 function watermarkDiv(monogramUri) {
   if (!monogramUri) return '';
@@ -7,10 +7,10 @@ function watermarkDiv(monogramUri) {
 
 function buildWorkbookCover(course, theme) {
   const branded = theme === 'branded';
-  const logo = branded ? resolveBrandLogo() : null;
+  const logo = branded ? resolveBrandHero() : null;
   const monogram = branded ? resolveBrandMonogram() : null;
   const logoHtml = logo
-    ? `<img class="brand-logo branded-only" src="${logo}" alt="Skill Forge" />`
+    ? `<img class="brand-logo brand-logo--hero branded-only" src="${logo}" alt="Forge PPF" />`
     : '';
 
   const brandMark = branded && !logo
@@ -48,12 +48,15 @@ function buildWorkbookCover(course, theme) {
 function buildDocCover(doc, theme) {
   const branded = theme === 'branded';
   const logo = branded ? resolveBrandLogo() : null;
+  const monogram = branded ? resolveBrandMonogram() : null;
   const logoHtml = logo
-    ? `<img class="brand-logo branded-only" src="${logo}" alt="Skill Forge" />`
+    ? `<img class="brand-logo brand-logo--primary branded-only" src="${logo}" alt="Forge PPF" />`
     : '';
+  const watermark = branded ? watermarkDiv(monogram) : '';
 
   return `
   <div class="cover layout-cover${branded ? ' has-brand-gradient' : ''}">
+    ${watermark}
     ${logoHtml}
     <div class="brand-mark ${branded && !logo ? 'branded-only' : 'whitelabel-only'}">Skill Forge</div>
     <div class="brand-mark whitelabel-only">Standard Operating Procedure</div>
@@ -88,7 +91,7 @@ function buildManualCover(manual, theme) {
   const logo = branded ? resolveBrandLogo() : null;
   const monogram = branded ? resolveBrandMonogram() : null;
   const logoHtml = logo
-    ? `<img class="brand-logo branded-only" src="${logo}" alt="Skill Forge" />`
+    ? `<img class="brand-logo brand-logo--primary branded-only" src="${logo}" alt="Forge PPF" />`
     : '';
   const texture = branded
     ? '<div class="cover-texture texture-carbon" aria-hidden="true"></div>'

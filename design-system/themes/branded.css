@@ -451,6 +451,21 @@ body.theme-branded .layout-cover .brand-logo {
   max-height: 1.4in;
   max-width: 5in;
   margin-bottom: 2rem;
+  object-fit: contain;
+}
+
+body.theme-branded .cover .brand-logo--primary,
+body.theme-branded .layout-cover .brand-logo--primary {
+  max-height: 1.75in;
+  max-width: 4.5in;
+}
+
+body.theme-branded .cover .brand-logo--hero,
+body.theme-branded .layout-cover .brand-logo--hero {
+  max-height: 2.5in;
+  max-width: 6in;
+  width: 100%;
+  border-radius: 8px;
 }
 
 body.theme-branded .cover .brand-logo--monogram,

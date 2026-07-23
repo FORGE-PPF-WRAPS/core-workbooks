@@ -5,6 +5,7 @@ const path = require('path');
 const { ROOT, parseThemeArgs } = require('./lib/theme');
 const { wrapDocument, markdownToHtml } = require('./lib/html');
 const { buildManualCover, buildManualFooter } = require('./lib/covers');
+const { setHtmlOutputDir } = require('./lib/assets');
 const { loadDesignSystemCss } = require('./lib/theme');
 
 const MANUALS_ROOT = path.join(ROOT, 'manuals');
@@ -116,6 +117,7 @@ async function main() {
 
   for (const manual of manuals) {
     console.log(`  ${manual.id}...`);
+    setHtmlOutputDir(outDir);
     const html = buildHtml(manual, theme);
     const htmlPath = path.join(outDir, `${manual.id}.html`);
     const pdfPath = path.join(outDir, `${manual.id}.pdf`);

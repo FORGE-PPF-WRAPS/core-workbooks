@@ -5,6 +5,7 @@ const path = require('path');
 const { ROOT, parseThemeArgs } = require('./lib/theme');
 const { wrapDocument, markdownToHtml } = require('./lib/html');
 const { buildDocCover, buildDocFooter } = require('./lib/covers');
+const { setHtmlOutputDir } = require('./lib/assets');
 const { buildPdf } = require('./lib/pdf');
 
 const DOCS_ROOT = path.join(ROOT, 'docs');
@@ -51,9 +52,10 @@ function main() {
   console.log(`Building ${docs.length} document(s) — theme: ${theme}`);
 
   for (const doc of docs) {
-    const html = buildHtml(doc, theme);
     const outDir = path.join(OUTPUT, theme);
     fs.mkdirSync(outDir, { recursive: true });
+    setHtmlOutputDir(outDir);
+    const html = buildHtml(doc, theme);
     const htmlPath = path.join(outDir, `${doc.id}.html`);
     const pdfPath = path.join(outDir, `${doc.id}.pdf`);
 

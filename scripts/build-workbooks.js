@@ -5,6 +5,7 @@ const path = require('path');
 const { ROOT, parseThemeArgs } = require('./lib/theme');
 const { wrapDocument, markdownToHtml } = require('./lib/html');
 const { buildWorkbookCover, buildWorkbookFooter } = require('./lib/covers');
+const { setHtmlOutputDir } = require('./lib/assets');
 const { enhanceWorkbookHtml } = require('./lib/workbook-enhance');
 const { buildPdf } = require('./lib/pdf');
 
@@ -56,6 +57,7 @@ async function main() {
 
   for (const course of courses) {
     console.log(`  ${course.id}...`);
+    setHtmlOutputDir(outDir);
     const html = await buildHtml(course, theme);
     const htmlPath = path.join(outDir, `${course.id}-workbook.html`);
     const pdfPath = path.join(outDir, `${course.id}-workbook.pdf`);
