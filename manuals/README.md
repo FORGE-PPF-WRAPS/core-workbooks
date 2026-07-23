@@ -37,22 +37,18 @@ npm run generate:manuals      # regenerate from source generators
 npm run build:manuals:pdf     # build all PDFs
 ```
 
-## Public downloads
+## Access on GitHub (`cursor-design-system` branch)
 
-Published via **GitHub Pages** on the `cursor-design-system` branch:
+**Browse all manuals:** https://github.com/FORGE-PPF-WRAPS/core-workbooks/tree/cursor-design-system/manuals
 
-**Index:** https://forge-ppf-wraps.github.io/core-workbooks/
-
-| Manual | PDF |
-|--------|-----|
-| PPF Master Install | https://forge-ppf-wraps.github.io/core-workbooks/manuals/ppf-master-install.pdf |
-| Window Tint Master Install | https://forge-ppf-wraps.github.io/core-workbooks/manuals/window-tint-master-install.pdf |
-| Customer Service Operations | https://forge-ppf-wraps.github.io/core-workbooks/manuals/customer-service-operations.pdf |
-| Vinyl Wrap Master Install | https://forge-ppf-wraps.github.io/core-workbooks/manuals/vinyl-wrap-master-install.pdf |
-| Ceramic Coating Application | https://forge-ppf-wraps.github.io/core-workbooks/manuals/ceramic-coating-application.pdf |
-| Paint Correction & Detailing | https://forge-ppf-wraps.github.io/core-workbooks/manuals/paint-correction-detailing.pdf |
-
-After pushing, enable Pages under **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+| Manual | Markdown chapters | HTML export |
+|--------|-------------------|-------------|
+| PPF Master Install | [chapters](https://github.com/FORGE-PPF-WRAPS/core-workbooks/tree/cursor-design-system/manuals/ppf-master-install/chapters) | [html](https://github.com/FORGE-PPF-WRAPS/core-workbooks/blob/cursor-design-system/manuals/html/ppf-master-install.html) |
+| Window Tint Master Install | [chapters](https://github.com/FORGE-PPF-WRAPS/core-workbooks/tree/cursor-design-system/manuals/window-tint-master-install/chapters) | [html](https://github.com/FORGE-PPF-WRAPS/core-workbooks/blob/cursor-design-system/manuals/html/window-tint-master-install.html) |
+| Customer Service Operations | [chapters](https://github.com/FORGE-PPF-WRAPS/core-workbooks/tree/cursor-design-system/manuals/customer-service-operations/chapters) | [html](https://github.com/FORGE-PPF-WRAPS/core-workbooks/blob/cursor-design-system/manuals/html/customer-service-operations.html) |
+| Vinyl Wrap Master Install | [chapters](https://github.com/FORGE-PPF-WRAPS/core-workbooks/tree/cursor-design-system/manuals/vinyl-wrap-master-install/chapters) | [html](https://github.com/FORGE-PPF-WRAPS/core-workbooks/blob/cursor-design-system/manuals/html/vinyl-wrap-master-install.html) |
+| Ceramic Coating Application | [chapters](https://github.com/FORGE-PPF-WRAPS/core-workbooks/tree/cursor-design-system/manuals/ceramic-coating-application/chapters) | [html](https://github.com/FORGE-PPF-WRAPS/core-workbooks/blob/cursor-design-system/manuals/html/ceramic-coating-application.html) |
+| Paint Correction & Detailing | [chapters](https://github.com/FORGE-PPF-WRAPS/core-workbooks/tree/cursor-design-system/manuals/paint-correction-detailing/chapters) | [html](https://github.com/FORGE-PPF-WRAPS/core-workbooks/blob/cursor-design-system/manuals/html/paint-correction-detailing.html) |
 
 ## Relationship to student workbooks
 
