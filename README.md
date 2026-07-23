@@ -11,6 +11,7 @@ Training workbooks, SOPs, and operational documents for automotive restyling.
 |------|----------|
 | `design-system/` | Master print design system (tokens, components, themes) |
 | `workbooks/` | Student training workbooks (Tint, PPF, Vinyl Wrap) |
+| `manuals/` | Core operations manuals — complete shop reference (150–200 pages each) |
 | `docs/` | White-label SOPs, policies, checklists, forms |
 | `styles/` | Deprecated CSS shims — see `design-system/` |
 
@@ -35,7 +36,25 @@ npm run build:docs:branded:pdf  # branded PDF
 
 See `docs/README.md` for adding documents. Drop reference files in `docs/reference/`.
 
-**Branch:** `cursor/sop-docs-d9e4`
+## Master Core Operations Manuals (150–200 pages each)
+
+Complete shop reference manuals covering every aspect of each service — not 3-day class outlines.
+
+| Manual | Output |
+|--------|--------|
+| PPF Master Install | `manuals/output/ppf-master-install.pdf` |
+| Window Tint Master Install | `manuals/output/window-tint-master-install.pdf` |
+| Customer Service Operations | `manuals/output/customer-service-operations.pdf` |
+| Vinyl Wrap Master Install | `manuals/output/vinyl-wrap-master-install.pdf` |
+| Ceramic Coating Application | `manuals/output/ceramic-coating-application.pdf` |
+| Paint Correction & Detailing | `manuals/output/paint-correction-detailing.pdf` |
+
+```bash
+npm run generate:manuals    # regenerate chapter content
+npm run build:manuals:pdf   # build all manual PDFs
+```
+
+See `manuals/README.md` for the distinction between core manuals and student workbooks.
 
 ## Build & Print
 

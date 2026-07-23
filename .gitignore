@@ -1,5 +1,4 @@
 node_modules/
-
 .DS_Store
 *.iml
 .idea/
@@ -10,3 +9,5 @@ workbooks/output/**
 !workbooks/output/.gitkeep
 docs/output/**
 !docs/output/.gitkeep
+manuals/output/**
+!manuals/output/.gitkeep
