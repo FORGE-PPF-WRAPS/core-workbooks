@@ -1,0 +1,42 @@
+{
+  "brand": "Skill Forge",
+  "tagline": "WHERE STUDENTS BECOME TEACHERS",
+  "serviceBrand": "Forge PPF",
+  "colors": {
+    "magenta": "#FF2DAA",
+    "purple": "#7A3FFF",
+    "cyan": "#15D8FF",
+    "gold": "#D4AF37",
+    "black": "#0A0A0F",
+    "silver": "#B8BDC9",
+    "white": "#FFFFFF"
+  },
+  "gradient": {
+    "angle": 135,
+    "stops": [
+      { "color": "#FF2DAA", "position": "0%" },
+      { "color": "#7A3FFF", "position": "50%" },
+      { "color": "#15D8FF", "position": "100%" }
+    ],
+    "css": "linear-gradient(135deg, #FF2DAA 0%, #7A3FFF 50%, #15D8FF 100%)"
+  },
+  "typography": {
+    "display": "Skill Forge Display",
+    "body": "Segoe UI, Helvetica Neue, Arial, sans-serif",
+    "label": "system-ui, Segoe UI, Helvetica Neue, Arial, sans-serif"
+  },
+  "logos": {
+    "monogram": "logos/skill-forge-monogram.svg",
+    "primary": "logos/skill-forge-logo.svg",
+    "horizontal": "logos/skill-forge-logo-horizontal.svg"
+  },
+  "resources": {
+    "url": "https://forgeppf.com/skill-forge",
+    "label": "Skill Forge Resources"
+  },
+  "days": {
+    "1": { "color": "#FF2DAA", "label": "Day 1" },
+    "2": { "color": "#7A3FFF", "label": "Day 2" },
+    "3": { "color": "#15D8FF", "label": "Day 3" }
+  }
+}

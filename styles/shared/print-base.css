@@ -1,0 +1,8 @@
+/**
+ * @deprecated Source of truth: design-system/
+ * Build scripts load design-system layers via scripts/lib/theme.js.
+ */
+@import url("../../design-system/tokens.css");
+@import url("../../design-system/base.css");
+@import url("../../design-system/components.css");
+@import url("../../design-system/layouts.css");

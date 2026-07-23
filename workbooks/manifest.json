@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "courses": [
+    {
+      "id": "window-tint",
+      "title": "Window Tint Installation",
+      "subtitle": "Core Course — 3-Day Beginner Program",
+      "source": "workbooks/core/window-tint/workbook.md",
+      "docType": "Student Workbook",
+      "version": "1.0"
+    },
+    {
+      "id": "ppf",
+      "title": "Paint Protection Film (PPF)",
+      "subtitle": "Core Course — 3-Day Beginner Program",
+      "source": "workbooks/core/ppf/workbook.md",
+      "docType": "Student Workbook",
+      "version": "1.0"
+    }
+  ]
+}

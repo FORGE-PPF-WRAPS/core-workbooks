@@ -1,9 +1,18 @@
 # Skill Forge Core Workbooks
 
-Training workbooks for **Velox Wrap Co** Skill Forge — core automotive restyling courses.
+Training workbooks, SOPs, and operational documents for automotive restyling.
 
 **GitHub:** https://github.com/FORGE-PPF-WRAPS/core-workbooks  
 **GitLab:** `veloxwrapco/skill-forge-workbooks-v1.0` (legacy mirror)
+
+## Repository layout
+
+| Path | Contents |
+|------|----------|
+| `design-system/` | Master print design system (tokens, components, themes) |
+| `workbooks/` | Student training workbooks (Tint, PPF, Vinyl Wrap) |
+| `docs/` | White-label SOPs, policies, checklists, forms |
+| `styles/` | Deprecated CSS shims — see `design-system/` |
 
 ## Core Courses (3-Day Beginner)
 
@@ -12,6 +21,21 @@ Training workbooks for **Velox Wrap Co** Skill Forge — core automotive restyli
 | Vinyl Wrap | Planned | — | — |
 | **Window Tint** | **Ready** | `workbooks/core/window-tint/workbook.md` | `workbooks/output/window-tint-workbook.pdf` |
 | **PPF** | **Ready** | `workbooks/core/ppf/workbook.md` | `workbooks/output/ppf-workbook.pdf` |
+
+## SOPs & Documents
+
+White-label, print-ready operational docs with optional branded styling.
+
+```bash
+npm run build:docs              # white-label HTML
+npm run build:docs:pdf          # white-label PDF
+npm run build:docs:branded      # your brand (gradient, logo, font)
+npm run build:docs:branded:pdf  # branded PDF
+```
+
+See `docs/README.md` for adding documents. Drop reference files in `docs/reference/`.
+
+**Branch:** `cursor/sop-docs-d9e4`
 
 ## Build & Print
 
@@ -24,14 +48,17 @@ Training workbooks for **Velox Wrap Co** Skill Forge — core automotive restyli
 
 ```bash
 npm install
-npm run build        # HTML output
-npm run build:pdf    # HTML + PDF output
+npm run build              # white-label HTML
+npm run build:pdf          # white-label HTML + PDF
+npm run build:branded:pdf  # branded HTML + PDF (Skill Forge theme)
 ```
 
-Output files land in `workbooks/output/`:
+Output files land in `workbooks/output/<theme>/`:
 
-- `window-tint-workbook.html` / `.pdf`
-- `ppf-workbook.html` / `.pdf`
+- `whitelabel/window-tint-workbook.html` / `.pdf`
+- `whitelabel/ppf-workbook.html` / `.pdf`
+
+See `design-system/README.md` and `docs/ARCHITECTURE.md` for the design system and layout components.
 
 ### Print from Browser
 

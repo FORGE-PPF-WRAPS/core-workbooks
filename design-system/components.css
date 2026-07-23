@@ -1,0 +1,170 @@
+/* CORE Workbooks — Reusable UI components */
+
+.callout {
+  background: var(--callout-bg);
+  border-left: 4px solid var(--callout-border);
+  padding: 0.6em 0.8em 0.6em 0.8em;
+  margin: var(--space-lg) 0;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+.callout.warning {
+  background: var(--callout-warning-bg);
+  border-left-color: var(--callout-warning-border);
+}
+
+.callout.tip {
+  background: var(--callout-tip-bg);
+  border-left-color: var(--callout-tip-border);
+}
+
+/* Procedure / SOP block */
+.procedure,
+.sop-page {
+  border: var(--border-width-medium) solid var(--surface-lesson-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+}
+
+.procedure h3,
+.sop-page h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+/* Lesson / lab block */
+.lab,
+.lesson-page {
+  border: var(--border-width-medium) solid var(--surface-lesson-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg) 1em 0.8em 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+.lab h3,
+.lesson-page h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+/* Checklists */
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li::before {
+  content: "☐ ";
+  font-size: 12pt;
+}
+
+/* Quiz / knowledge check */
+.knowledge-check,
+.quiz-page {
+  background: var(--surface-quiz-bg);
+  border: var(--border-width-thin) solid var(--surface-quiz-border);
+  padding: var(--space-lg) 1em 0.8em 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+.knowledge-check ol,
+.quiz-page ol {
+  margin: 0;
+}
+
+/* Worksheet */
+.worksheet,
+.worksheet-page {
+  border: var(--border-width-thin) dashed var(--color-border);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  min-height: 3in;
+  page-break-inside: avoid;
+}
+
+.worksheet-page h3,
+.worksheet h3 {
+  margin-top: 0;
+}
+
+/* Review */
+.review-page {
+  border: var(--border-width-thin) solid var(--color-border-light);
+  background: var(--color-revision-bg);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-inside: avoid;
+}
+
+/* Revision / doc metadata */
+.revision-block {
+  background: var(--color-revision-bg);
+  border: var(--border-width-thin) solid var(--color-border);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  font-size: var(--font-size-table);
+  page-break-inside: avoid;
+}
+
+/* Notes */
+.notes-page {
+  border: var(--border-width-thin) dashed var(--color-border);
+  min-height: 8in;
+  padding: 0.5in;
+  page-break-before: always;
+}
+
+.notes-page h2 {
+  border: none;
+  color: var(--color-muted);
+  font-size: var(--font-size-h3);
+}
+
+.notes-lines {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 23px,
+    var(--color-notes-line) 23px,
+    var(--color-notes-line) 24px
+  );
+  min-height: 7in;
+  margin-top: var(--space-md);
+}
+
+/* Schedule tables (workbooks) */
+.schedule-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+  width: 22%;
+}
+
+/* Document chrome */
+.doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-running);
+  color: var(--color-muted);
+  border-bottom: var(--border-width-thin) solid var(--color-border-light);
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+.doc-header .header-logo {
+  max-height: 0.35in;
+}
+
+.footer-note {
+  font-size: var(--font-size-footer);
+  color: var(--color-muted);
+  margin-top: var(--space-3xl);
+  border-top: var(--border-width-thin) solid var(--color-border-light);
+  padding-top: var(--space-md);
+}

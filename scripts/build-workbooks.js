@@ -2,111 +2,77 @@
 
 const fs = require('fs');
 const path = require('path');
-const { marked } = require('marked');
+const { ROOT, parseThemeArgs } = require('./lib/theme');
+const { wrapDocument, markdownToHtml } = require('./lib/html');
+const { buildWorkbookCover, buildWorkbookFooter } = require('./lib/covers');
+const { enhanceWorkbookHtml } = require('./lib/workbook-enhance');
+const { buildPdf } = require('./lib/pdf');
 
-const ROOT = path.join(__dirname, '..');
 const OUTPUT = path.join(ROOT, 'workbooks', 'output');
-const ASSETS = path.join(ROOT, 'workbooks', 'assets');
+const MANIFEST = path.join(ROOT, 'workbooks', 'manifest.json');
 
-const COURSES = [
-  {
-    id: 'window-tint',
-    title: 'Window Tint Installation',
-    subtitle: 'Core Course — 3-Day Beginner Program',
-    source: path.join(ROOT, 'workbooks', 'core', 'window-tint', 'workbook.md'),
-  },
-  {
-    id: 'ppf',
-    title: 'Paint Protection Film (PPF)',
-    subtitle: 'Core Course — 3-Day Beginner Program',
-    source: path.join(ROOT, 'workbooks', 'core', 'ppf', 'workbook.md'),
-  },
-];
-
-function buildHtml(course) {
-  const md = fs.readFileSync(course.source, 'utf8');
-  const body = marked.parse(md);
-  const css = fs.readFileSync(path.join(ASSETS, 'print.css'), 'utf8');
-
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skill Forge — ${course.title}</title>
-  <style>${css}</style>
-</head>
-<body>
-  <div class="cover">
-    <div class="brand">Skill Forge · Velox Wrap Co</div>
-    <h1>${course.title}</h1>
-    <p class="subtitle">${course.subtitle}</p>
-    <p class="meta">Student Workbook · Version 1.0</p>
-    <div class="student-fields">
-      <p>Student Name: _________________________________</p>
-      <p>Class Date: ___________________________________</p>
-      <p>Instructor: ___________________________________</p>
-      <p>Location: ____________________________________</p>
-    </div>
-  </div>
-  ${body}
-  <p class="footer-note">© Velox Wrap Co · Skill Forge Training · For enrolled students only. Reproduction prohibited without written permission.</p>
-</body>
-</html>`;
+function loadCourses() {
+  if (!fs.existsSync(MANIFEST)) {
+    throw new Error('Missing workbooks/manifest.json');
+  }
+  const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
+  return manifest.courses || [];
 }
 
-function buildPdf(htmlPath, pdfPath) {
-  const chrome = process.env.CHROME_BIN || 'google-chrome';
-  const { spawn } = require('child_process');
-  const os = require('os');
-  const userDataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'skill-forge-chrome-'));
-  if (fs.existsSync(pdfPath)) fs.unlinkSync(pdfPath);
+async function buildHtml(course, theme) {
+  const source = path.join(ROOT, course.source);
+  if (!fs.existsSync(source)) {
+    throw new Error(`Missing source: ${course.source}`);
+  }
 
-  const child = spawn(chrome, [
-    '--headless=new',
-    '--disable-gpu',
-    '--no-sandbox',
-    '--disable-dev-shm-usage',
-    `--user-data-dir=${userDataDir}`,
-    `--print-to-pdf=${pdfPath}`,
-    '--print-to-pdf-no-header',
-    '--remote-debugging-port=0',
-    `file://${htmlPath}`,
-  ], { stdio: 'ignore' });
+  const md = fs.readFileSync(source, 'utf8');
+  const rawBody = markdownToHtml(md);
+  const body = await enhanceWorkbookHtml(rawBody, course, theme);
+  const cover = buildWorkbookCover(course, theme);
+  const footer = buildWorkbookFooter(theme);
 
-  const deadline = Date.now() + 45000;
-  while (Date.now() < deadline) {
-    if (fs.existsSync(pdfPath) && fs.statSync(pdfPath).size > 1000) {
-      child.kill('SIGKILL');
-      fs.rmSync(userDataDir, { recursive: true, force: true });
-      return;
+  return wrapDocument({
+    title: `${course.title} — Workbook`,
+    body,
+    cover,
+    footer,
+    theme,
+    bodyClass: 'workbook',
+  });
+}
+
+async function main() {
+  const { theme, pdf } = parseThemeArgs();
+  const courses = loadCourses();
+
+  if (courses.length === 0) {
+    console.log('No courses in manifest.');
+    return;
+  }
+
+  const outDir = path.join(OUTPUT, theme);
+  fs.mkdirSync(outDir, { recursive: true });
+  console.log(`Building ${courses.length} workbook(s) — theme: ${theme}`);
+
+  for (const course of courses) {
+    console.log(`  ${course.id}...`);
+    const html = await buildHtml(course, theme);
+    const htmlPath = path.join(outDir, `${course.id}-workbook.html`);
+    const pdfPath = path.join(outDir, `${course.id}-workbook.pdf`);
+
+    fs.writeFileSync(htmlPath, html);
+    console.log(`    → ${htmlPath}`);
+
+    if (pdf) {
+      await buildPdf(htmlPath, pdfPath, { tmpPrefix: 'core-workbooks-' });
+      console.log(`    → ${pdfPath}`);
     }
-    const waitUntil = Date.now() + 300;
-    while (Date.now() < waitUntil) { /* sync wait */ }
   }
 
-  child.kill('SIGKILL');
-  fs.rmSync(userDataDir, { recursive: true, force: true });
-  throw new Error(`Timed out generating PDF: ${pdfPath}`);
+  console.log('Done.');
 }
 
-fs.mkdirSync(OUTPUT, { recursive: true });
-
-const shouldBuildPdf = process.argv.includes('--pdf');
-
-for (const course of COURSES) {
-  console.log(`Building ${course.id}...`);
-  const html = buildHtml(course);
-  const htmlPath = path.join(OUTPUT, `${course.id}-workbook.html`);
-  const pdfPath = path.join(OUTPUT, `${course.id}-workbook.pdf`);
-
-  fs.writeFileSync(htmlPath, html);
-  console.log(`  → ${htmlPath}`);
-
-  if (shouldBuildPdf) {
-    buildPdf(htmlPath, pdfPath);
-    console.log(`  → ${pdfPath}`);
-  }
-}
-
-console.log('Done.');
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
+});

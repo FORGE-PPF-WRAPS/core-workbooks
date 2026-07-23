@@ -1,13 +1,23 @@
 {
-  "name": "skill-forge-workbooks",
+  "name": "skill-forge-core-workbooks",
   "version": "1.0.0",
-  "description": "Velox Wrap Co Skill Forge training workbooks",
+  "description": "Skill Forge core training workbooks, SOPs, and operational documents",
   "private": true,
   "scripts": {
     "build": "node scripts/build-workbooks.js",
-    "build:pdf": "node scripts/build-workbooks.js --pdf"
+    "build:pdf": "node scripts/build-workbooks.js --pdf",
+    "build:branded": "node scripts/build-workbooks.js --branded",
+    "build:branded:pdf": "node scripts/build-workbooks.js --branded --pdf",
+    "build:docs": "node scripts/build-docs.js",
+    "build:docs:pdf": "node scripts/build-docs.js --pdf",
+    "build:docs:branded": "node scripts/build-docs.js --branded",
+    "build:docs:branded:pdf": "node scripts/build-docs.js --branded --pdf",
+    "build:all": "npm run build && npm run build:docs",
+    "build:all:pdf": "npm run build:pdf && npm run build:docs:pdf"
   },
   "dependencies": {
-    "marked": "^15.0.0"
+    "marked": "^15.0.0",
+    "puppeteer": "^25.3.0",
+    "qrcode": "^1.5.4"
   }
 }

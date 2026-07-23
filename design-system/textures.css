@@ -1,0 +1,77 @@
+/* CORE Workbooks — Carbon fiber / forged metal textures */
+
+:root {
+  --texture-carbon-opacity: 0.07;
+  --texture-forge-opacity: 0.06;
+  --watermark-opacity: 0.1;
+}
+
+.texture-carbon,
+.cover-texture,
+.chapter-divider__texture,
+.certificate-texture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--texture-carbon-opacity);
+  background-image:
+  /* woven carbon weave */
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 6px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0.06) 0px,
+      rgba(0, 0, 0, 0.06) 1px,
+      transparent 1px,
+      transparent 6px
+    ),
+  /* fine forged grain */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 255, 255, 0.025) 3px,
+      rgba(255, 255, 255, 0.025) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.03) 3px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
+  mix-blend-mode: overlay;
+}
+
+.texture-forge {
+  opacity: var(--texture-forge-opacity);
+  mix-blend-mode: soft-light;
+}
+
+.cover-watermark,
+.certificate-watermark,
+.chapter-divider__watermark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center 42%;
+  background-size: 55% auto;
+  opacity: var(--watermark-opacity);
+}
+
+.cover-watermark,
+.chapter-divider__watermark {
+  filter: brightness(2);
+}
+
+.certificate-watermark {
+  background-position: center center;
+  background-size: 70% auto;
+  opacity: 0.06;
+}

@@ -1,0 +1,460 @@
+/* CORE Workbooks — Page layout templates */
+
+/* Cover page */
+.cover,
+.layout-cover {
+  text-align: center;
+  padding: var(--space-cover-pad-y) 0 var(--space-cover-pad-bottom);
+  page-break-after: always;
+  position: relative;
+}
+
+.cover.has-brand-gradient,
+.layout-cover.has-brand-gradient {
+  background: var(--cover-gradient);
+  background-color: var(--brand-black, #0A0A0F);
+  margin: calc(-1 * var(--page-margin-first)) calc(-1 * var(--page-margin-x)) 0;
+  padding: 2in var(--page-margin-x) 1.2in;
+  color: var(--cover-text);
+  overflow: hidden;
+}
+
+.cover-title-block,
+.layout-cover .cover-title-block {
+  position: relative;
+  z-index: 1;
+}
+
+.cover .brand-logo,
+.layout-cover .brand-logo {
+  max-height: 1.2in;
+  max-width: 4in;
+  margin: 0 auto 0.4in;
+  display: block;
+}
+
+.cover .brand,
+.cover .brand-mark,
+.layout-cover .brand,
+.layout-cover .brand-mark {
+  font-size: var(--font-size-cover-brand);
+  letter-spacing: var(--letter-spacing-brand);
+  text-transform: uppercase;
+  color: var(--cover-brand-text);
+  margin-bottom: var(--space-cover-brand-gap);
+}
+
+.cover h1,
+.layout-cover h1 {
+  font-size: var(--font-size-cover-title);
+  border: none;
+  margin: 0.3in 0;
+  color: var(--cover-title);
+  font-family: var(--font-display);
+}
+
+.cover .subtitle,
+.layout-cover .subtitle {
+  font-size: var(--font-size-cover-subtitle);
+  color: var(--cover-subtitle);
+  margin: 0.2in 0;
+}
+
+.cover .meta,
+.layout-cover .meta {
+  margin-top: 0.8in;
+  font-size: var(--font-size-cover-meta);
+  color: var(--cover-meta);
+}
+
+.cover .doc-fields,
+.cover .student-fields,
+.layout-cover .doc-fields,
+.layout-cover .student-fields {
+  margin-top: var(--space-cover-fields-top);
+  text-align: left;
+  max-width: 4.5in;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cover .doc-fields p,
+.cover .student-fields p,
+.layout-cover .doc-fields p,
+.layout-cover .student-fields p {
+  border-bottom: var(--border-width-thin) solid var(--color-field-line);
+  padding-bottom: var(--space-xs);
+  margin: var(--space-lg) 0;
+}
+
+/* Certificate layout */
+.certificate-page,
+.layout-certificate {
+  border: var(--border-width-medium) double var(--surface-certificate-border);
+  padding: 0.75in 1in;
+  margin: var(--space-xl) 0;
+  text-align: center;
+  page-break-inside: avoid;
+}
+
+.certificate-page h1,
+.certificate-page h2,
+.layout-certificate h1,
+.layout-certificate h2 {
+  border: none;
+  text-align: center;
+}
+
+.certificate-page .certificate-body,
+.layout-certificate .certificate-body {
+  text-align: left;
+  margin-top: var(--space-xl);
+}
+
+.certificate-page .signature-row,
+.layout-certificate .signature-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1in;
+  margin-top: 1.5in;
+  text-align: left;
+}
+
+.certificate-page .signature-row p,
+.layout-certificate .signature-row p {
+  flex: 1;
+  border-top: var(--border-width-thin) solid var(--color-field-line);
+  padding-top: var(--space-xs);
+  font-size: var(--font-size-table);
+}
+
+/* Appendix layout */
+.appendix-page,
+.layout-appendix {
+  background: var(--surface-appendix-bg);
+  border: var(--border-width-thin) solid var(--color-border-light);
+  padding: var(--space-lg) 1em;
+  margin: var(--space-xl) 0;
+  page-break-before: always;
+}
+
+.appendix-page h2,
+.layout-appendix h2 {
+  margin-top: 0;
+}
+
+/* Running header (optional per-section) */
+.running-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-running);
+  color: var(--color-muted);
+  border-bottom: var(--border-width-thin) solid var(--color-border-light);
+  padding-bottom: 0.25em;
+  margin-bottom: var(--space-lg);
+  page-break-after: avoid;
+}
+
+.running-header .doc-title {
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.running-footer {
+  font-size: var(--font-size-footer);
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-md);
+  border-top: var(--border-width-thin) solid var(--color-border-light);
+}
+
+/* Chapter divider — full-width branded day opener */
+.chapter-divider {
+  page-break-before: always;
+  page-break-after: always;
+  position: relative;
+  min-height: 9.2in;
+  margin: calc(-1 * var(--page-margin-top)) calc(-1 * var(--page-margin-x));
+  padding: 3.2in var(--page-margin-x) 2in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: var(--color-revision-bg);
+  color: var(--color-heading);
+}
+
+.chapter-divider--branded {
+  background: var(--cover-gradient);
+  background-color: var(--brand-black, #0A0A0F);
+  color: var(--brand-white, #fff);
+}
+
+.chapter-divider__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.chapter-divider__day {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-size: 11pt;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--brand-silver, var(--color-muted));
+  margin-bottom: 0.35in;
+}
+
+.chapter-divider--branded .chapter-divider__day {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.chapter-divider__title {
+  font-size: 34pt;
+  border: none;
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+
+.chapter-divider__rule {
+  width: 2.5in;
+  height: 3px;
+  margin: 0.45in auto 0;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.chapter-divider--branded .chapter-divider__rule {
+  background: linear-gradient(90deg, #FF2DAA, #7A3FFF, #15D8FF);
+}
+
+.chapter-divider__edge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.35in;
+  height: 100%;
+  background: var(--day-accent, var(--color-accent));
+  z-index: 3;
+}
+
+.chapter-divider.day-1 { --day-accent: #FF2DAA; }
+.chapter-divider.day-2 { --day-accent: #7A3FFF; }
+.chapter-divider.day-3 { --day-accent: #15D8FF; }
+
+/* Day sections — colored page-edge marker via left border */
+.day-section {
+  --day-accent: #cccccc;
+  position: relative;
+  border-left: 7px solid var(--day-accent);
+  padding-left: 0.65em;
+  margin-left: -0.12in;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.day-section.day-1 { --day-accent: #FF2DAA; }
+.day-section.day-2 { --day-accent: #7A3FFF; }
+.day-section.day-3 { --day-accent: #15D8FF; }
+
+.day-section::before {
+  content: attr(data-day-label);
+  position: absolute;
+  left: -0.52in;
+  top: 0.15in;
+  width: 0.38in;
+  padding: 0.18in 0.04in;
+  font-family: var(--font-label);
+  font-size: 6.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #fff;
+  background: var(--day-accent);
+  text-align: center;
+  line-height: 1.2;
+  border-radius: 3px 0 0 3px;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  z-index: 2;
+}
+
+body.theme-whitelabel .day-section::before {
+  background: var(--day-accent);
+  opacity: 0.85;
+}
+
+/* Polished certificate */
+.certificate-page.certificate--branded .certificate-frame {
+  border: 3px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, #FF2DAA, #7A3FFF, #15D8FF, #D4AF37) border-box;
+}
+
+.certificate-frame {
+  position: relative;
+  z-index: 1;
+  border: 3px double var(--surface-certificate-border);
+  padding: 0.15in;
+}
+
+.certificate-inner {
+  position: relative;
+  padding: 0.55in 0.65in 0.45in;
+  background: #fff;
+}
+
+.certificate-logo {
+  max-height: 0.9in;
+  max-width: 3.5in;
+  margin: 0 auto 0.25in;
+  display: block;
+}
+
+.certificate-logo-text {
+  font-family: var(--font-display);
+  font-size: 18pt;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25in;
+}
+
+.certificate-eyebrow {
+  font-family: var(--font-label);
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--brand-gold, #D4AF37);
+  margin: 0 0 0.15in;
+}
+
+.certificate-title {
+  font-size: 22pt;
+  border: none;
+  margin: 0;
+  text-align: center;
+  color: var(--brand-black, var(--color-heading));
+}
+
+.certificate-subtitle,
+.certificate-tagline {
+  text-align: center;
+  color: var(--color-muted);
+  margin: 0.2em 0;
+}
+
+.certificate-tagline {
+  font-family: var(--font-label);
+  font-size: 8.5pt;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brand-silver, var(--color-muted));
+}
+
+.certificate-presented {
+  text-align: center;
+  margin: 0.8em 0 0.25em;
+}
+
+.certificate-name-line {
+  text-align: center;
+  font-size: 14pt;
+  font-weight: 600;
+  color: var(--brand-black, var(--color-heading));
+  margin: 0.15in 0 0.5in;
+}
+
+.certificate-table {
+  margin: 0.5in auto;
+  max-width: 5.5in;
+}
+
+.certificate-meta-row {
+  display: flex;
+  gap: 0.35in;
+  justify-content: center;
+  margin: 0.45in 0 0.2in;
+}
+
+.certificate-meta-field {
+  flex: 1;
+  text-align: center;
+  font-size: 9pt;
+}
+
+.certificate-meta-field p {
+  margin: 0.15em 0;
+}
+
+.certificate-line {
+  border-bottom: 1px solid var(--color-field-line);
+  min-height: 1.2em;
+}
+
+.certificate-footer {
+  margin-top: 0.45in;
+  padding-top: 0.35in;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.certificate-qr-block {
+  display: flex;
+  align-items: center;
+  gap: 0.35in;
+  justify-content: center;
+  margin-bottom: 0.4in;
+}
+
+.certificate-qr {
+  flex-shrink: 0;
+  width: 1.1in;
+  height: 1.1in;
+  padding: 0.08in;
+  border: 2px solid var(--brand-black, #0A0A0F);
+  background: #fff;
+}
+
+.certificate-qr svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.certificate-qr-copy {
+  max-width: 3.2in;
+  text-align: left;
+}
+
+.certificate-qr-title {
+  font-weight: 700;
+  font-size: 10pt;
+  margin: 0 0 0.2em;
+  color: var(--brand-black, var(--color-heading));
+}
+
+.certificate-qr-desc {
+  font-size: 8.5pt;
+  color: var(--color-muted);
+  margin: 0 0 0.2em;
+}
+
+.certificate-qr-url {
+  font-family: var(--font-label);
+  font-size: 8pt;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--brand-purple, var(--color-accent));
+  margin: 0;
+}
