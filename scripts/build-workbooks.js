@@ -7,6 +7,7 @@ const { wrapDocument, markdownToHtml } = require('./lib/html');
 const { buildWorkbookCover, buildWorkbookFooter } = require('./lib/covers');
 const { setHtmlOutputDir } = require('./lib/assets');
 const { enhanceWorkbookHtml } = require('./lib/workbook-enhance');
+const { preprocessMarkdown } = require('./lib/images');
 const { buildPdf } = require('./lib/pdf');
 
 const OUTPUT = path.join(ROOT, 'workbooks', 'output');
@@ -26,7 +27,8 @@ async function buildHtml(course, theme) {
     throw new Error(`Missing source: ${course.source}`);
   }
 
-  const md = fs.readFileSync(source, 'utf8');
+  let md = fs.readFileSync(source, 'utf8');
+  md = preprocessMarkdown(md);
   const rawBody = markdownToHtml(md);
   const body = await enhanceWorkbookHtml(rawBody, course, theme);
   const cover = buildWorkbookCover(course, theme);

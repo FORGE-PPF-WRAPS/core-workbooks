@@ -51,6 +51,16 @@ function resolveAssetUri(relPath) {
   return fileToDataUri(abs);
 }
 
+/** Always prefer relative paths for print images when output dir is set. */
+function resolveImageUri(relPath) {
+  const abs = path.join(ROOT, relPath);
+  if (!fs.existsSync(abs)) return null;
+  if (htmlOutputDir) {
+    return path.relative(htmlOutputDir, abs).replace(/\\/g, '/');
+  }
+  return fileToDataUri(abs);
+}
+
 function resolveFirstAsset(candidates) {
   for (const rel of candidates) {
     const uri = resolveAssetUri(rel);
@@ -112,6 +122,7 @@ module.exports = {
   MONOGRAM_CANDIDATES,
   setHtmlOutputDir,
   resolveAssetUri,
+  resolveImageUri,
   resolveBrandLogo,
   resolveBrandHero,
   resolveBrandMonogram,

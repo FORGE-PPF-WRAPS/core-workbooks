@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "base": "workbooks/assets/images",
+  "tools": {
+    "heat-gun": {
+      "path": "shared/tools/heat-gun.jpg",
+      "label": "Heat gun",
+      "courses": ["window-tint", "ppf", "vinyl-wrap"]
+    },
+    "spray-bottles": {
+      "path": "shared/tools/spray-bottles.jpg",
+      "label": "Slip & tack solution bottles",
+      "courses": ["window-tint", "ppf"]
+    },
+    "tape-measure": {
+      "path": "shared/tools/tape-measure.jpg",
+      "label": "Tape measure",
+      "courses": ["window-tint", "ppf", "vinyl-wrap"]
+    },
+    "hard-card": {
+      "path": "window-tint/tools/hard-card.jpg",
+      "label": "Hard card / squeegee",
+      "courses": ["window-tint"]
+    },
+    "hard-card-pink": {
+      "path": "window-tint/tools/hard-card-pink.jpg",
+      "label": "Hard card (low-friction)",
+      "courses": ["window-tint"]
+    },
+    "tint-blade-holder": {
+      "path": "window-tint/tools/tint-blade-holder.jpg",
+      "label": "Tint blade holder",
+      "courses": ["window-tint"]
+    },
+    "plastic-razor-blades": {
+      "path": "window-tint/tools/plastic-razor-blades.jpg",
+      "label": "Plastic razor blades",
+      "courses": ["window-tint"]
+    },
+    "tint-reach-squeegee": {
+      "path": "window-tint/tools/tint-reach-squeegee.jpg",
+      "label": "Reach squeegee",
+      "courses": ["window-tint"]
+    },
+    "tint-reach-squeegees": {
+      "path": "window-tint/tools/tint-reach-squeegees.jpg",
+      "label": "Reach squeegee set",
+      "courses": ["window-tint"]
+    },
+    "chizzler": {
+      "path": "window-tint/tools/chizzler.jpg",
+      "label": "Chizzler / tuck tool",
+      "courses": ["window-tint"]
+    },
+    "tint-tuck-tool": {
+      "path": "window-tint/tools/tint-tuck-tool.jpg",
+      "label": "Tint tuck tool",
+      "courses": ["window-tint"]
+    },
+    "tint-tucking-tools": {
+      "path": "window-tint/tools/tint-tucking-tools.jpg",
+      "label": "Tucking tool set",
+      "courses": ["window-tint"]
+    },
+    "clay-bar": {
+      "path": "ppf/tools/clay-bar.jpg",
+      "label": "Clay bar / clay mitt",
+      "courses": ["ppf"]
+    },
+    "knifeless-tape": {
+      "path": "vinyl-wrap/tools/knifeless-tape-spool.jpg",
+      "label": "Knifeless tape",
+      "courses": ["vinyl-wrap", "ppf"]
+    }
+  },
+  "galleries": {
+    "window-tint": [
+      "hard-card",
+      "hard-card-pink",
+      "heat-gun",
+      "spray-bottles",
+      "tint-blade-holder",
+      "plastic-razor-blades",
+      "tint-reach-squeegee",
+      "chizzler",
+      "tint-tuck-tool",
+      "tape-measure"
+    ],
+    "ppf": [
+      "clay-bar",
+      "heat-gun",
+      "spray-bottles",
+      "tape-measure",
+      "knifeless-tape"
+    ],
+    "shared": [
+      "heat-gun",
+      "spray-bottles",
+      "tape-measure"
+    ]
+  }
+}

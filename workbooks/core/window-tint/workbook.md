@@ -172,6 +172,8 @@ Before any install, confirm:
 | **Heat gun holster / stand** | Keep heat gun accessible but safe |
 | **Film plotter** (shop) | Computer-cut patterns — introduced Day 3 |
 
+{{tool-gallery:window-tint}}
+
 ### Slip Solution Recipe (General)
 
 Most shops use a mild soap-and-water mix:

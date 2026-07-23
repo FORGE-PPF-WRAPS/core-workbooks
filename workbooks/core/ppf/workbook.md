@@ -178,6 +178,8 @@ Walk the vehicle in good lighting (preferably outdoors or with LED inspection li
 | **Plotter** (shop) | Pre-cut patterns — introduced Day 3 |
 | **Light bar / inspection lamp** | Reveal contamination and defects |
 
+{{tool-gallery:ppf}}
+
 ### Slip vs. Tack Solution
 
 | Solution | Purpose | When |

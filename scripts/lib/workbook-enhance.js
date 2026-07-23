@@ -1,5 +1,6 @@
 const { buildChapterDivider, buildCertificateHtml } = require('./certificate');
 const { resolveBrandMonogram } = require('./assets');
+const { processHtmlImages } = require('./images');
 
 const DAY_LABELS = {
   1: 'Day 1',
@@ -71,6 +72,7 @@ async function enhanceWorkbookHtml(html, course, theme) {
   out = injectComponentLabels(out);
   out = injectSectionIcons(out);
   out = await replaceCompletionSection(out, course, theme);
+  out = processHtmlImages(out);
   return out;
 }
 
