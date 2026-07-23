@@ -2,17 +2,18 @@
 # Push Skill Forge core workbooks to GitHub.
 #
 # Prerequisites:
-#   1. Create an empty repo: https://github.com/new → name it "core-workbooks"
+#   1. Repo exists: https://github.com/FORGE-PPF-WRAPS/core-workbooks
 #   2. Authenticate: gh auth login   (or set GITHUB_TOKEN)
 #
 # Usage:
 #   ./scripts/push-to-github.sh
+#   BRANCH=cursor-design-system ./scripts/push-to-github.sh
 
 set -euo pipefail
 
 GITHUB_OWNER="${GITHUB_OWNER:-FORGE-PPF-WRAPS}"
 GITHUB_REPO="${GITHUB_REPO:-core-workbooks}"
-BRANCH="${BRANCH:-main}"
+BRANCH="${BRANCH:-cursor-design-system}"
 
 cd "$(dirname "$0")/.."
 
@@ -29,13 +30,7 @@ fi
 # Create repo if it doesn't exist
 if ! gh repo view "${GITHUB_OWNER}/${GITHUB_REPO}" >/dev/null 2>&1; then
   echo "Creating ${GITHUB_OWNER}/${GITHUB_REPO}..."
-  gh repo create "${GITHUB_OWNER}/${GITHUB_REPO}" --private --description "Skill Forge core training workbooks — Tint, PPF, Vinyl Wrap"
-fi
-
-# Ensure main branch name
-CURRENT=$(git branch --show-current)
-if [ "$CURRENT" = "master" ]; then
-  git branch -M "$BRANCH" 2>/dev/null || true
+  gh repo create "${GITHUB_OWNER}/${GITHUB_REPO}" --private --description "Skill Forge core workbooks, design system, SOPs, and operations manuals"
 fi
 
 # Add or update github remote
@@ -45,7 +40,13 @@ else
   git remote add github "https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}.git"
 fi
 
-echo "Pushing to github.com/${GITHUB_OWNER}/${GITHUB_REPO}..."
+CURRENT=$(git branch --show-current)
+if [ "$CURRENT" != "$BRANCH" ]; then
+  echo "Warning: current branch is '$CURRENT' but pushing '$BRANCH'."
+  echo "Checkout $BRANCH first, or set BRANCH=$CURRENT"
+fi
+
+echo "Pushing to github.com/${GITHUB_OWNER}/${GITHUB_REPO} (branch: ${BRANCH})..."
 git push -u github "${BRANCH}"
 
-echo "Done: https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}"
+echo "Done: https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/tree/${BRANCH}"
