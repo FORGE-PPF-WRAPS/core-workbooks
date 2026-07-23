@@ -13,6 +13,7 @@
     "build:docs:branded": "node scripts/build-docs.js --branded",
     "build:docs:branded:pdf": "node scripts/build-docs.js --branded --pdf",
     "generate:manuals": "node scripts/generate-manuals/index.js",
+    "generate:sops": "node scripts/generate-sops.js",
     "build:manuals": "node scripts/build-manuals.js",
     "build:manuals:pdf": "node scripts/build-manuals.js --pdf",
     "build:manuals:branded": "node scripts/build-manuals.js --branded",

@@ -13,7 +13,7 @@ Unified delivery package for the complete turnkey business system.
 | **Pricing** | Per-service pricing guides |
 | **Manuals** | 6 core operations manuals (150–180 pages each) |
 | **Workbooks** | 3-day student training workbooks |
-| **SOPs** | Bay-posted standard operating procedures |
+| **SOPs** | Forge SOP Manual v1.0 + 37 numbered procedures (SOP-001 – SOP-903) |
 | **Checklists** | Daily QC and delivery checklists |
 | **Customer** | Estimates, agreements, aftercare, releases |
 | **Warranty** | Policy, certificate, claim form |
