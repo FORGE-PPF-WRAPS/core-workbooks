@@ -37,6 +37,21 @@ npm run generate:manuals      # regenerate from source generators
 npm run build:manuals:pdf     # build all PDFs
 ```
 
+## Public downloads
+
+Published via GitLab Pages on the `cursor-design-system` branch:
+
+**Index:** https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/
+
+| Manual | PDF |
+|--------|-----|
+| PPF Master Install | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/ppf-master-install.pdf |
+| Window Tint Master Install | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/window-tint-master-install.pdf |
+| Customer Service Operations | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/customer-service-operations.pdf |
+| Vinyl Wrap Master Install | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/vinyl-wrap-master-install.pdf |
+| Ceramic Coating Application | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/ceramic-coating-application.pdf |
+| Paint Correction & Detailing | https://veloxwrapco.gitlab.io/skill-forge-workbooks-v1.0/manuals/paint-correction-detailing.pdf |
+
 ## Relationship to student workbooks
 
 | Document | Purpose |

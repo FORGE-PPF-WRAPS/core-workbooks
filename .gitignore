@@ -4,7 +4,7 @@ node_modules/
 .idea/
 .vscode/
 
-# Generated build output
+# Generated build output (source copies live in public/manuals/ for Pages)
 workbooks/output/**
 !workbooks/output/.gitkeep
 docs/output/**
