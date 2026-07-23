@@ -2,27 +2,34 @@
   "brand": "Skill Forge",
   "tagline": "WHERE STUDENTS BECOME TEACHERS",
   "serviceBrand": "Forge PPF",
+  "version": "2.0",
   "colors": {
-    "magenta": "#FF2DAA",
-    "purple": "#7A3FFF",
-    "cyan": "#15D8FF",
-    "gold": "#D4AF37",
-    "black": "#0A0A0F",
-    "silver": "#B8BDC9",
+    "pink": "#FF0F7B",
+    "magenta": "#FF2BA6",
+    "purple": "#7D3CFF",
+    "violet": "#5D2BFF",
+    "blue": "#00AAFF",
+    "cyan": "#00D5FF",
+    "gold": "#D9B44A",
+    "black": "#080808",
+    "charcoal": "#121212",
+    "carbon": "#1D1D1D",
+    "gray": "#4D4D4D",
+    "light": "#E8EDF5",
     "white": "#FFFFFF"
   },
   "gradient": {
     "angle": 135,
     "stops": [
-      { "color": "#FF2DAA", "position": "0%" },
-      { "color": "#7A3FFF", "position": "50%" },
-      { "color": "#15D8FF", "position": "100%" }
+      { "color": "#FF0F7B", "position": "0%" },
+      { "color": "#7D3CFF", "position": "50%" },
+      { "color": "#00AAFF", "position": "100%" }
     ],
-    "css": "linear-gradient(135deg, #FF2DAA 0%, #7A3FFF 50%, #15D8FF 100%)"
+    "css": "linear-gradient(135deg, #FF0F7B 0%, #7D3CFF 50%, #00AAFF 100%)"
   },
   "typography": {
     "display": "Skill Forge Display",
-    "body": "Segoe UI, Helvetica Neue, Arial, sans-serif",
+    "body": "Inter, Segoe UI, Helvetica Neue, Arial, sans-serif",
     "label": "system-ui, Segoe UI, Helvetica Neue, Arial, sans-serif"
   },
   "logos": {
@@ -35,8 +42,8 @@
     "label": "Skill Forge Resources"
   },
   "days": {
-    "1": { "color": "#FF2DAA", "label": "Day 1" },
-    "2": { "color": "#7A3FFF", "label": "Day 2" },
-    "3": { "color": "#15D8FF", "label": "Day 3" }
+    "1": { "color": "#FF0F7B", "label": "Day 1" },
+    "2": { "color": "#7D3CFF", "label": "Day 2" },
+    "3": { "color": "#00D5FF", "label": "Day 3" }
   }
 }
