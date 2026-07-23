@@ -11,3 +11,4 @@ docs/output/**
 !docs/output/.gitkeep
 manuals/output/**
 !manuals/output/.gitkeep
+!manuals/output/branded/.gitkeep
