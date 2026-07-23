@@ -15,12 +15,21 @@ const CSS_LAYERS = [
 
 const VALID_THEMES = new Set(['whitelabel', 'branded']);
 
-function loadDesignSystemCss(theme = 'whitelabel') {
+const MANUAL_CSS_LAYERS = [
+  'tokens.css',
+  'base.css',
+  'components.css',
+  'icons.css',
+  'layouts.css',
+];
+
+function loadDesignSystemCss(theme = 'whitelabel', options = {}) {
   if (!VALID_THEMES.has(theme)) {
     throw new Error(`Unknown theme: ${theme}. Use whitelabel or branded.`);
   }
 
-  const layers = CSS_LAYERS.map((file) =>
+  const layerFiles = options.forManual ? MANUAL_CSS_LAYERS : CSS_LAYERS;
+  const layers = layerFiles.map((file) =>
     fs.readFileSync(path.join(DESIGN_SYSTEM, file), 'utf8')
   );
   const themeCss = fs.readFileSync(

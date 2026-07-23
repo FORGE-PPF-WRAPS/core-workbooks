@@ -33,11 +33,15 @@ Every manual includes:
 ## Build
 
 ```bash
-npm run generate:manuals      # regenerate from source generators
-npm run build:manuals:pdf     # build all PDFs
+npm run build:library          # Build all branded PDFs + assemble library
+npm run build:all:branded:pdf  # Docs + workbooks + manuals (branded)
 ```
 
-## Access on GitHub (`cursor-design-system` branch)
+## Document library
+
+**Browse:** `library/index.html` (local) or https://github.com/FORGE-PPF-WRAPS/core-workbooks/tree/main/library
+
+51 branded PDFs organized by category — turnkey guides, SOPs, pricing, manuals, workbooks, customer forms, warranties, legal agreements.
 
 **Browse all manuals:** https://github.com/FORGE-PPF-WRAPS/core-workbooks/tree/cursor-design-system/manuals
 
